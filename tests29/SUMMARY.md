@@ -19,7 +19,7 @@ Code: commit `2dbc6ae` (clean tree for all training runs). GPU: RTX 3060, torch 
 | `logs/08_train_f_synonly.log` | `python Model_F/train_f.py --real-frac 0 --prefix f_synonly` (**incomplete**, see caveats) |
 | `logs/09_model_f_eval_crashed.log` | first E11 attempt, killed by a GPU driver fault (kept for the record) |
 | `logs/11_model_f_eval.log` | E11: `python experiments/model_f_eval.py --ckpt best_model_f_seed0.pt best_model_f_nohk_seed0.pt best_model_f_nodg_seed0.pt best_model_f_synonly_seed0.pt` |
-| `logs/10a_cross_dataset.log` | E9: `python experiments/cross_dataset.py` (Looped-only) |
+| `logs/10a_cross_dataset.log` | E9: `python experiments/cross_dataset.py` (Looped-only, full run) |
 | `logs/10b_cross_dataset_model_d.log` | E9: `python experiments/cross_dataset.py --ckpt best_model_d.pt` |
 | `runs/` | copies of the `results/runs/` JSON records for these runs |
 
@@ -114,8 +114,50 @@ the models are poorly calibrated on real data: they flag nearly everything (acc)
 
 ## 6. E9: cross-dataset rerun (Looped-only Mendeley)
 
-_In progress when this file was written; the logs are in `logs/10a_cross_dataset.log` and
-`logs/10b_cross_dataset_model_d.log`, records in `runs/`._
+Mendeley is **Looped-only**: 9534 contaminated Branched windows were dropped (mendeley_acc 7148
+windows / 40 recordings, mendeley_hyd 11516 / 60). So these Mendeley numbers are not comparable
+with tests25, which still included Branched. AUROC on logits, 95% CIs over recordings/groups.
+
+Two runs, which differ only in the synthetic checkpoint used by `cnn_pre` (fine-tuned) and
+`probe` (frozen encoder + linear head). `logreg` and `cnn_scratch` do not use a checkpoint.
+
+| Run | Checkpoint | Log | Record |
+|---|---|---|---|
+| 10a | `best_model_c_v4.pt` (default) | `logs/10a_cross_dataset.log` | `runs/2026-09-29_003526_e9_cross_dataset.json` |
+| 10b | `best_model_d.pt` | `logs/10b_cross_dataset_model_d.log` | `runs/2026-09-29_010352_e9_cross_dataset.json` |
+
+No plots were written.
+
+### Within-dataset (5-fold grouped CV), AUROC [95% CI]
+
+| Dataset | logreg | cnn_scratch (10a) | cnn_pre C v4 | probe C v4 | cnn_pre D | probe D |
+|---|---|---|---|---|---|---|
+| hk_noiselogger | 0.585 [0.416, 0.789] | 0.433 [0.277, 0.658] | 0.442 [0.269, 0.634] | 0.460 [0.311, 0.639] | 0.368 [0.234, 0.583] | 0.540 [0.378, 0.711] |
+| hk_hydrophone | 0.900 [0.779, 0.993] | 0.943 [0.883, 0.989] | 0.959 [0.907, 0.999] | 0.849 [0.701, 0.962] | 0.930 [0.857, 0.986] | 0.745 [0.510, 0.972] |
+| dongguan | 0.891 [0.836, 0.933] | 0.971 [0.956, 0.989] | 0.968 [0.950, 0.987] | 0.965 [0.941, 0.983] | 0.973 [0.955, 0.987] | 0.929 [0.906, 0.953] |
+| mendeley_acc (Looped) | 0.858 [0.731, 0.957] | 0.686 [0.341, 0.924] | 0.746 [0.535, 0.936] | 0.781 [0.673, 0.881] | 0.693 [0.402, 0.911] | 0.762 [0.490, 0.950] |
+| mendeley_hyd (Looped) | 0.853 [0.788, 0.910] | 0.973 [0.945, 0.992] | 0.978 [0.951, 0.995] | 0.961 [0.930, 0.984] | 0.970 [0.939, 0.992] | 0.961 [0.932, 0.983] |
+
+`logreg` was identical in both runs. `cnn_scratch` in 10b: 0.434, 0.941, 0.971, 0.695, 0.974
+(same order), i.e. within GPU run-to-run noise of 10a.
+
+### Leave-one-source-out, AUROC [95% CI] (detect / false alarm)
+
+| Held out | Test | logreg | cnn_scratch (10a) | cnn_pre C v4 | probe C v4 | cnn_pre D | probe D |
+|---|---|---|---|---|---|---|---|
+| dongguan | dongguan | 0.659 [0.573, 0.733] (0.46/0.21) | 0.648 [0.538, 0.728] (0.48/0.29) | 0.716 [0.657, 0.774] (0.42/0.11) | 0.692 [0.636, 0.742] (0.31/0.04) | 0.678 [0.600, 0.775] (0.35/0.13) | 0.362 [0.289, 0.428] (0.30/0.50) |
+| hongkong | hk_hydrophone | 0.157 [0.016, 0.307] (0.46/0.98) | 0.435 [0.320, 0.559] (0.91/0.82) | 0.424 [0.268, 0.611] (0.69/0.80) | 0.626 [0.461, 0.800] (0.72/0.53) | 0.495 [0.388, 0.608] (0.91/0.81) | 0.688 [0.450, 0.881] (0.84/0.84) |
+| hongkong | hk_noiselogger | 0.431 [0.286, 0.616] (0.20/0.34) | 0.548 [0.261, 0.694] (0.81/0.78) | 0.480 [0.205, 0.623] (0.76/0.76) | 0.502 [0.266, 0.614] (0.79/0.69) | 0.604 [0.327, 0.733] (0.81/0.69) | 0.606 [0.447, 0.742] (0.52/0.31) |
+| mendeley | mendeley_acc (Looped) | 0.502 [0.309, 0.731] (0.65/0.54) | 0.334 [0.254, 0.433] (0.34/0.51) | 0.505 [0.374, 0.656] (0.29/0.37) | 0.563 [0.415, 0.730] (0.29/0.34) | 0.486 [0.313, 0.716] (0.35/0.37) | 0.427 [0.275, 0.593] (0.29/0.40) |
+| mendeley | mendeley_hyd (Looped) | 0.491 [0.352, 0.612] (0.68/0.69) | 0.603 [0.567, 0.645] (0.26/0.02) | 0.509 [0.472, 0.544] (0.37/0.10) | 0.597 [0.566, 0.628] (0.43/0.02) | 0.575 [0.549, 0.604] (0.04/0.00) | 0.381 [0.326, 0.431] (0.00/0.05) |
+
+`cnn_scratch` in 10b (LOSO): 0.662, 0.423, 0.541, 0.342, 0.602 (same order).
+
+Reading: within a source, every dataset except hk_noiselogger is learnable (AUROC 0.85–0.98).
+Across sources it mostly is not: most LOSO AUROCs are 0.4–0.7, several are below 0.5, and
+the checkpoint (C v4 vs D) does not change that consistently. The only LOSO results with the whole
+CI above 0.5 are on dongguan (logreg, cnn_scratch, cnn_pre C v4/D, probe C v4) and mendeley_hyd
+(cnn_scratch, probe C v4, cnn_pre D), all at 0.58–0.72.
 
 ## Integrity caveats
 
