@@ -1,0 +1,283 @@
+{
+  "experiment": "train_f",
+  "timestamp": "2026-09-26T04:42:52",
+  "git_commit": "2dbc6ae",
+  "git_dirty": false,
+  "python": "3.12.10",
+  "torch": "2.7.1+cu118",
+  "device": "cuda",
+  "command": "Model_F/train_f.py",
+  "config": {
+    "base_channels": 64,
+    "dropout": 0.3,
+    "fusion": "cca",
+    "input_norm": "zscore",
+    "band_hz": 2000.0,
+    "cache": "cache_f",
+    "exclude_source": [],
+    "real_frac": 0.3,
+    "epochs": 30,
+    "steps": 1500,
+    "batch": 256,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "workers": 6,
+    "n_val": 4000,
+    "seed": 0,
+    "prefix": "f"
+  },
+  "summary": "best epoch 10: val AUROC synthetic 0.941, real 0.940 (held-out groups of the training sources)",
+  "results": {
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 0.5658878044287363,
+        "det_loss": 0.5479356889526049,
+        "val_auroc_synthetic": 0.883312382998128,
+        "val_auroc_real": 0.8962815262552384,
+        "score": 0.8897969546266832
+      },
+      {
+        "epoch": 2,
+        "loss": 0.38718572491407394,
+        "det_loss": 0.376722741941611,
+        "val_auroc_synthetic": 0.917081923310773,
+        "val_auroc_real": 0.9318776563720141,
+        "score": 0.9244797898413936
+      },
+      {
+        "epoch": 3,
+        "loss": 0.3390384040872256,
+        "det_loss": 0.3291651317675908,
+        "val_auroc_synthetic": 0.9249435490967856,
+        "val_auroc_real": 0.9174669313352051,
+        "score": 0.9212052402159954
+      },
+      {
+        "epoch": 4,
+        "loss": 0.31655151057243347,
+        "det_loss": 0.3071083227097988,
+        "val_auroc_synthetic": 0.931577905246484,
+        "val_auroc_real": 0.922292363358906,
+        "score": 0.926935134302695
+      },
+      {
+        "epoch": 5,
+        "loss": 0.30308324710528056,
+        "det_loss": 0.29389927617708844,
+        "val_auroc_synthetic": 0.931980411686587,
+        "val_auroc_real": 0.9263607479866711,
+        "score": 0.929170579836629
+      },
+      {
+        "epoch": 6,
+        "loss": 0.2924988851646582,
+        "det_loss": 0.28350826515754063,
+        "val_auroc_synthetic": 0.9363657318517096,
+        "val_auroc_real": 0.9331056230142408,
+        "score": 0.9347356774329751
+      },
+      {
+        "epoch": 7,
+        "loss": 0.28564425303538643,
+        "det_loss": 0.2769911389748255,
+        "val_auroc_synthetic": 0.937159994559913,
+        "val_auroc_real": 0.9364229212491877,
+        "score": 0.9367914579045503
+      },
+      {
+        "epoch": 8,
+        "loss": 0.27974241654078164,
+        "det_loss": 0.27134368854761126,
+        "val_auroc_synthetic": 0.9358292232675722,
+        "val_auroc_real": 0.8936437823756982,
+        "score": 0.9147365028216352
+      },
+      {
+        "epoch": 9,
+        "loss": 0.2752480628589789,
+        "det_loss": 0.2670733694434166,
+        "val_auroc_synthetic": 0.9380082581321302,
+        "val_auroc_real": 0.9275648706164271,
+        "score": 0.9327865643742786
+      },
+      {
+        "epoch": 10,
+        "loss": 0.2707850557466348,
+        "det_loss": 0.26271916419267655,
+        "val_auroc_synthetic": 0.9409165546648746,
+        "val_auroc_real": 0.9404942863785117,
+        "score": 0.9407054205216931
+      },
+      {
+        "epoch": 11,
+        "loss": 0.2672808113694191,
+        "det_loss": 0.25947293360034623,
+        "val_auroc_synthetic": 0.9377492539880639,
+        "val_auroc_real": 0.9413616123321231,
+        "score": 0.9395554331600935
+      },
+      {
+        "epoch": 12,
+        "loss": 0.26393445776899654,
+        "det_loss": 0.25629884852965673,
+        "val_auroc_synthetic": 0.9392430278884463,
+        "val_auroc_real": 0.9224622519477577,
+        "score": 0.930852639918102
+      },
+      {
+        "epoch": 13,
+        "loss": 0.26107323984305064,
+        "det_loss": 0.25356625228126844,
+        "val_auroc_synthetic": 0.9393962803404856,
+        "val_auroc_real": 0.925186430372503,
+        "score": 0.9322913553564943
+      },
+      {
+        "epoch": 14,
+        "loss": 0.2610341608822346,
+        "det_loss": 0.2536155791481336,
+        "val_auroc_synthetic": 0.9389645234323749,
+        "val_auroc_real": 0.920769327062358,
+        "score": 0.9298669252473665
+      },
+      {
+        "epoch": 15,
+        "loss": 0.2572440100610256,
+        "det_loss": 0.24995597075422604,
+        "val_auroc_synthetic": 0.9407148014368228,
+        "val_auroc_real": 0.9296780462216181,
+        "score": 0.9351964238292205
+      },
+      {
+        "epoch": 16,
+        "loss": 0.25652869295080505,
+        "det_loss": 0.2492824680109819,
+        "val_auroc_synthetic": 0.9428290852653642,
+        "val_auroc_real": 0.935847684448339,
+        "score": 0.9393383848568516
+      },
+      {
+        "epoch": 17,
+        "loss": 0.25471291664242746,
+        "det_loss": 0.2475497378706932,
+        "val_auroc_synthetic": 0.9382632622121954,
+        "val_auroc_real": 0.9265157340677288,
+        "score": 0.9323894981399621
+      },
+      {
+        "epoch": 18,
+        "loss": 0.25188588094711306,
+        "det_loss": 0.24481170347332953,
+        "val_auroc_synthetic": 0.9411203079249268,
+        "val_auroc_real": 0.9076759837145394,
+        "score": 0.9243981458197331
+      },
+      {
+        "epoch": 19,
+        "loss": 0.24996514789263408,
+        "det_loss": 0.24299522353212039,
+        "val_auroc_synthetic": 0.9445071121137939,
+        "val_auroc_real": 0.9257050376437348,
+        "score": 0.9351060748787643
+      },
+      {
+        "epoch": 20,
+        "loss": 0.24945302948355674,
+        "det_loss": 0.2425056993663311,
+        "val_auroc_synthetic": 0.9406513004208068,
+        "val_auroc_real": 0.8969521391059688,
+        "score": 0.9188017197633878
+      },
+      {
+        "epoch": 21,
+        "loss": 0.2471343184510867,
+        "det_loss": 0.24031218966841697,
+        "val_auroc_synthetic": 0.9438966023456377,
+        "val_auroc_real": 0.9245813885560663,
+        "score": 0.934238995450852
+      },
+      {
+        "epoch": 22,
+        "loss": 0.2467765411734581,
+        "det_loss": 0.2399506388405959,
+        "val_auroc_synthetic": 0.9431112147794365,
+        "val_auroc_real": 0.9212491878133252,
+        "score": 0.9321802012963809
+      },
+      {
+        "epoch": 23,
+        "loss": 0.24587713358799618,
+        "det_loss": 0.23909706406792006,
+        "val_auroc_synthetic": 0.9416578165250644,
+        "val_auroc_real": 0.9212789928289132,
+        "score": 0.9314684046769888
+      },
+      {
+        "epoch": 24,
+        "loss": 0.24608007586995762,
+        "det_loss": 0.23936792069673538,
+        "val_auroc_synthetic": 0.9413649368389895,
+        "val_auroc_real": 0.9146145913434314,
+        "score": 0.9279897640912105
+      },
+      {
+        "epoch": 25,
+        "loss": 0.2438103914062182,
+        "det_loss": 0.2370693560341994,
+        "val_auroc_synthetic": 0.942163324613194,
+        "val_auroc_real": 0.9129097444517963,
+        "score": 0.9275365345324951
+      },
+      {
+        "epoch": 26,
+        "loss": 0.24346064110596974,
+        "det_loss": 0.23675946859518687,
+        "val_auroc_synthetic": 0.9429125866013857,
+        "val_auroc_real": 0.9164326972943007,
+        "score": 0.9296726419478432
+      },
+      {
+        "epoch": 27,
+        "loss": 0.24375871857007345,
+        "det_loss": 0.23707466587424278,
+        "val_auroc_synthetic": 0.9421735747771964,
+        "val_auroc_real": 0.9116668753017758,
+        "score": 0.9269202250394861
+      },
+      {
+        "epoch": 28,
+        "loss": 0.24325918579101563,
+        "det_loss": 0.2366052464544773,
+        "val_auroc_synthetic": 0.9421473243571896,
+        "val_auroc_real": 0.9147308309042246,
+        "score": 0.9284390776307071
+      },
+      {
+        "epoch": 29,
+        "loss": 0.24265191303690276,
+        "det_loss": 0.2359674576719602,
+        "val_auroc_synthetic": 0.9423773280372487,
+        "val_auroc_real": 0.9125669867725341,
+        "score": 0.9274721574048914
+      },
+      {
+        "epoch": 30,
+        "loss": 0.24211226692795754,
+        "det_loss": 0.23543689487377803,
+        "val_auroc_synthetic": 0.9423300772812364,
+        "val_auroc_real": 0.9127994658941205,
+        "score": 0.9275647715876785
+      }
+    ],
+    "best": {
+      "epoch": 10,
+      "loss": 0.2707850557466348,
+      "det_loss": 0.26271916419267655,
+      "val_auroc_synthetic": 0.9409165546648746,
+      "val_auroc_real": 0.9404942863785117,
+      "score": 0.9407054205216931
+    },
+    "checkpoint": "best_model_f_seed0.pt"
+  }
+}

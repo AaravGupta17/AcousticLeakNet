@@ -1,0 +1,40 @@
+Loading test data...
+  hk_noiselogger     2175 windows |   32 groups | leak 46%
+  hk_hydrophone      2000 windows |   18 groups | leak 50%
+  dongguan           1772 windows |  293 groups | leak 56%
+
+best_model_f_seed0.pt (epoch 10) | trained on real: ['hongkong', 'dongguan'] | held out: none
+  mendeley_looped_acc    Model F  AUROC 0.424 [0.193, 0.680] | detect 0.70 false alarm 0.82
+                         logreg   AUROC 0.295 [0.050, 0.627]
+  mendeley_looped_hyd    Model F  AUROC 0.630 [0.500, 0.762] | detect 0.06 false alarm 0.03
+                         logreg   AUROC 0.188 [0.106, 0.288]
+  noise flagged as leak: white 0%, coloured 0%
+
+best_model_f_nohk_seed0.pt (epoch 3) | trained on real: ['dongguan'] | held out: ['hongkong']
+  mendeley_looped_acc    Model F  AUROC 0.348 [0.162, 0.558] | detect 0.91 false alarm 0.96
+                         logreg   AUROC 0.189 [0.058, 0.362]
+  mendeley_looped_hyd    Model F  AUROC 0.197 [0.105, 0.304] | detect 0.01 false alarm 0.01
+                         logreg   AUROC 0.428 [0.243, 0.599]
+  hk_noiselogger         Model F  AUROC 0.389 [0.292, 0.596] | detect 0.91 false alarm 0.94
+                         logreg   AUROC 0.699 [0.471, 0.838]
+  hk_hydrophone          Model F  AUROC 0.631 [0.486, 0.774] | detect 0.29 false alarm 0.07
+                         logreg   AUROC 0.375 [0.166, 0.599]
+  noise flagged as leak: white 0%, coloured 0%
+
+best_model_f_nodg_seed0.pt (epoch 5) | trained on real: ['hongkong'] | held out: ['dongguan']
+  mendeley_looped_acc    Model F  AUROC 0.273 [0.047, 0.557] | detect 0.49 false alarm 0.77
+                         logreg   AUROC 0.263 [0.039, 0.565]
+  mendeley_looped_hyd    Model F  AUROC 0.704 [0.526, 0.859] | detect 0.00 false alarm 0.01
+                         logreg   AUROC 0.113 [0.039, 0.204]
+  dongguan               Model F  AUROC 0.612 [0.543, 0.684] | detect 0.81 false alarm 0.75
+                         logreg   AUROC 0.777 [0.724, 0.822]
+  noise flagged as leak: white 1%, coloured 0%
+
+best_model_f_synonly_seed0.pt (epoch 11) | trained on real: ['hongkong', 'dongguan'] | held out: none
+  mendeley_looped_acc    Model F  AUROC 0.315 [0.104, 0.544] | detect 0.53 false alarm 0.77
+                         logreg   AUROC 0.295 [0.050, 0.627]
+  mendeley_looped_hyd    Model F  AUROC 0.396 [0.256, 0.526] | detect 0.08 false alarm 0.08
+                         logreg   AUROC 0.188 [0.106, 0.288]
+  noise flagged as leak: white 0%, coloured 0%
+
+Run recorded: <repo>\results\runs\2026-09-29_000514_e11_model_f_eval.json
