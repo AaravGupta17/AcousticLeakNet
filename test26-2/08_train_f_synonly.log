@@ -1,0 +1,43 @@
+Device: cuda | excluded sources: none
+Bank train: 4788 real windows (2350 no-leak), 541 Mendeley pairs | val: 1159 real windows
+Validation: 4000 synthetic, 0 real windows
+<repo>\.venv\Lib\site-packages\torch\nn\modules\module.py:1341: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  return t.to(
+<repo>\.venv\Lib\site-packages\torch\optim\lr_scheduler.py:182: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+Ep   1/30 | loss 0.5546 (det 0.5368) | val AUROC synthetic 0.9036 real nan | 235s
+  saved best_model_f_synonly_seed0.pt
+Ep   2/30 | loss 0.3914 (det 0.3812) | val AUROC synthetic 0.9296 real nan | 237s
+  saved best_model_f_synonly_seed0.pt
+Ep   3/30 | loss 0.3519 (det 0.3424) | val AUROC synthetic 0.9392 real nan | 232s
+  saved best_model_f_synonly_seed0.pt
+Ep   4/30 | loss 0.3342 (det 0.3252) | val AUROC synthetic 0.9391 real nan | 234s
+Ep   5/30 | loss 0.3228 (det 0.3142) | val AUROC synthetic 0.9433 real nan | 241s
+  saved best_model_f_synonly_seed0.pt
+Ep   6/30 | loss 0.3159 (det 0.3076) | val AUROC synthetic 0.9459 real nan | 246s
+  saved best_model_f_synonly_seed0.pt
+Ep   7/30 | loss 0.3110 (det 0.3030) | val AUROC synthetic 0.9465 real nan | 236s
+  saved best_model_f_synonly_seed0.pt
+Ep   8/30 | loss 0.3068 (det 0.2990) | val AUROC synthetic 0.9455 real nan | 231s
+Ep   9/30 | loss 0.3034 (det 0.2958) | val AUROC synthetic 0.9462 real nan | 232s
+Ep  10/30 | loss 0.2990 (det 0.2916) | val AUROC synthetic 0.9451 real nan | 239s
+Ep  11/30 | loss 0.2963 (det 0.2891) | val AUROC synthetic 0.9499 real nan | 241s
+  saved best_model_f_synonly_seed0.pt
+Ep  12/30 | loss 0.2940 (det 0.2869) | val AUROC synthetic 0.9454 real nan | 236s
+Ep  13/30 | loss 0.2925 (det 0.2855) | val AUROC synthetic 0.9466 real nan | 231s
+Ep  14/30 | loss 0.2911 (det 0.2842) | val AUROC synthetic 0.9476 real nan | 230s
+Ep  15/30 | loss 0.2886 (det 0.2818) | val AUROC synthetic 0.9470 real nan | 237s
+Ep  16/30 | loss 0.2876 (det 0.2808) | val AUROC synthetic 0.9490 real nan | 245s
+Ep  17/30 | loss 0.2862 (det 0.2795) | val AUROC synthetic 0.9478 real nan | 237s
+Ep  18/30 | loss 0.2836 (det 0.2770) | val AUROC synthetic 0.9461 real nan | 233s
+Ep  19/30 | loss 0.2822 (det 0.2757) | val AUROC synthetic 0.9475 real nan | 231s
+Ep  20/30 | loss 0.2823 (det 0.2758) | val AUROC synthetic 0.9478 real nan | 238s
+Ep  21/30 | loss 0.2798 (det 0.2733) | val AUROC synthetic 0.9474 real nan | 244s
+Ep  22/30 | loss 0.2791 (det 0.2727) | val AUROC synthetic 0.9480 real nan | 236s
+Ep  23/30 | loss 0.2789 (det 0.2725) | val AUROC synthetic 0.9476 real nan | 234s
+Ep  24/30 | loss 0.2787 (det 0.2724) | val AUROC synthetic 0.9485 real nan | 229s
+Ep  25/30 | loss 0.2766 (det 0.2702) | val AUROC synthetic 0.9480 real nan | 233s
+Ep  26/30 | loss 0.2768 (det 0.2705) | val AUROC synthetic 0.9477 real nan | 240s
+Ep  27/30 | loss 0.2770 (det 0.2707) | val AUROC synthetic 0.9474 real nan | 236s
+Ep  28/30 | loss 0.2765 (det 0.2702) | val AUROC synthetic 0.9475 real nan | 230s
+Ep  29/30 | loss 0.2760 (det 0.2698) | val AUROC synthetic 0.9472 real nan | 229s

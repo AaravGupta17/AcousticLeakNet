@@ -1,0 +1,4 @@
+synthetic_rows: rms 0.621, peak 0.507, channel_rms_ratio 0.564, channel_correlation 0.548, kurtosis 0.505, spectral_logreg_5fold 0.673
+real_rows: rms 0.597, peak 0.610, channel_rms_ratio 0.607, channel_correlation 0.528, kurtosis 0.668, spectral_logreg_5fold 0.857
+
+Run recorded: <repo>\results\runs\2026-09-25_234449_f_shortcut_audit.json

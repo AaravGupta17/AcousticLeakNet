@@ -1,0 +1,9 @@
+Public datasets (5 kHz, band-limited to 2 kHz):
+  hk_noiselogger     2175 windows |   32 groups | leak 46%
+  hk_hydrophone      2000 windows |   18 groups | leak 50%
+  dongguan           1772 windows |  293 groups | leak 56%
+Mendeley Branched no-leak hydrophone pairs:
+  dongguan    1772 windows |  293 groups | leak 56% | val groups 79
+  hongkong    4175 windows |   50 groups | leak 48% | val groups 8
+  mendeley     632 two-sensor no-leak windows | 6 recordings
+Saved <repo>\cache_f\bank.npz

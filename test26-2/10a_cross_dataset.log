@@ -1,0 +1,15 @@
+Device: cuda
+Loading datasets (5 kHz, band-limited to 2000 Hz):
+  hk_noiselogger     2175 windows |   32 groups | leak 46%
+  hk_hydrophone      2000 windows |   18 groups | leak 50%
+  dongguan           1772 windows |  293 groups | leak 56%
+  mendeley_acc       7148 windows |   40 groups | leak 80%
+  mendeley_hyd      11516 windows |   60 groups | leak 79%
+  dropped 9534 Mendeley Branched windows (contaminated); Looped only
+
+=== within-dataset, 5-fold grouped CV ===
+  hk_noiselogger   logreg       AUROC 0.585 [0.416, 0.789] | bal.acc 0.600 (2s)
+  hk_noiselogger   cnn_scratch  AUROC 0.411 [0.253, 0.648] | bal.acc 0.463 (97s)
+  hk_noiselogger   cnn_pre      AUROC 0.443 [0.270, 0.635] | bal.acc 0.485 (98s)
+  hk_noiselogger   probe        AUROC 0.460 [0.311, 0.639] | bal.acc 0.498 (41s)
+  hk_hydrophone    logreg       AUROC 0.900 [0.779, 0.993] | bal.acc 0.835 (2s)
