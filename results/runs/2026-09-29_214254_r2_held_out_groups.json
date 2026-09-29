@@ -1,0 +1,344 @@
+{
+  "experiment": "r2_held_out_groups",
+  "timestamp": "2026-09-29T21:42:54",
+  "git_commit": "fed18cb",
+  "git_dirty": false,
+  "python": "3.13.1",
+  "torch": "2.13.0+cpu",
+  "device": "cpu",
+  "command": "Model_F/r2_held_out_groups.py",
+  "config": {
+    "eval_seed": 0,
+    "n_boot": 2000,
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "summary": "dongguan: Stable (median rho 0.67); hongkong: Stable (median rho 0.98)",
+  "results": {
+    "eval_seed": 0,
+    "n_boot": 2000,
+    "sources": {
+      "dongguan": {
+        "n_groups": 79,
+        "groups": [
+          "dg:NA-NA-NA-NA-hydrophone:0",
+          "dg:NA-NA-NA-NA-noise logger:0",
+          "dg:NA-zone 2-NA-NA-noise logger:0",
+          "dg:ductile iron-NA-0.0650 MPa-2.46 ms-noise logger:1",
+          "dg:ductile iron-NA-0.1192 MPa-2.95 ms-noise logger:1",
+          "dg:ductile iron-NA-0.1217 MPa-3.00 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.1630 MPa-3.45 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.1687 MPa-3.5 ms-noise logger:1",
+          "dg:ductile iron-NA-0.1726 MPa-3.58 ms-noise logger:1",
+          "dg:ductile iron-NA-0.2320 MPa-3.78 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.2377 MPa-3.95 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.2405 MPa-4.00 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.2425 MPa-3.97 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.2425 MPa-3.97 ms-noise logger:1",
+          "dg:ductile iron-NA-0.2425 MPa-4.01 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.2437 MPa-3.98 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.2495 MPa-4.33 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.2495 MPa-4.33 ms-noise logger:1",
+          "dg:ductile iron-NA-0.2630 MPa-4.11 ms-noise logger:1",
+          "dg:ductile iron-NA-0.2688 MPa-4.21 ms-noise logger:1",
+          "dg:ductile iron-NA-0.2742 MPa-4.18 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.2755 MPa-4.38 ms-noise logger:1",
+          "dg:ductile iron-NA-0.2761 MPa-4.42 ms-noise logger:1",
+          "dg:ductile iron-NA-0.2817 MPa-4.52 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.3091 MPa-4.64 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3181 MPa-0.94 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3212 MPa-1.23 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3227 MPa-1.13 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3231 MPa-0.10 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3234 MPa-0.31 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3234 MPa-1.20 ms-hydrophone:1",
+          "dg:ductile iron-NA-0.3248 MPa-1.05 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3249 MPa-0.01 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3286 MPa-1.34 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3303 MPa-0.25 ms-noise logger:1",
+          "dg:ductile iron-NA-0.3362 MPa-0.7 ms-hydrophone:1",
+          "dg:ductile iron-NA-NA-NA-NA:1",
+          "dg:ductile iron-NA-NA-NA-noise logger:0",
+          "dg:ductile iron-zone 1-0.32 MPa-NA-noise logger:1",
+          "dg:ductile iron-zone 1-NA-NA-hydrophone:0",
+          "dg:ductile iron-zone 2-0.3111 MPa-0.15 ms-hydrophone:1",
+          "dg:ductile iron-zone 2-0.3132 MPa-0.8 ms-noise logger:1",
+          "dg:ductile iron-zone 2-0.315 MPa-1.34 ms-noise logger:1",
+          "dg:ductile iron-zone 2-0.3172 MPa-0.95 ms-noise logger:1",
+          "dg:ductile iron-zone 2-0.3177 MPa-1.15 ms-noise logger:1",
+          "dg:ductile iron-zone 2-0.3237 MPa-1.35 ms-noise logger:1",
+          "dg:ductile iron-zone 2-0.3249 MPa-1.33 ms-noise logger:1",
+          "dg:ductile iron-zone 2-NA-NA-hydrophone:0",
+          "dg:pe-NA-0.1192 MPa-2.95 ms-noise logger:1",
+          "dg:pe-NA-0.1446 MPa-3.26 ms-noise logger:1",
+          "dg:pe-NA-0.1545 MPa-3.36 ms-hydrophone:1",
+          "dg:pe-NA-0.1545 MPa-3.40 ms-hydrophone:1",
+          "dg:pe-NA-0.1687 MPa-3.5 ms-noise logger:1",
+          "dg:pe-NA-0.1767 MPa-3.50 ms-noise logger:1",
+          "dg:pe-NA-0.1771 MPa-3.62 ms-hydrophone:1",
+          "dg:pe-NA-0.1771 MPa-3.62 ms-noise logger:1",
+          "dg:pe-NA-0.1803 MPa-3.68 ms-hydrophone:1",
+          "dg:pe-NA-0.2233 MPa-3.77 ms-noise logger:1",
+          "dg:pe-NA-0.2242 MPa-3.90 ms-noise logger:1",
+          "dg:pe-NA-0.2269 MPa-3.95 ms-noise logger:1",
+          "dg:pe-NA-0.2339 MPa-4.20 ms-noise logger:1",
+          "dg:pe-NA-0.2377 MPa-3.95 ms-noise logger:1",
+          "dg:pe-NA-0.2495 MPa-4.33 ms-hydrophone:1",
+          "dg:pe-NA-0.3003 MPa-4.65 ms-hydrophone:1",
+          "dg:pe-NA-0.3047 MPa-0.73 ms-noise logger:1",
+          "dg:pe-NA-0.3126 MPa-4.85 ms-hydrophone:1",
+          "dg:pe-NA-0.3138 MPa-0.69 ms-noise logger:1",
+          "dg:pe-NA-0.32 MPa-NA-noise logger:1",
+          "dg:pe-NA-0.3235 MPa-0.81 ms-noise logger:1",
+          "dg:pe-NA-0.3267 MPa-0.95 ms-noise logger:1",
+          "dg:pe-NA-0.3280 MPa-1.46 ms-noise logger:1",
+          "dg:pe-NA-0.3334 MPa-0.82 ms-noise logger:1",
+          "dg:pe-zone 1-0.25 MPa-NA-noise logger:1",
+          "dg:pe-zone 2-0.3034 MPa-1.55 ms-noise logger:1",
+          "dg:pe-zone 2-0.305 MPa-1.6 ms-noise logger:1",
+          "dg:pe-zone 2-0.313 MPa-0.52 ms-noise logger:1",
+          "dg:pe-zone 2-0.3194 MPa-1.64 ms-noise logger:1",
+          "dg:pe-zone 2-0.3221 MPa-0.08 ms-noise logger:1",
+          "dg:steel-zone 1-0.25 MPa-NA-hydrophone:1"
+        ],
+        "labels": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "n_leak_groups": 73,
+        "n_noleak_groups": 6,
+        "spearman": {
+          "0-1": {
+            "rho": 0.672444011684518,
+            "p": 1.1500841681304394e-11
+          },
+          "0-2": {
+            "rho": 0.6673076923076924,
+            "p": 1.873301882898734e-11
+          },
+          "1-2": {
+            "rho": 0.631475170399221,
+            "p": 4.388448273106557e-10
+          }
+        },
+        "median_rho": 0.6673076923076924,
+        "stability_classification": "Stable",
+        "model_auroc": {
+          "0": {
+            "auroc": 0.9908675799086758,
+            "ci95": [
+              0.9657534246575342,
+              1.0
+            ],
+            "n_boot": 2000,
+            "n_leak_groups": 73,
+            "n_noleak_groups": 6
+          },
+          "1": {
+            "auroc": 0.9931506849315068,
+            "ci95": [
+              0.9726027397260274,
+              1.0
+            ],
+            "n_boot": 2000,
+            "n_leak_groups": 73,
+            "n_noleak_groups": 6
+          },
+          "2": {
+            "auroc": 0.9931506849315068,
+            "ci95": [
+              0.9726027397260274,
+              1.0
+            ],
+            "n_boot": 2000,
+            "n_leak_groups": 73,
+            "n_noleak_groups": 6
+          }
+        },
+        "logreg_baseline_auroc": {
+          "auroc": 0.9726027397260274,
+          "ci95": [
+            0.91324200913242,
+            1.0
+          ],
+          "n_boot": 2000,
+          "n_leak_groups": 73,
+          "n_noleak_groups": 6
+        },
+        "window_pooled_auroc_INFLATED_BY_SELECTION": {
+          "0": 0.9672821676638469,
+          "1": 0.9614194347018775,
+          "2": 0.9450519221511589
+        }
+      },
+      "hongkong": {
+        "n_groups": 8,
+        "groups": [
+          "hk:05569",
+          "hk:12835",
+          "hk:172499",
+          "hk:h1.3",
+          "hk:h2.1",
+          "hk:h2.3",
+          "hk:h2.7",
+          "hk:h3.3"
+        ],
+        "labels": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "n_leak_groups": 5,
+        "n_noleak_groups": 3,
+        "spearman": {
+          "0-1": {
+            "rho": 0.9285714285714287,
+            "p": 0.0008629681828999767
+          },
+          "0-2": {
+            "rho": 0.9761904761904763,
+            "p": 3.314396026200098e-05
+          },
+          "1-2": {
+            "rho": 0.9761904761904763,
+            "p": 3.314396026200098e-05
+          }
+        },
+        "median_rho": 0.9761904761904763,
+        "stability_classification": "Stable",
+        "model_auroc": {
+          "0": {
+            "auroc": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_boot": 2000,
+            "n_leak_groups": 5,
+            "n_noleak_groups": 3
+          },
+          "1": {
+            "auroc": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_boot": 2000,
+            "n_leak_groups": 5,
+            "n_noleak_groups": 3
+          },
+          "2": {
+            "auroc": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_boot": 2000,
+            "n_leak_groups": 5,
+            "n_noleak_groups": 3
+          }
+        },
+        "logreg_baseline_auroc": {
+          "auroc": 0.8,
+          "ci95": [
+            0.4,
+            1.0
+          ],
+          "n_boot": 2000,
+          "n_leak_groups": 5,
+          "n_noleak_groups": 3
+        },
+        "window_pooled_auroc_INFLATED_BY_SELECTION": {
+          "0": 0.9091466666666665,
+          "1": 0.9321600000000001,
+          "2": 0.9032266666666666
+        }
+      }
+    }
+  }
+}
