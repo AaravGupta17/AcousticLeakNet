@@ -52,27 +52,34 @@ For the author(s) and mentor to work through before submission. Source draft:
 
 ## E. Figures
 
-- [ ] **Fig. 4 (R1 seed comparison) does not exist yet.** No script currently generates it. Build
-      it from `results/runs/2026-09-29_193019_e11_model_f_eval.json` and
-      `results/runs/2026-09-29_000514_e11_model_f_eval.json` before the figures deck is final.
-- [ ] **Fig. 2's current candidate plots are stale** (`plots/exp2_mendeley_eval.png` and three
-      others, all dated 13 Aug — before the 23 Sep E4 rerun this draft actually cites). Regenerate
-      from `results/runs/2026-09-23_202146_e4_mendeley_eval.json` before using any figure titled
-      "Mendeley" from `plots/`.
+- [x] **Fig. 4 (R1 seed comparison) built**: `experiments/fig_r1_seeds.py` reads
+      `results/runs/2026-09-29_193019_e11_model_f_eval.json` and
+      `results/runs/2026-09-29_000514_e11_model_f_eval.json` directly (no model loaded, no
+      re-evaluation) and writes `plots/fig4_r1_seed_replication.png`. Spot-check the printed
+      per-seed numbers against Results §3.6 before final use.
+- [x] **Fig. 2 regenerated**: `experiments/fig_mendeley_e4.py` reads
+      `results/runs/2026-09-23_202146_e4_mendeley_eval.json` directly and writes
+      `plots/fig2_e4_mendeley_auroc.png`, replacing the stale, pre-rerun, sigmoid-probability
+      `plots/exp2_mendeley_eval.png`. Spot-check the printed AUROC/CI values against Results §3.3
+      before final use.
 - [ ] Fig. 1 and Fig. 3 (`plots/e3_snr_sweep.png`, `plots/e5_label_efficiency.png`) exist at
       usable resolution (2250×1200 and 1050×675) — confirm they still match the numbers quoted in
       §3.1/3.4 before reuse.
-- [ ] Decide whether a 5th figure (R2 group-AUROC vs. baseline) is worth the page budget, or
-      whether the in-text table in §3.7 is enough — see the draft's own note.
+- [x] Decided against a 5th figure (R2 group-AUROC vs. baseline); the in-text table in §3.7
+      carries the same numbers, to protect page budget.
 - [ ] Every figure: axis labels with units, legible font at print size, caption below the figure,
       no school/city name anywhere in a plot title or axis label.
 
 ## F. Writing
 
-- [ ] The draft is currently ~2,500 prose words (tables excluded); the CJSJ template at this
-      density fits roughly 1,300–1,700 words in 2–3 pages. **A trim pass is required** — see the
-      `(TRIM?)` markers in `private/cjsj/draft.md` (the E1–E10 methods table and the Discussion's
-      second paragraph are the two largest candidates).
+- [ ] Trim pass done: the draft is now ~2,260 words (Title–AI-disclosure; tables/refs/figures
+      excluded), down from ~2,900, but still above the CJSJ template's ~1,300–1,700-word target for
+      a 2–3 page body. Every remaining paragraph is either R1/R2/baseline/confounding content this
+      pass was told not to cut, or the E1–E10 background needed to make those sections legible.
+      **[CONFIRM — human author]**: whether to move §2.4's E1–E10 method descriptions to a
+      supplementary table per CJSJ's format rules — see the note at the top of
+      `private/cjsj/draft.md` — which would close most of the remaining gap without touching any
+      protected content.
 - [ ] Read titles/headers for consistent capitalization and terminology (e.g., always "Model F,"
       always "R1"/"R2," not mixed with "replication study" elsewhere).
 - [ ] No passive-voice results sentences that hide which experiment produced a number.
