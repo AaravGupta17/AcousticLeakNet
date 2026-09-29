@@ -1,0 +1,44 @@
+Device: cuda | excluded sources: none
+Bank train: 4788 real windows (2350 no-leak), 541 Mendeley pairs | val: 1159 real windows
+Validation: 4000 synthetic, 1159 real windows
+C:\Users\armaan\PycharmProjects\SJWP_Research\.venv\Lib\site-packages\torch\nn\modules\module.py:1341: UserWarning: expandable_segments not supported on this platform (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\c10/cuda/CUDAAllocatorConfig.h:28.)
+  return t.to(
+C:\Users\armaan\PycharmProjects\SJWP_Research\.venv\Lib\site-packages\torch\optim\lr_scheduler.py:182: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+Ep   1/30 | loss 0.5437 (det 0.5287) | val AUROC synthetic 0.8771 real 0.8975 | 206s
+  saved best_model_f_seed1.pt
+Ep   2/30 | loss 0.3866 (det 0.3760) | val AUROC synthetic 0.9134 real 0.9390 | 237s
+  saved best_model_f_seed1.pt
+Ep   3/30 | loss 0.3391 (det 0.3291) | val AUROC synthetic 0.9203 real 0.9491 | 283s
+  saved best_model_f_seed1.pt
+Ep   4/30 | loss 0.3156 (det 0.3060) | val AUROC synthetic 0.9239 real 0.9358 | 272s
+Ep   5/30 | loss 0.3022 (det 0.2928) | val AUROC synthetic 0.9311 real 0.9242 | 271s
+Ep   6/30 | loss 0.2921 (det 0.2829) | val AUROC synthetic 0.9341 real 0.9416 | 282s
+  saved best_model_f_seed1.pt
+Ep   7/30 | loss 0.2823 (det 0.2735) | val AUROC synthetic 0.9309 real 0.9509 | 280s
+  saved best_model_f_seed1.pt
+Ep   8/30 | loss 0.2781 (det 0.2696) | val AUROC synthetic 0.9340 real 0.9375 | 291s
+Ep   9/30 | loss 0.2734 (det 0.2651) | val AUROC synthetic 0.9330 real 0.9363 | 283s
+Ep  10/30 | loss 0.2691 (det 0.2609) | val AUROC synthetic 0.9341 real 0.9270 | 285s
+Ep  11/30 | loss 0.2659 (det 0.2579) | val AUROC synthetic 0.9344 real 0.9249 | 303s
+Ep  12/30 | loss 0.2636 (det 0.2559) | val AUROC synthetic 0.9358 real 0.9364 | 304s
+Ep  13/30 | loss 0.2607 (det 0.2531) | val AUROC synthetic 0.9389 real 0.9393 | 311s
+Ep  14/30 | loss 0.2580 (det 0.2506) | val AUROC synthetic 0.9380 real 0.9355 | 305s
+Ep  15/30 | loss 0.2564 (det 0.2490) | val AUROC synthetic 0.9354 real 0.9376 | 312s
+Ep  16/30 | loss 0.2549 (det 0.2476) | val AUROC synthetic 0.9382 real 0.9385 | 305s
+Ep  17/30 | loss 0.2531 (det 0.2458) | val AUROC synthetic 0.9369 real 0.9440 | 303s
+Ep  18/30 | loss 0.2507 (det 0.2436) | val AUROC synthetic 0.9388 real 0.9321 | 306s
+Ep  19/30 | loss 0.2501 (det 0.2430) | val AUROC synthetic 0.9345 real 0.9283 | 312s
+Ep  20/30 | loss 0.2477 (det 0.2407) | val AUROC synthetic 0.9384 real 0.9293 | 307s
+Ep  21/30 | loss 0.2480 (det 0.2410) | val AUROC synthetic 0.9361 real 0.9269 | 309s
+Ep  22/30 | loss 0.2456 (det 0.2386) | val AUROC synthetic 0.9380 real 0.9306 | 316s
+Ep  23/30 | loss 0.2454 (det 0.2385) | val AUROC synthetic 0.9381 real 0.9194 | 298s
+Ep  24/30 | loss 0.2453 (det 0.2384) | val AUROC synthetic 0.9380 real 0.9166 | 297s
+Ep  25/30 | loss 0.2429 (det 0.2361) | val AUROC synthetic 0.9373 real 0.9134 | 283s
+Ep  26/30 | loss 0.2441 (det 0.2373) | val AUROC synthetic 0.9386 real 0.9182 | 282s
+Ep  27/30 | loss 0.2421 (det 0.2353) | val AUROC synthetic 0.9369 real 0.9123 | 294s
+Ep  28/30 | loss 0.2429 (det 0.2362) | val AUROC synthetic 0.9381 real 0.9148 | 288s
+Ep  29/30 | loss 0.2419 (det 0.2351) | val AUROC synthetic 0.9381 real 0.9140 | 277s
+Ep  30/30 | loss 0.2405 (det 0.2338) | val AUROC synthetic 0.9381 real 0.9151 | 268s
+
+Run recorded: C:\Users\armaan\PycharmProjects\SJWP_Research\results\runs\2026-09-29_172028_train_f.json

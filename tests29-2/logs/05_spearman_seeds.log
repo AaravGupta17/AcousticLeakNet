@@ -1,0 +1,19 @@
+Loading Mendeley Looped test data (as E11)...
+seed 0: best_model_f_seed0.pt (epoch 10)
+seed 1: best_model_f_seed1.pt (epoch 7)
+seed 2: best_model_f_seed2.pt (epoch 15)
+
+Spearman rho of per-recording mean logits (descriptive, no pass rule)
+sensor                   pair      rho          p  n_rec
+mendeley_looped_acc      0-1     0.914   1.73e-08     20
+mendeley_looped_acc      0-2     0.952    1.1e-10     20
+mendeley_looped_acc      1-2     0.920    9.2e-09     20
+mendeley_looped_hyd      0-1     0.596    0.00051     30
+mendeley_looped_hyd      0-2     0.374     0.0415     30
+mendeley_looped_hyd      1-2     0.157      0.406     30
+
+Window-level AUROC on logits (cross-check vs E11 JSON)
+mendeley_looped_acc      seed0 0.424  seed1 0.318  seed2 0.445
+mendeley_looped_hyd      seed0 0.630  seed1 0.812  seed2 0.508
+
+Wrote C:\Users\armaan\PycharmProjects\SJWP_Research\tests29-2\spearman\per_recording_logits.csv and C:\Users\armaan\PycharmProjects\SJWP_Research\tests29-2\spearman\spearman_results.json

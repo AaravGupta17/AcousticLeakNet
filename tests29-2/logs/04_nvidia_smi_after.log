@@ -1,0 +1,45 @@
+Tue Sep 29 19:30:28 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 617.14                 KMD Version: 617.14        CUDA UMD Version: 13.4     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3060      WDDM  |   00000000:0A:00.0  On |                  N/A |
+| 76%   50C    P8             13W /  170W |    1272MiB /  12288MiB |     19%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            1576    C+G   C:\Windows\explorer.exe               N/A      |
+|    0   N/A  N/A            1892    C+G   ...ntrolPanel\SystemSettings.exe      N/A      |
+|    0   N/A  N/A            1904    C+G   ...1g1gvanyjgm\WhatsApp.Root.exe      N/A      |
+|    0   N/A  N/A            3548    C+G   ...IA app\CEF\NVIDIA Overlay.exe      N/A      |
+|    0   N/A  N/A            3864    C+G   ...Chrome\Application\chrome.exe      N/A      |
+|    0   N/A  N/A            5232    C+G   ...indows\System32\ShellHost.exe      N/A      |
+|    0   N/A  N/A            6424    C+G   ...cord\app-1.0.9259\Discord.exe      N/A      |
+|    0   N/A  N/A            9572    C+G   ...mENGINE\JBLQuantumControl.exe      N/A      |
+|    0   N/A  N/A           10496    C+G   ...2txyewy\CrossDeviceResume.exe      N/A      |
+|    0   N/A  N/A           11788    C+G   ....0.4258.37\msedgewebview2.exe      N/A      |
+|    0   N/A  N/A           12340    C+G   ...em_tray\lghub_system_tray.exe      N/A      |
+|    0   N/A  N/A           12652    C+G   ...em32\ApplicationFrameHost.exe      N/A      |
+|    0   N/A  N/A           13628    C+G   ...y\StartMenuExperienceHost.exe      N/A      |
+|    0   N/A  N/A           14936    C+G   ..._cw5n1h2txyewy\SearchHost.exe      N/A      |
+|    0   N/A  N/A           15608    C+G   ...ocal\Programs\WClop\WClop.exe      N/A      |
+|    0   N/A  N/A           16168    C+G   ...App_cw5n1h2txyewy\LockApp.exe      N/A      |
+|    0   N/A  N/A           18656    C+G   ...IA app\CEF\NVIDIA Overlay.exe      N/A      |
+|    0   N/A  N/A           19500    C+G   ...5n1h2txyewy\TextInputHost.exe      N/A      |
+|    0   N/A  N/A           22924    C+G   ....0.4258.37\msedgewebview2.exe      N/A      |
+|    0   N/A  N/A           23868    C+G   ...iles\Riot Vanguard\vgtray.exe      N/A      |
+|    0   N/A  N/A           24784    C+G   ...SnippingTool\SnippingTool.exe      N/A      |
+|    0   N/A  N/A           24876    C+G   ...Free Download Manager\fdm.exe      N/A      |
+|    0   N/A  N/A           26300    C+G   C:\Windows\explorer.exe               N/A      |
+|    0   N/A  N/A           27012    C+G   ...8bbwe\PhoneExperienceHost.exe      N/A      |
+|    0   N/A  N/A           28080    C+G   ...26wp6bftszj\TranslucentTB.exe      N/A      |
+|    0   N/A  N/A           29144    C+G   ...Chrome\Application\chrome.exe      N/A      |
++-----------------------------------------------------------------------------------------+

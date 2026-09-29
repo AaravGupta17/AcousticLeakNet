@@ -1,0 +1,297 @@
+{
+  "experiment": "e11_model_f_eval",
+  "timestamp": "2026-09-29T19:30:19",
+  "git_commit": "e24cb89",
+  "git_dirty": false,
+  "python": "3.12.10",
+  "torch": "2.7.1+cu118",
+  "device": "cuda",
+  "command": "experiments/model_f_eval.py --ckpt best_model_f_seed1.pt best_model_f_seed2.pt",
+  "config": {
+    "ckpt": [
+      "best_model_f_seed1.pt",
+      "best_model_f_seed2.pt"
+    ],
+    "n_boot": 2000,
+    "seed": 0
+  },
+  "summary": "best_model_f_seed1.pt: mendeley_looped_acc 0.32, mendeley_looped_hyd 0.81; best_model_f_seed2.pt: mendeley_looped_acc 0.45, mendeley_looped_hyd 0.51",
+  "results": {
+    "best_model_f_seed1.pt": {
+      "epoch": 7,
+      "exclude_source": [],
+      "tests": {
+        "mendeley_looped_acc": {
+          "model": {
+            "auroc": 0.3177216488337594,
+            "detection_rate": 0.6983240223463687,
+            "false_alarm_rate": 0.9124293785310734,
+            "balanced_accuracy": 0.39294732190764764,
+            "threshold": 0.0,
+            "n_leak": 1432,
+            "n_no_leak": 354,
+            "ci95": {
+              "auroc": [
+                0.11625216583899034,
+                0.5521855278771051
+              ],
+              "detection_rate": [
+                0.48077766583216297,
+                0.8872608110330085
+              ],
+              "false_alarm_rate": [
+                0.7724719101123596,
+                1.0
+              ],
+              "balanced_accuracy": [
+                0.26736345307575754,
+                0.5071466144298201
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 16,
+            "n_groups_no_leak": 4
+          },
+          "logreg": {
+            "auroc": 0.29533977211753937,
+            "detection_rate": 0.4574022346368715,
+            "false_alarm_rate": 0.6610169491525424,
+            "balanced_accuracy": 0.3981926427421646,
+            "threshold": 0.0,
+            "n_leak": 1432,
+            "n_no_leak": 354,
+            "ci95": {
+              "auroc": [
+                0.05032978344254016,
+                0.626889248502122
+              ],
+              "detection_rate": [
+                0.2578105494689328,
+                0.6579229792970248
+              ],
+              "false_alarm_rate": [
+                0.25842696629213485,
+                1.0
+              ],
+              "balanced_accuracy": [
+                0.18105595873446706,
+                0.6329812053753457
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 16,
+            "n_groups_no_leak": 4
+          }
+        },
+        "mendeley_looped_hyd": {
+          "model": {
+            "auroc": 0.8123230288350081,
+            "detection_rate": 0.025293586269196026,
+            "false_alarm_rate": 0.01415929203539823,
+            "balanced_accuracy": 0.5055671471168989,
+            "threshold": 0.0,
+            "n_leak": 2214,
+            "n_no_leak": 565,
+            "ci95": {
+              "auroc": [
+                0.6933234646357614,
+                0.907675406612164
+              ],
+              "detection_rate": [
+                0.009536352429959413,
+                0.04830973003891605
+              ],
+              "false_alarm_rate": [
+                0.0,
+                0.04040404040404041
+              ],
+              "balanced_accuracy": [
+                0.48964503911165574,
+                0.5211893127222623
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 24,
+            "n_groups_no_leak": 6
+          },
+          "logreg": {
+            "auroc": 0.18849557522123891,
+            "detection_rate": 0.544263775971093,
+            "false_alarm_rate": 0.879646017699115,
+            "balanced_accuracy": 0.332308879135989,
+            "threshold": 0.0,
+            "n_leak": 2214,
+            "n_no_leak": 565,
+            "ci95": {
+              "auroc": [
+                0.10587437884301754,
+                0.2875273027975164
+              ],
+              "detection_rate": [
+                0.4377482741059303,
+                0.6403471703442334
+              ],
+              "false_alarm_rate": [
+                0.777027027027027,
+                0.9573712255772646
+              ],
+              "balanced_accuracy": [
+                0.2638535743028078,
+                0.39923340290514653
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 24,
+            "n_groups_no_leak": 6
+          }
+        }
+      },
+      "noise_flagged": {
+        "white": 0.0,
+        "coloured": 0.002
+      }
+    },
+    "best_model_f_seed2.pt": {
+      "epoch": 15,
+      "exclude_source": [],
+      "tests": {
+        "mendeley_looped_acc": {
+          "model": {
+            "auroc": 0.4451243569106461,
+            "detection_rate": 0.7004189944134078,
+            "false_alarm_rate": 0.7401129943502824,
+            "balanced_accuracy": 0.4801530000315627,
+            "threshold": 0.0,
+            "n_leak": 1432,
+            "n_no_leak": 354,
+            "ci95": {
+              "auroc": [
+                0.21162257702736031,
+                0.6848488154422164
+              ],
+              "detection_rate": [
+                0.4839312459422369,
+                0.8893869258783456
+              ],
+              "false_alarm_rate": [
+                0.42696629213483145,
+                1.0
+              ],
+              "balanced_accuracy": [
+                0.2894401789364063,
+                0.6660709336906386
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 16,
+            "n_groups_no_leak": 4
+          },
+          "logreg": {
+            "auroc": 0.29533977211753937,
+            "detection_rate": 0.4574022346368715,
+            "false_alarm_rate": 0.6610169491525424,
+            "balanced_accuracy": 0.3981926427421646,
+            "threshold": 0.0,
+            "n_leak": 1432,
+            "n_no_leak": 354,
+            "ci95": {
+              "auroc": [
+                0.05032978344254016,
+                0.626889248502122
+              ],
+              "detection_rate": [
+                0.2578105494689328,
+                0.6579229792970248
+              ],
+              "false_alarm_rate": [
+                0.25842696629213485,
+                1.0
+              ],
+              "balanced_accuracy": [
+                0.18105595873446706,
+                0.6329812053753457
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 16,
+            "n_groups_no_leak": 4
+          }
+        },
+        "mendeley_looped_hyd": {
+          "model": {
+            "auroc": 0.5080173633594742,
+            "detection_rate": 0.12601626016260162,
+            "false_alarm_rate": 0.19646017699115045,
+            "balanced_accuracy": 0.46477804158572555,
+            "threshold": 0.0,
+            "n_leak": 2214,
+            "n_no_leak": 565,
+            "ci95": {
+              "auroc": [
+                0.29183334406058026,
+                0.7182889472253963
+              ],
+              "detection_rate": [
+                0.06792865131062627,
+                0.19426684852809664
+              ],
+              "false_alarm_rate": [
+                0.07773148148148148,
+                0.34458259325044405
+              ],
+              "balanced_accuracy": [
+                0.38588429056315016,
+                0.5349657042592516
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 24,
+            "n_groups_no_leak": 6
+          },
+          "logreg": {
+            "auroc": 0.18849557522123891,
+            "detection_rate": 0.544263775971093,
+            "false_alarm_rate": 0.879646017699115,
+            "balanced_accuracy": 0.332308879135989,
+            "threshold": 0.0,
+            "n_leak": 2214,
+            "n_no_leak": 565,
+            "ci95": {
+              "auroc": [
+                0.10587437884301754,
+                0.2875273027975164
+              ],
+              "detection_rate": [
+                0.4377482741059303,
+                0.6403471703442334
+              ],
+              "false_alarm_rate": [
+                0.777027027027027,
+                0.9573712255772646
+              ],
+              "balanced_accuracy": [
+                0.2638535743028078,
+                0.39923340290514653
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 24,
+            "n_groups_no_leak": 6
+          }
+        }
+      },
+      "noise_flagged": {
+        "white": 0.0,
+        "coloured": 0.0
+      }
+    }
+  }
+}
