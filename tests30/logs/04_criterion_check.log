@@ -1,0 +1,44 @@
+report keys: ['auroc', 'detection_rate', 'false_alarm_rate', 'balanced_accuracy', 'threshold', 'n_leak', 'n_no_leak', 'ci95', 'n_boot', 'mixed_groups', 'n_groups_leak', 'n_groups_no_leak'] ci keys: ['auroc', 'detection_rate', 'false_alarm_rate', 'balanced_accuracy']
+config: {'eval_seed': 0, 'n_per_level': 2000, 'snr_grid_db': [-20, -15, -10, -5, 0, 5, 10], 'native_floor_db': -10.0}
+det keys ['detection_rate'] fa keys ['false_alarm_rate']
+
+RMS baseline
+-20 AUROC 0.501 [0.477, 0.525] {'detection_rate': '0.504', 'false_alarm_rate': '0.496'}
+-15 AUROC 0.502 [0.477, 0.526] {'detection_rate': '0.504', 'false_alarm_rate': '0.496'}
+-10 AUROC 0.506 [0.481, 0.530] {'detection_rate': '0.507', 'false_alarm_rate': '0.493'}
+-5 AUROC 0.517 [0.492, 0.542] {'detection_rate': '0.517', 'false_alarm_rate': '0.483'}
+0 AUROC 0.537 [0.513, 0.562] {'detection_rate': '0.536', 'false_alarm_rate': '0.464'}
+5 AUROC 0.569 [0.544, 0.594] {'detection_rate': '0.580', 'false_alarm_rate': '0.420'}
+10 AUROC 0.613 [0.589, 0.638] {'detection_rate': '0.628', 'false_alarm_rate': '0.372'}
+
+Model F
+seed 0 epoch 10
+  -20 AUROC 0.697 [0.675, 0.720] {'detection_rate': '0.263 [0.235, 0.290]', 'false_alarm_rate': '0.038 [0.026, 0.051]'}
+  -15 AUROC 0.758 [0.737, 0.779] {'detection_rate': '0.388 [0.357, 0.417]', 'false_alarm_rate': '0.038 [0.026, 0.051]'}
+  -10 AUROC 0.829 [0.811, 0.847] {'detection_rate': '0.503 [0.471, 0.533]', 'false_alarm_rate': '0.038 [0.026, 0.051]'}
+  -5 AUROC 0.894 [0.879, 0.908] {'detection_rate': '0.700 [0.671, 0.727]', 'false_alarm_rate': '0.038 [0.026, 0.051]'}
+  0 AUROC 0.919 [0.905, 0.933] {'detection_rate': '0.812 [0.787, 0.836]', 'false_alarm_rate': '0.038 [0.026, 0.051]'}
+  5 AUROC 0.928 [0.915, 0.941] {'detection_rate': '0.850 [0.827, 0.872]', 'false_alarm_rate': '0.038 [0.026, 0.051]'}
+  10 AUROC 0.937 [0.925, 0.949] {'detection_rate': '0.866 [0.844, 0.887]', 'false_alarm_rate': '0.038 [0.026, 0.051]'}
+seed 1 epoch 7
+  -20 AUROC 0.691 [0.667, 0.714] {'detection_rate': '0.284 [0.255, 0.313]', 'false_alarm_rate': '0.062 [0.047, 0.077]'}
+  -15 AUROC 0.759 [0.738, 0.780] {'detection_rate': '0.398 [0.368, 0.427]', 'false_alarm_rate': '0.062 [0.047, 0.077]'}
+  -10 AUROC 0.839 [0.822, 0.857] {'detection_rate': '0.532 [0.500, 0.563]', 'false_alarm_rate': '0.062 [0.047, 0.077]'}
+  -5 AUROC 0.898 [0.884, 0.912] {'detection_rate': '0.730 [0.703, 0.756]', 'false_alarm_rate': '0.062 [0.047, 0.077]'}
+  0 AUROC 0.924 [0.911, 0.936] {'detection_rate': '0.824 [0.801, 0.847]', 'false_alarm_rate': '0.062 [0.047, 0.077]'}
+  5 AUROC 0.936 [0.923, 0.948] {'detection_rate': '0.854 [0.832, 0.876]', 'false_alarm_rate': '0.062 [0.047, 0.077]'}
+  10 AUROC 0.946 [0.934, 0.956] {'detection_rate': '0.871 [0.850, 0.891]', 'false_alarm_rate': '0.062 [0.047, 0.077]'}
+seed 2 epoch 15
+  -20 AUROC 0.733 [0.712, 0.753] {'detection_rate': '0.322 [0.292, 0.351]', 'false_alarm_rate': '0.059 [0.045, 0.073]'}
+  -15 AUROC 0.793 [0.774, 0.811] {'detection_rate': '0.441 [0.409, 0.470]', 'false_alarm_rate': '0.059 [0.045, 0.073]'}
+  -10 AUROC 0.856 [0.840, 0.871] {'detection_rate': '0.582 [0.552, 0.611]', 'false_alarm_rate': '0.059 [0.045, 0.073]'}
+  -5 AUROC 0.904 [0.890, 0.918] {'detection_rate': '0.766 [0.739, 0.792]', 'false_alarm_rate': '0.059 [0.045, 0.073]'}
+  0 AUROC 0.924 [0.911, 0.937] {'detection_rate': '0.831 [0.808, 0.854]', 'false_alarm_rate': '0.059 [0.045, 0.073]'}
+  5 AUROC 0.934 [0.922, 0.946] {'detection_rate': '0.859 [0.837, 0.880]', 'false_alarm_rate': '0.059 [0.045, 0.073]'}
+  10 AUROC 0.943 [0.930, 0.954] {'detection_rate': '0.875 [0.854, 0.895]', 'false_alarm_rate': '0.059 [0.045, 0.073]'}
+
+Frozen criterion (all seeds, -20 and -15 dB): CI_lo>0.5 AND CI_lo>RMS CI_hi
+seed 0 -20 dB: lo=0.6751 rms_hi=0.5252 PASS | -15 dB: lo=0.7374 rms_hi=0.5263 PASS
+seed 1 -20 dB: lo=0.6674 rms_hi=0.5252 PASS | -15 dB: lo=0.7378 rms_hi=0.5263 PASS
+seed 2 -20 dB: lo=0.7117 rms_hi=0.5252 PASS | -15 dB: lo=0.7739 rms_hi=0.5263 PASS
+OVERALL: PASS

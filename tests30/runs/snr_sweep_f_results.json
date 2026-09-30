@@ -1,0 +1,901 @@
+{
+ "eval_seed": 0,
+ "n_per_level": 2000,
+ "snr_grid_db": [
+  -20,
+  -15,
+  -10,
+  -5,
+  0,
+  5,
+  10
+ ],
+ "native_floor_db": -10.0,
+ "seeds": {
+  "0": {
+   "epoch": 10,
+   "levels": {
+    "-20": {
+     "auroc": 0.6971379999999999,
+     "detection_rate": 0.263,
+     "false_alarm_rate": 0.038,
+     "balanced_accuracy": 0.6125,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.67507445,
+       0.719680125
+      ],
+      "detection_rate": [
+       0.234975,
+       0.29
+      ],
+      "false_alarm_rate": [
+       0.026,
+       0.051
+      ],
+      "balanced_accuracy": [
+       0.597,
+       0.628
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "-15": {
+     "auroc": 0.7583000000000001,
+     "detection_rate": 0.388,
+     "false_alarm_rate": 0.038,
+     "balanced_accuracy": 0.675,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.737440725,
+       0.7793221499999999
+      ],
+      "detection_rate": [
+       0.357,
+       0.417
+      ],
+      "false_alarm_rate": [
+       0.026,
+       0.051
+      ],
+      "balanced_accuracy": [
+       0.6585,
+       0.691
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "-10": {
+     "auroc": 0.8294949999999999,
+     "detection_rate": 0.503,
+     "false_alarm_rate": 0.038,
+     "balanced_accuracy": 0.7324999999999999,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.810975,
+       0.8467898
+      ],
+      "detection_rate": [
+       0.471,
+       0.5330249999999999
+      ],
+      "false_alarm_rate": [
+       0.026,
+       0.051
+      ],
+      "balanced_accuracy": [
+       0.7155,
+       0.749
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "-5": {
+     "auroc": 0.893604,
+     "detection_rate": 0.7,
+     "false_alarm_rate": 0.038,
+     "balanced_accuracy": 0.831,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.879077125,
+       0.9080822500000001
+      ],
+      "detection_rate": [
+       0.671,
+       0.727
+      ],
+      "false_alarm_rate": [
+       0.026,
+       0.051
+      ],
+      "balanced_accuracy": [
+       0.8155,
+       0.846
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "0": {
+     "auroc": 0.919108,
+     "detection_rate": 0.812,
+     "false_alarm_rate": 0.038,
+     "balanced_accuracy": 0.887,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.905302325,
+       0.93257965
+      ],
+      "detection_rate": [
+       0.787,
+       0.836
+      ],
+      "false_alarm_rate": [
+       0.026,
+       0.051
+      ],
+      "balanced_accuracy": [
+       0.873,
+       0.901
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "5": {
+     "auroc": 0.928234,
+     "detection_rate": 0.85,
+     "false_alarm_rate": 0.038,
+     "balanced_accuracy": 0.9059999999999999,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.9149688500000001,
+       0.9410441250000001
+      ],
+      "detection_rate": [
+       0.827,
+       0.872
+      ],
+      "false_alarm_rate": [
+       0.026,
+       0.051
+      ],
+      "balanced_accuracy": [
+       0.893,
+       0.919
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "10": {
+     "auroc": 0.937416,
+     "detection_rate": 0.866,
+     "false_alarm_rate": 0.038,
+     "balanced_accuracy": 0.9139999999999999,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.9251800499999999,
+       0.949107125
+      ],
+      "detection_rate": [
+       0.844,
+       0.887
+      ],
+      "false_alarm_rate": [
+       0.026,
+       0.051
+      ],
+      "balanced_accuracy": [
+       0.9015,
+       0.9265
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    }
+   }
+  },
+  "1": {
+   "epoch": 7,
+   "levels": {
+    "-20": {
+     "auroc": 0.690863,
+     "detection_rate": 0.284,
+     "false_alarm_rate": 0.062,
+     "balanced_accuracy": 0.611,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.66741895,
+       0.713876375
+      ],
+      "detection_rate": [
+       0.255,
+       0.313
+      ],
+      "false_alarm_rate": [
+       0.047,
+       0.077
+      ],
+      "balanced_accuracy": [
+       0.5955,
+       0.6270125
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "-15": {
+     "auroc": 0.7587059999999999,
+     "detection_rate": 0.398,
+     "false_alarm_rate": 0.062,
+     "balanced_accuracy": 0.6679999999999999,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.737838475,
+       0.7797179249999999
+      ],
+      "detection_rate": [
+       0.368,
+       0.427
+      ],
+      "false_alarm_rate": [
+       0.047,
+       0.077
+      ],
+      "balanced_accuracy": [
+       0.6515,
+       0.6845
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "-10": {
+     "auroc": 0.838749,
+     "detection_rate": 0.532,
+     "false_alarm_rate": 0.062,
+     "balanced_accuracy": 0.735,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.8220268500000001,
+       0.8566097
+      ],
+      "detection_rate": [
+       0.5,
+       0.563
+      ],
+      "false_alarm_rate": [
+       0.047,
+       0.077
+      ],
+      "balanced_accuracy": [
+       0.7179875,
+       0.7525
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "-5": {
+     "auroc": 0.897682,
+     "detection_rate": 0.73,
+     "false_alarm_rate": 0.062,
+     "balanced_accuracy": 0.834,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.8837308500000001,
+       0.9117585500000001
+      ],
+      "detection_rate": [
+       0.703,
+       0.756
+      ],
+      "false_alarm_rate": [
+       0.047,
+       0.077
+      ],
+      "balanced_accuracy": [
+       0.8185,
+       0.8494999999999999
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "0": {
+     "auroc": 0.923756,
+     "detection_rate": 0.824,
+     "false_alarm_rate": 0.062,
+     "balanced_accuracy": 0.881,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.9107005249999999,
+       0.9364950999999999
+      ],
+      "detection_rate": [
+       0.801,
+       0.847
+      ],
+      "false_alarm_rate": [
+       0.047,
+       0.077
+      ],
+      "balanced_accuracy": [
+       0.8674999999999999,
+       0.895
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "5": {
+     "auroc": 0.9355905,
+     "detection_rate": 0.854,
+     "false_alarm_rate": 0.062,
+     "balanced_accuracy": 0.8959999999999999,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.92306675,
+       0.9477376
+      ],
+      "detection_rate": [
+       0.832,
+       0.876
+      ],
+      "false_alarm_rate": [
+       0.047,
+       0.077
+      ],
+      "balanced_accuracy": [
+       0.8825000000000001,
+       0.9095
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "10": {
+     "auroc": 0.945819,
+     "detection_rate": 0.871,
+     "false_alarm_rate": 0.062,
+     "balanced_accuracy": 0.9045,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.9342041000000001,
+       0.95635205
+      ],
+      "detection_rate": [
+       0.85,
+       0.891
+      ],
+      "false_alarm_rate": [
+       0.047,
+       0.077
+      ],
+      "balanced_accuracy": [
+       0.891,
+       0.9175
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    }
+   }
+  },
+  "2": {
+   "epoch": 15,
+   "levels": {
+    "-20": {
+     "auroc": 0.7329950000000001,
+     "detection_rate": 0.322,
+     "false_alarm_rate": 0.059,
+     "balanced_accuracy": 0.6315000000000001,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.7116776749999999,
+       0.753418625
+      ],
+      "detection_rate": [
+       0.292,
+       0.351
+      ],
+      "false_alarm_rate": [
+       0.045,
+       0.073
+      ],
+      "balanced_accuracy": [
+       0.6144999999999999,
+       0.6475
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "-15": {
+     "auroc": 0.79335,
+     "detection_rate": 0.441,
+     "false_alarm_rate": 0.059,
+     "balanced_accuracy": 0.6910000000000001,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.7739330750000001,
+       0.8109015749999998
+      ],
+      "detection_rate": [
+       0.409,
+       0.47
+      ],
+      "false_alarm_rate": [
+       0.045,
+       0.073
+      ],
+      "balanced_accuracy": [
+       0.6735,
+       0.7075
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "-10": {
+     "auroc": 0.8557609999999999,
+     "detection_rate": 0.582,
+     "false_alarm_rate": 0.059,
+     "balanced_accuracy": 0.7615000000000001,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.839560575,
+       0.871241475
+      ],
+      "detection_rate": [
+       0.552,
+       0.611
+      ],
+      "false_alarm_rate": [
+       0.045,
+       0.073
+      ],
+      "balanced_accuracy": [
+       0.744,
+       0.778
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "-5": {
+     "auroc": 0.9042300000000001,
+     "detection_rate": 0.766,
+     "false_alarm_rate": 0.059,
+     "balanced_accuracy": 0.8535,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.8899293500000001,
+       0.91760895
+      ],
+      "detection_rate": [
+       0.739,
+       0.792
+      ],
+      "false_alarm_rate": [
+       0.045,
+       0.073
+      ],
+      "balanced_accuracy": [
+       0.838,
+       0.8685
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "0": {
+     "auroc": 0.9244420000000001,
+     "detection_rate": 0.831,
+     "false_alarm_rate": 0.059,
+     "balanced_accuracy": 0.886,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.910935525,
+       0.936626725
+      ],
+      "detection_rate": [
+       0.807975,
+       0.854
+      ],
+      "false_alarm_rate": [
+       0.045,
+       0.073
+      ],
+      "balanced_accuracy": [
+       0.872,
+       0.8995
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "5": {
+     "auroc": 0.934313,
+     "detection_rate": 0.859,
+     "false_alarm_rate": 0.059,
+     "balanced_accuracy": 0.9,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.9215535000000001,
+       0.9461864249999999
+      ],
+      "detection_rate": [
+       0.837,
+       0.8800249999999998
+      ],
+      "false_alarm_rate": [
+       0.045,
+       0.073
+      ],
+      "balanced_accuracy": [
+       0.8865,
+       0.9135
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    },
+    "10": {
+     "auroc": 0.94252,
+     "detection_rate": 0.875,
+     "false_alarm_rate": 0.059,
+     "balanced_accuracy": 0.908,
+     "threshold": 0.0,
+     "n_leak": 1000,
+     "n_no_leak": 1000,
+     "ci95": {
+      "auroc": [
+       0.930499975,
+       0.95358145
+      ],
+      "detection_rate": [
+       0.854,
+       0.8950249999999998
+      ],
+      "false_alarm_rate": [
+       0.045,
+       0.073
+      ],
+      "balanced_accuracy": [
+       0.895,
+       0.9205
+      ]
+     },
+     "n_boot": 2000,
+     "mixed_groups": false,
+     "n_groups_leak": 1000,
+     "n_groups_no_leak": 1000
+    }
+   }
+  }
+ },
+ "rms_baseline": {
+  "-20": {
+   "auroc": 0.501108,
+   "detection_rate": 0.504,
+   "false_alarm_rate": 0.496,
+   "balanced_accuracy": 0.504,
+   "threshold": 0.9999999908671346,
+   "n_leak": 1000,
+   "n_no_leak": 1000,
+   "ci95": {
+    "auroc": [
+     0.476667175,
+     0.52523615
+    ],
+    "detection_rate": [
+     0.473,
+     0.535
+    ],
+    "false_alarm_rate": [
+     0.46597500000000003,
+     0.526
+    ],
+    "balanced_accuracy": [
+     0.4825,
+     0.5260125
+    ]
+   },
+   "n_boot": 2000,
+   "mixed_groups": false,
+   "n_groups_leak": 1000,
+   "n_groups_no_leak": 1000
+  },
+  "-15": {
+   "auroc": 0.5016670000000001,
+   "detection_rate": 0.504,
+   "false_alarm_rate": 0.496,
+   "balanced_accuracy": 0.504,
+   "threshold": 0.9999999908971712,
+   "n_leak": 1000,
+   "n_no_leak": 1000,
+   "ci95": {
+    "auroc": [
+     0.47674475,
+     0.526333875
+    ],
+    "detection_rate": [
+     0.473,
+     0.5350249999999999
+    ],
+    "false_alarm_rate": [
+     0.46597500000000003,
+     0.526
+    ],
+    "balanced_accuracy": [
+     0.4825,
+     0.5265
+    ]
+   },
+   "n_boot": 2000,
+   "mixed_groups": false,
+   "n_groups_leak": 1000,
+   "n_groups_no_leak": 1000
+  },
+  "-10": {
+   "auroc": 0.505804,
+   "detection_rate": 0.507,
+   "false_alarm_rate": 0.493,
+   "balanced_accuracy": 0.507,
+   "threshold": 0.9999999910149145,
+   "n_leak": 1000,
+   "n_no_leak": 1000,
+   "ci95": {
+    "auroc": [
+     0.480673825,
+     0.53049575
+    ],
+    "detection_rate": [
+     0.475,
+     0.537
+    ],
+    "false_alarm_rate": [
+     0.461,
+     0.5230249999999999
+    ],
+    "balanced_accuracy": [
+     0.486,
+     0.5285
+    ]
+   },
+   "n_boot": 2000,
+   "mixed_groups": false,
+   "n_groups_leak": 1000,
+   "n_groups_no_leak": 1000
+  },
+  "-5": {
+   "auroc": 0.5167210000000001,
+   "detection_rate": 0.517,
+   "false_alarm_rate": 0.483,
+   "balanced_accuracy": 0.517,
+   "threshold": 0.9999999913860043,
+   "n_leak": 1000,
+   "n_no_leak": 1000,
+   "ci95": {
+    "auroc": [
+     0.4922375500000001,
+     0.5415534500000001
+    ],
+    "detection_rate": [
+     0.486,
+     0.547
+    ],
+    "false_alarm_rate": [
+     0.452,
+     0.513
+    ],
+    "balanced_accuracy": [
+     0.4955,
+     0.5385
+    ]
+   },
+   "n_boot": 2000,
+   "mixed_groups": false,
+   "n_groups_leak": 1000,
+   "n_groups_no_leak": 1000
+  },
+  "0": {
+   "auroc": 0.537466,
+   "detection_rate": 0.536,
+   "false_alarm_rate": 0.464,
+   "balanced_accuracy": 0.536,
+   "threshold": 0.9999999921064626,
+   "n_leak": 1000,
+   "n_no_leak": 1000,
+   "ci95": {
+    "auroc": [
+     0.5127845750000001,
+     0.5619100749999998
+    ],
+    "detection_rate": [
+     0.505,
+     0.566
+    ],
+    "false_alarm_rate": [
+     0.433,
+     0.494
+    ],
+    "balanced_accuracy": [
+     0.5149875,
+     0.5575125000000001
+    ]
+   },
+   "n_boot": 2000,
+   "mixed_groups": false,
+   "n_groups_leak": 1000,
+   "n_groups_no_leak": 1000
+  },
+  "5": {
+   "auroc": 0.5686140000000001,
+   "detection_rate": 0.58,
+   "false_alarm_rate": 0.42,
+   "balanced_accuracy": 0.5800000000000001,
+   "threshold": 0.9999999930993467,
+   "n_leak": 1000,
+   "n_no_leak": 1000,
+   "ci95": {
+    "auroc": [
+     0.5442663,
+     0.59356565
+    ],
+    "detection_rate": [
+     0.549975,
+     0.612
+    ],
+    "false_alarm_rate": [
+     0.389,
+     0.449
+    ],
+    "balanced_accuracy": [
+     0.5589999999999999,
+     0.602
+    ]
+   },
+   "n_boot": 2000,
+   "mixed_groups": false,
+   "n_groups_leak": 1000,
+   "n_groups_no_leak": 1000
+  },
+  "10": {
+   "auroc": 0.61346,
+   "detection_rate": 0.628,
+   "false_alarm_rate": 0.372,
+   "balanced_accuracy": 0.628,
+   "threshold": 0.9999999944202982,
+   "n_leak": 1000,
+   "n_no_leak": 1000,
+   "ci95": {
+    "auroc": [
+     0.58932075,
+     0.638011375
+    ],
+    "detection_rate": [
+     0.596,
+     0.658
+    ],
+    "false_alarm_rate": [
+     0.343,
+     0.401
+    ],
+    "balanced_accuracy": [
+     0.608,
+     0.649
+    ]
+   },
+   "n_boot": 2000,
+   "mixed_groups": false,
+   "n_groups_leak": 1000,
+   "n_groups_no_leak": 1000
+  }
+ }
+}
