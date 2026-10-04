@@ -1,0 +1,307 @@
+{
+  "experiment": "v2_xrig_eval",
+  "timestamp": "2026-10-04T05:49:31",
+  "git_commit": "4b20090",
+  "git_dirty": true,
+  "python": "3.12.10",
+  "torch": "2.7.1+cu118",
+  "device": "cuda",
+  "command": "experiments/xrig_eval.py --ckpt xrig_sheffield_fold2_seed0.pt",
+  "config": {
+    "checkpoint": "xrig_sheffield_fold2_seed0.pt",
+    "n_boot": 2000,
+    "seed": 0
+  },
+  "summary": "xrig_sheffield_fold2_seed0: model_f window AUROC 0.548 [0.357, 1.000] on sheffield_fold2",
+  "results": {
+    "checkpoint": "xrig_sheffield_fold2_seed0.pt",
+    "train_rig": "sheffield",
+    "fold": 2,
+    "seed_pairing": 0,
+    "thresholds": {
+      "model_f": -3.632970094680786,
+      "rms": -2.0844674110412598,
+      "logreg": -5.011796134483989
+    },
+    "rms_sign": 1.0,
+    "test_sets": {
+      "sheffield_fold2": {
+        "summary": {
+          "n_windows": 2925,
+          "n_streams": 39,
+          "n_groups": 3,
+          "n_groups_leak": 2,
+          "n_groups_no_leak": 1,
+          "n_windows_leak": 2775,
+          "n_windows_no_leak": 150,
+          "n_dropped_dead": 0
+        },
+        "methods": {
+          "model_f": {
+            "val_youden": {
+              "auroc": 0.5480624624624624,
+              "detection_rate": 0.46846846846846846,
+              "false_alarm_rate": 0.37333333333333335,
+              "balanced_accuracy": 0.5475675675675675,
+              "threshold": -3.632970094680786,
+              "n_leak": 2775,
+              "n_no_leak": 150,
+              "ci95": {
+                "auroc": [
+                  0.35685811965811964,
+                  1.0
+                ],
+                "detection_rate": [
+                  0.24358974358974358,
+                  1.0
+                ],
+                "false_alarm_rate": [
+                  0.37333333333333335,
+                  0.37333333333333335
+                ],
+                "balanced_accuracy": [
+                  0.43512820512820516,
+                  0.8133333333333334
+                ]
+              },
+              "n_boot": 2000,
+              "mixed_groups": false,
+              "n_groups_leak": 2,
+              "n_groups_no_leak": 1,
+              "auprc": 0.9669085362623405,
+              "prevalence": 0.9487179487179487,
+              "confusion": {
+                "tp": 1300,
+                "fn": 1475,
+                "tn": 94,
+                "fp": 56,
+                "windows": 2925
+              },
+              "group": {
+                "auroc": 0.5,
+                "n_groups_leak": 2,
+                "n_groups_no_leak": 1,
+                "confusion": {
+                  "tp": 2,
+                  "fn": 0,
+                  "tn": 0,
+                  "fp": 1
+                }
+              }
+            },
+            "logit0": {
+              "auroc": 0.5480624624624624,
+              "detection_rate": 0.32504504504504506,
+              "false_alarm_rate": 0.04,
+              "balanced_accuracy": 0.6425225225225225,
+              "threshold": 0.0,
+              "n_leak": 2775,
+              "n_no_leak": 150,
+              "ci95": {
+                "auroc": [
+                  0.35685811965811964,
+                  1.0
+                ],
+                "detection_rate": [
+                  0.03948717948717949,
+                  1.0
+                ],
+                "false_alarm_rate": [
+                  0.04,
+                  0.04
+                ],
+                "balanced_accuracy": [
+                  0.49974358974358973,
+                  0.98
+                ]
+              },
+              "n_boot": 2000,
+              "mixed_groups": false,
+              "n_groups_leak": 2,
+              "n_groups_no_leak": 1,
+              "auprc": 0.9669085362623405,
+              "prevalence": 0.9487179487179487,
+              "confusion": {
+                "tp": 902,
+                "fn": 1873,
+                "tn": 144,
+                "fp": 6,
+                "windows": 2925
+              },
+              "group": {
+                "auroc": 0.5,
+                "n_groups_leak": 2,
+                "n_groups_no_leak": 1,
+                "confusion": {
+                  "tp": 1,
+                  "fn": 1,
+                  "tn": 1,
+                  "fp": 0
+                }
+              }
+            }
+          },
+          "rms": {
+            "val_youden": {
+              "auroc": 0.7886966966966966,
+              "detection_rate": 0.28792792792792793,
+              "false_alarm_rate": 0.0,
+              "balanced_accuracy": 0.6439639639639639,
+              "threshold": -2.0844674110412598,
+              "n_leak": 2775,
+              "n_no_leak": 150,
+              "ci95": {
+                "auroc": [
+                  0.6992991452991453,
+                  1.0
+                ],
+                "detection_rate": [
+                  0.0010256410256410256,
+                  0.9660606060606061
+                ],
+                "false_alarm_rate": [
+                  0.0,
+                  0.0
+                ],
+                "balanced_accuracy": [
+                  0.5005128205128205,
+                  0.983030303030303
+                ]
+              },
+              "n_boot": 2000,
+              "mixed_groups": false,
+              "n_groups_leak": 2,
+              "n_groups_no_leak": 1,
+              "auprc": 0.987195048902535,
+              "prevalence": 0.9487179487179487,
+              "confusion": {
+                "tp": 799,
+                "fn": 1976,
+                "tn": 150,
+                "fp": 0,
+                "windows": 2925
+              },
+              "group": {
+                "auroc": 1.0,
+                "n_groups_leak": 2,
+                "n_groups_no_leak": 1,
+                "confusion": {
+                  "tp": 1,
+                  "fn": 1,
+                  "tn": 1,
+                  "fp": 0
+                }
+              }
+            }
+          },
+          "logreg": {
+            "val_youden": {
+              "auroc": 0.8891939939939941,
+              "detection_rate": 0.8724324324324324,
+              "false_alarm_rate": 0.35333333333333333,
+              "balanced_accuracy": 0.7595495495495496,
+              "threshold": -5.011796134483989,
+              "n_leak": 2775,
+              "n_no_leak": 150,
+              "ci95": {
+                "auroc": [
+                  0.8423145299145299,
+                  1.0
+                ],
+                "detection_rate": [
+                  0.8184615384615385,
+                  1.0
+                ],
+                "false_alarm_rate": [
+                  0.35333333333333333,
+                  0.35333333333333333
+                ],
+                "balanced_accuracy": [
+                  0.7325641025641025,
+                  0.8233333333333334
+                ]
+              },
+              "n_boot": 2000,
+              "mixed_groups": false,
+              "n_groups_leak": 2,
+              "n_groups_no_leak": 1,
+              "auprc": 0.9934522724198278,
+              "prevalence": 0.9487179487179487,
+              "confusion": {
+                "tp": 2421,
+                "fn": 354,
+                "tn": 97,
+                "fp": 53,
+                "windows": 2925
+              },
+              "group": {
+                "auroc": 1.0,
+                "n_groups_leak": 2,
+                "n_groups_no_leak": 1,
+                "confusion": {
+                  "tp": 2,
+                  "fn": 0,
+                  "tn": 1,
+                  "fp": 0
+                }
+              }
+            }
+          }
+        },
+        "breakdowns": {
+          "model_f": {
+            "distance/pos0": {
+              "auroc": 0.5377185185185184,
+              "n_leak": 225,
+              "n_no_leak": 150
+            },
+            "distance/pos1_10": {
+              "auroc": 0.5898844444444444,
+              "n_leak": 2250,
+              "n_no_leak": 150
+            },
+            "distance/pos15plus": {
+              "auroc": 0.2421555555555556,
+              "n_leak": 300,
+              "n_no_leak": 150
+            }
+          },
+          "rms": {
+            "distance/pos0": {
+              "auroc": 1.0,
+              "n_leak": 225,
+              "n_no_leak": 150
+            },
+            "distance/pos1_10": {
+              "auroc": 0.8422844444444444,
+              "n_leak": 2250,
+              "n_no_leak": 150
+            },
+            "distance/pos15plus": {
+              "auroc": 0.2283111111111111,
+              "n_leak": 300,
+              "n_no_leak": 150
+            }
+          },
+          "logreg": {
+            "distance/pos0": {
+              "auroc": 1.0,
+              "n_leak": 225,
+              "n_no_leak": 150
+            },
+            "distance/pos1_10": {
+              "auroc": 0.9207851851851852,
+              "n_leak": 2250,
+              "n_no_leak": 150
+            },
+            "distance/pos15plus": {
+              "auroc": 0.5691555555555555,
+              "n_leak": 300,
+              "n_no_leak": 150
+            }
+          }
+        }
+      }
+    }
+  }
+}

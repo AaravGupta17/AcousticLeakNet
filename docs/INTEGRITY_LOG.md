@@ -40,6 +40,14 @@ dated list of self-found mistakes shows judges that the evidence has been checke
 | 21 | The anonymity scanner (`scripts/make_submission_copy.py`) and its test contained the school and city names they were meant to catch, plus both student names. | Those terms now live in the git-ignored `private/forbidden_terms.txt`; the test uses made-up names and checks the script names no place. |
 | 22 | Same seed, same data: `cnn_scratch` never uses the checkpoint, yet its AUROCs differ by up to ≈0.01 between the two full E9 runs in `tests25/runs/` (GPU non-determinism). | Not a bug, but differences of this size are treated as noise, not findings. |
 
+## 2–4 Oct 2026: Version 2 cross-rig baseline (`docs/VERSION2_CROSS_RIG_BASELINE.md`)
+
+| # | Problem found | Correction |
+|---|---|---|
+| 23 | The first training run of `xrig_mendeley_acc_foldx_seed0` was killed by a 2-hour time limit in the tool that launched it. It left only an epoch-1 checkpoint and no training record, and it was never evaluated. | Rerun with an identical configuration (`--overwrite`), after the other runs. Only the rerun is reported. No result had been seen when the rerun was queued, so this is not a selection. |
+| 24 | The handoff named two audit documents (`VERSION2_PHYSICAL_DOMAIN_AUDIT.md`, `VERSION2_CRITICAL_REVIEW.md`) as the benchmark definition. Neither exists in this repository. | Every physical fact was checked against the raw data instead, and the protocol was written down before training (`docs/VERSION2_CROSS_RIG_PREREG.md`). One check changed the data: Sheffield has 3 distinct no-leak recordings, not 4, because two files are byte-identical copies. |
+| 25 | The cross-rig runs were made while the benchmark code was untracked, so the commit hash in each run record (`4b20090`) does not identify that code. | Commit the code together with the results, so the commit that adds `results/v2_cross_rig/` identifies the code version. Not committed yet (awaiting the go-ahead). |
+
 ## Still open
 
 - `L-TOWN.inp` is not committed (it's over 100 MB). The README says where to get it.

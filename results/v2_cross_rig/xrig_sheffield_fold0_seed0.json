@@ -1,0 +1,211 @@
+{
+ "checkpoint": "xrig_sheffield_fold0_seed0.pt",
+ "train_rig": "sheffield",
+ "fold": 0,
+ "seed": 0,
+ "best_epoch": 1,
+ "val_auroc": 0.8115034845496385,
+ "threshold_val_youden": 3.459378480911255,
+ "history": [
+  {
+   "epoch": 1,
+   "loss": 0.2368367173820734,
+   "val_auroc": 0.8115034845496385
+  },
+  {
+   "epoch": 2,
+   "loss": 0.12506732127567133,
+   "val_auroc": 0.7842451019066403
+  },
+  {
+   "epoch": 3,
+   "loss": 0.12090187169114748,
+   "val_auroc": 0.6859000657462196
+  },
+  {
+   "epoch": 4,
+   "loss": 0.12026294898490111,
+   "val_auroc": 0.7308549638395792
+  },
+  {
+   "epoch": 5,
+   "loss": 0.1197140214095513,
+   "val_auroc": 0.7472599605522681
+  },
+  {
+   "epoch": 6,
+   "loss": 0.1192977451980114,
+   "val_auroc": 0.6516247205785667
+  },
+  {
+   "epoch": 7,
+   "loss": 0.11900766299664975,
+   "val_auroc": 0.660365811965812
+  },
+  {
+   "epoch": 8,
+   "loss": 0.11888633631169795,
+   "val_auroc": 0.5159721236028929
+  },
+  {
+   "epoch": 9,
+   "loss": 0.11878440510233243,
+   "val_auroc": 0.7194337935568704
+  },
+  {
+   "epoch": 10,
+   "loss": 0.11838614839315414,
+   "val_auroc": 0.6110790269559501
+  },
+  {
+   "epoch": 11,
+   "loss": 0.11847873447835446,
+   "val_auroc": 0.6604202498356345
+  },
+  {
+   "epoch": 12,
+   "loss": 0.1182741026977698,
+   "val_auroc": 0.677581591058514
+  },
+  {
+   "epoch": 13,
+   "loss": 0.11821770057082176,
+   "val_auroc": 0.5388862590401052
+  },
+  {
+   "epoch": 14,
+   "loss": 0.11812960908810298,
+   "val_auroc": 0.6162358974358975
+  },
+  {
+   "epoch": 15,
+   "loss": 0.11817332623898982,
+   "val_auroc": 0.6793057199211047
+  },
+  {
+   "epoch": 16,
+   "loss": 0.11800762802362443,
+   "val_auroc": 0.5509157133464826
+  },
+  {
+   "epoch": 17,
+   "loss": 0.11795380475620429,
+   "val_auroc": 0.5373412228796844
+  },
+  {
+   "epoch": 18,
+   "loss": 0.117991591244936,
+   "val_auroc": 0.6486332675871138
+  },
+  {
+   "epoch": 19,
+   "loss": 0.11790365177889665,
+   "val_auroc": 0.6697251808021039
+  },
+  {
+   "epoch": 20,
+   "loss": 0.117890087723732,
+   "val_auroc": 0.5894545693622617
+  },
+  {
+   "epoch": 21,
+   "loss": 0.11782544148961703,
+   "val_auroc": 0.7347610782380012
+  },
+  {
+   "epoch": 22,
+   "loss": 0.11782069269816081,
+   "val_auroc": 0.5501023011176857
+  },
+  {
+   "epoch": 23,
+   "loss": 0.11780691839257876,
+   "val_auroc": 0.701100328731098
+  },
+  {
+   "epoch": 24,
+   "loss": 0.1178022532761097,
+   "val_auroc": 0.593520315581854
+  },
+  {
+   "epoch": 25,
+   "loss": 0.11777119085689386,
+   "val_auroc": 0.526928073635766
+  },
+  {
+   "epoch": 26,
+   "loss": 0.11775827313959598,
+   "val_auroc": 0.6369719921104536
+  },
+  {
+   "epoch": 27,
+   "loss": 0.11775389026105404,
+   "val_auroc": 0.6165977646285339
+  },
+  {
+   "epoch": 28,
+   "loss": 0.11775405047337215,
+   "val_auroc": 0.637980013149244
+  },
+  {
+   "epoch": 29,
+   "loss": 0.11775737735629081,
+   "val_auroc": 0.624935963182117
+  },
+  {
+   "epoch": 30,
+   "loss": 0.11774430878460407,
+   "val_auroc": 0.6185522682445759
+  }
+ ],
+ "train_groups": [
+  "sh:noleak:noLeak_2.8bar_newer",
+  "sh:test2",
+  "sh:test4",
+  "sh:test6",
+  "sh:test7"
+ ],
+ "val_groups": [
+  "sh:noleak:NoLeak_2.8bar",
+  "sh:test1"
+ ],
+ "cfg": {
+  "base_channels": 64,
+  "dropout": 0.3,
+  "fusion": "cca",
+  "input_norm": "zscore",
+  "band_hz": 2000.0,
+  "train_rig": "sheffield",
+  "seed": 0,
+  "fold": 0,
+  "epochs": 30,
+  "steps": 1500,
+  "batch": 256,
+  "lr": 0.0003,
+  "weight_decay": 0.01,
+  "workers": 6,
+  "smoke": false,
+  "overwrite": false,
+  "out_dir": "<repo>/results/v2_cross_rig",
+  "recipe": "model_f_real_only",
+  "train_groups": [
+   "sh:noleak:noLeak_2.8bar_newer",
+   "sh:test2",
+   "sh:test4",
+   "sh:test6",
+   "sh:test7"
+  ],
+  "val_groups": [
+   "sh:noleak:NoLeak_2.8bar",
+   "sh:test1"
+  ]
+ },
+ "hardware": {
+  "torch": "2.7.1+cu118",
+  "cuda": "11.8",
+  "max_memory_allocated_mb": 1661.4541015625,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "gpu_total_mem_mb": 12287.5
+ },
+ "wall_time_s": 5988.649302244186
+}

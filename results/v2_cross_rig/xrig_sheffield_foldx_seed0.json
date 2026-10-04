@@ -1,0 +1,219 @@
+{
+ "checkpoint": "xrig_sheffield_foldx_seed0.pt",
+ "train_rig": "sheffield",
+ "fold": -1,
+ "seed": 0,
+ "best_epoch": 29,
+ "val_auroc": 0.9363890362511051,
+ "threshold_val_youden": 2.273987054824829,
+ "history": [
+  {
+   "epoch": 1,
+   "loss": 0.3798682199617227,
+   "val_auroc": 0.6982035956380783
+  },
+  {
+   "epoch": 2,
+   "loss": 0.1787031783759594,
+   "val_auroc": 0.7917500736811082
+  },
+  {
+   "epoch": 3,
+   "loss": 0.13693364202976227,
+   "val_auroc": 0.8933866195107575
+  },
+  {
+   "epoch": 4,
+   "loss": 0.1296642538855473,
+   "val_auroc": 0.882151488358385
+  },
+  {
+   "epoch": 5,
+   "loss": 0.12601920680701734,
+   "val_auroc": 0.9177662245800177
+  },
+  {
+   "epoch": 6,
+   "loss": 0.12434351258973281,
+   "val_auroc": 0.8137616268788683
+  },
+  {
+   "epoch": 7,
+   "loss": 0.12315627925097943,
+   "val_auroc": 0.9126507515473032
+  },
+  {
+   "epoch": 8,
+   "loss": 0.12220711162189643,
+   "val_auroc": 0.916108104921898
+  },
+  {
+   "epoch": 9,
+   "loss": 0.12141794691483179,
+   "val_auroc": 0.8940917182434424
+  },
+  {
+   "epoch": 10,
+   "loss": 0.12101150911053021,
+   "val_auroc": 0.9319080459770114
+  },
+  {
+   "epoch": 11,
+   "loss": 0.12035815139611562,
+   "val_auroc": 0.923173592690834
+  },
+  {
+   "epoch": 12,
+   "loss": 0.12008169358472029,
+   "val_auroc": 0.9282911877394636
+  },
+  {
+   "epoch": 13,
+   "loss": 0.11981381850938003,
+   "val_auroc": 0.9308420866489833
+  },
+  {
+   "epoch": 14,
+   "loss": 0.11956057558953762,
+   "val_auroc": 0.9276055408193339
+  },
+  {
+   "epoch": 15,
+   "loss": 0.11919706815977892,
+   "val_auroc": 0.9108979664014146
+  },
+  {
+   "epoch": 16,
+   "loss": 0.11906272404392561,
+   "val_auroc": 0.9184290008841733
+  },
+  {
+   "epoch": 17,
+   "loss": 0.1189561536659797,
+   "val_auroc": 0.905188800471559
+  },
+  {
+   "epoch": 18,
+   "loss": 0.11881899006168048,
+   "val_auroc": 0.9098475685234304
+  },
+  {
+   "epoch": 19,
+   "loss": 0.11861550841232141,
+   "val_auroc": 0.9117511346890658
+  },
+  {
+   "epoch": 20,
+   "loss": 0.11846815842886765,
+   "val_auroc": 0.9227246684350132
+  },
+  {
+   "epoch": 21,
+   "loss": 0.11844032665590445,
+   "val_auroc": 0.92625216622458
+  },
+  {
+   "epoch": 22,
+   "loss": 0.11838946061333021,
+   "val_auroc": 0.9169506631299735
+  },
+  {
+   "epoch": 23,
+   "loss": 0.11830177223682403,
+   "val_auroc": 0.9341710580607132
+  },
+  {
+   "epoch": 24,
+   "loss": 0.11827209923168024,
+   "val_auroc": 0.9328943118184496
+  },
+  {
+   "epoch": 25,
+   "loss": 0.11825056373576323,
+   "val_auroc": 0.9298492189802534
+  },
+  {
+   "epoch": 26,
+   "loss": 0.11821897075573604,
+   "val_auroc": 0.9296615384615384
+  },
+  {
+   "epoch": 27,
+   "loss": 0.11818251817921797,
+   "val_auroc": 0.9301590333038608
+  },
+  {
+   "epoch": 28,
+   "loss": 0.11817594902714093,
+   "val_auroc": 0.9283911582670203
+  },
+  {
+   "epoch": 29,
+   "loss": 0.11818763295809429,
+   "val_auroc": 0.9363890362511051
+  },
+  {
+   "epoch": 30,
+   "loss": 0.11817854143182437,
+   "val_auroc": 0.935050279988211
+  }
+ ],
+ "train_groups": [
+  "sh:noleak:NoLeak_2.8bar",
+  "sh:noleak:noLeak_2.8bar_newer",
+  "sh:test2",
+  "sh:test3",
+  "sh:test4",
+  "sh:test6",
+  "sh:test7",
+  "sh:test8"
+ ],
+ "val_groups": [
+  "sh:noleak:NoLeak_4.2bar",
+  "sh:test1",
+  "sh:test5"
+ ],
+ "cfg": {
+  "base_channels": 64,
+  "dropout": 0.3,
+  "fusion": "cca",
+  "input_norm": "zscore",
+  "band_hz": 2000.0,
+  "train_rig": "sheffield",
+  "seed": 0,
+  "fold": -1,
+  "epochs": 30,
+  "steps": 1500,
+  "batch": 256,
+  "lr": 0.0003,
+  "weight_decay": 0.01,
+  "workers": 6,
+  "smoke": false,
+  "overwrite": false,
+  "out_dir": "<repo>/results/v2_cross_rig",
+  "recipe": "model_f_real_only",
+  "train_groups": [
+   "sh:noleak:NoLeak_2.8bar",
+   "sh:noleak:noLeak_2.8bar_newer",
+   "sh:test2",
+   "sh:test3",
+   "sh:test4",
+   "sh:test6",
+   "sh:test7",
+   "sh:test8"
+  ],
+  "val_groups": [
+   "sh:noleak:NoLeak_4.2bar",
+   "sh:test1",
+   "sh:test5"
+  ]
+ },
+ "hardware": {
+  "torch": "2.7.1+cu118",
+  "cuda": "11.8",
+  "max_memory_allocated_mb": 1661.4541015625,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "gpu_total_mem_mb": 12287.5
+ },
+ "wall_time_s": 9777.869571447372
+}
