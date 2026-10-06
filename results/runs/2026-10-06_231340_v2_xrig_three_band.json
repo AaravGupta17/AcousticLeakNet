@@ -1,0 +1,816 @@
+{
+  "experiment": "v2_xrig_three_band",
+  "timestamp": "2026-10-06T23:13:40",
+  "git_commit": "726e860",
+  "git_dirty": false,
+  "python": "3.12.10",
+  "torch": "2.7.1+cu118",
+  "device": "cuda",
+  "command": "experiments/xrig_three_band.py",
+  "config": {
+    "prereg": "docs/PHASE7_THREE_BAND_PREREG.md",
+    "three_band_cols": [
+      4,
+      5,
+      8
+    ],
+    "three_band_edges_hz": [
+      [
+        400,
+        600
+      ],
+      [
+        600,
+        800
+      ],
+      [
+        1600,
+        2000
+      ]
+    ],
+    "n_features_full": 14,
+    "band_edges": [
+      10,
+      50,
+      100,
+      200,
+      400,
+      600,
+      800,
+      1200,
+      1600,
+      2000
+    ],
+    "classifier": {
+      "max_iter": 3000,
+      "class_weight": "balanced",
+      "C": 0.5
+    },
+    "n_boot": 2000,
+    "seed": 0,
+    "directions": [
+      [
+        "A",
+        "mendeley_acc",
+        "sheffield"
+      ],
+      [
+        "B",
+        "sheffield",
+        "mendeley_acc"
+      ]
+    ]
+  },
+  "summary": "three_band AUROC A 0.801 B 0.506; full14 A 0.738 B 0.473",
+  "results": {
+    "directions": {
+      "A": {
+        "train_rig": "mendeley_acc",
+        "test_rig": "sheffield",
+        "thresholds": {
+          "three_band": 1.2420809528922518,
+          "full14": 1.3471916342171322
+        },
+        "val_auroc": {
+          "three_band": 0.4984,
+          "full14": 0.5985795454545454
+        },
+        "train_val": {
+          "n_train_windows": 5546,
+          "n_val_windows": 1602,
+          "n_train_groups": 31,
+          "n_val_groups": 9
+        },
+        "test_summary": {
+          "n_windows": 17250,
+          "n_streams": 230,
+          "n_groups": 11,
+          "n_groups_leak": 8,
+          "n_groups_no_leak": 3,
+          "n_windows_leak": 15150,
+          "n_windows_no_leak": 2100,
+          "n_dropped_dead": 0
+        },
+        "methods": {
+          "three_band": {
+            "auroc": 0.8014826025459688,
+            "detection_rate": 0.335973597359736,
+            "false_alarm_rate": 0.10523809523809524,
+            "balanced_accuracy": 0.6153677510608204,
+            "threshold": 1.2420809528922518,
+            "n_leak": 15150,
+            "n_no_leak": 2100,
+            "ci95": {
+              "auroc": [
+                0.6872147829608034,
+                0.9055531078777945
+              ],
+              "detection_rate": [
+                0.2703031942357338,
+                0.4027209302325581
+              ],
+              "false_alarm_rate": [
+                0.0,
+                0.15794871794871795
+              ],
+              "balanced_accuracy": [
+                0.5724269491177885,
+                0.6683078096661451
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 8,
+            "n_groups_no_leak": 3,
+            "auprc": 0.9590190742500584,
+            "prevalence": 0.8782608695652174,
+            "confusion": {
+              "tp": 5090,
+              "fn": 10060,
+              "tn": 1879,
+              "fp": 221,
+              "windows": 17250
+            },
+            "group": {
+              "auroc": 1.0,
+              "n_groups_leak": 8,
+              "n_groups_no_leak": 3,
+              "confusion": {
+                "tp": 0,
+                "fn": 8,
+                "tn": 3,
+                "fp": 0
+              }
+            }
+          },
+          "full14": {
+            "auroc": 0.7375227408455132,
+            "detection_rate": 0.641056105610561,
+            "false_alarm_rate": 0.29904761904761906,
+            "balanced_accuracy": 0.671004243281471,
+            "threshold": 1.3471916342171322,
+            "n_leak": 15150,
+            "n_no_leak": 2100,
+            "ci95": {
+              "auroc": [
+                0.6297707414239965,
+                0.9394178922080849
+              ],
+              "detection_rate": [
+                0.5306579543844737,
+                0.7760717630434179
+              ],
+              "false_alarm_rate": [
+                0.0,
+                0.4256410256410256
+              ],
+              "balanced_accuracy": [
+                0.5861222850586018,
+                0.800717699447658
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 8,
+            "n_groups_no_leak": 3,
+            "auprc": 0.950615651668557,
+            "prevalence": 0.8782608695652174,
+            "confusion": {
+              "tp": 9712,
+              "fn": 5438,
+              "tn": 1472,
+              "fp": 628,
+              "windows": 17250
+            },
+            "group": {
+              "auroc": 0.9583333333333334,
+              "n_groups_leak": 8,
+              "n_groups_no_leak": 3,
+              "confusion": {
+                "tp": 7,
+                "fn": 1,
+                "tn": 3,
+                "fp": 0
+              }
+            }
+          }
+        },
+        "breakdowns": {
+          "three_band": {
+            "distance/pos0": {
+              "auroc": 0.9717555555555556,
+              "n_leak": 1050,
+              "n_no_leak": 2100
+            },
+            "distance/pos1_10": {
+              "auroc": 0.7604101587301587,
+              "n_leak": 10500,
+              "n_no_leak": 2100
+            },
+            "distance/pos15plus": {
+              "auroc": 0.8716142857142857,
+              "n_leak": 3600,
+              "n_no_leak": 2100
+            }
+          },
+          "full14": {
+            "distance/pos0": {
+              "auroc": 0.9472358276643991,
+              "n_leak": 1050,
+              "n_no_leak": 2100
+            },
+            "distance/pos1_10": {
+              "auroc": 0.7184738321995464,
+              "n_leak": 10500,
+              "n_no_leak": 2100
+            },
+            "distance/pos15plus": {
+              "auroc": 0.7319157407407406,
+              "n_leak": 3600,
+              "n_no_leak": 2100
+            }
+          }
+        },
+        "clf_params": {
+          "three_band": {
+            "C": 0.5,
+            "class_weight": "balanced",
+            "dual": false,
+            "fit_intercept": true,
+            "intercept_scaling": 1,
+            "l1_ratio": 0.0,
+            "max_iter": 3000,
+            "n_jobs": null,
+            "penalty": "deprecated",
+            "random_state": null,
+            "solver": "lbfgs",
+            "tol": 0.0001,
+            "verbose": 0,
+            "warm_start": false
+          },
+          "full14": {
+            "C": 0.5,
+            "class_weight": "balanced",
+            "dual": false,
+            "fit_intercept": true,
+            "intercept_scaling": 1,
+            "l1_ratio": 0.0,
+            "max_iter": 3000,
+            "n_jobs": null,
+            "penalty": "deprecated",
+            "random_state": null,
+            "solver": "lbfgs",
+            "tol": 0.0001,
+            "verbose": 0,
+            "warm_start": false
+          }
+        },
+        "paired_diff_three_band_minus_full14": {
+          "point_diff": 0.06395986170045564,
+          "boot_mean_diff": 0.05645523552081046,
+          "ci95": [
+            -0.05106615567439102,
+            0.12168156599572486
+          ],
+          "n_boot": 2000,
+          "n_valid_draws": 2000,
+          "seed": 0
+        },
+        "comparators": {
+          "model_f": {
+            "seed0": {
+              "auroc": 0.29310627062706274,
+              "ci95": [
+                0.11396347860287853,
+                0.4462904470531931
+              ],
+              "auprc": 0.8325980401999069,
+              "balanced_accuracy": 0.31216643092880714,
+              "sensitivity": 0.3829042904290429,
+              "specificity": 0.24142857142857144,
+              "group_auroc": 0.125,
+              "threshold": -1.2610008716583252
+            },
+            "seed1": {
+              "auroc": 0.3687996542511395,
+              "ci95": [
+                0.18185031823796638,
+                0.5552345594511308
+              ],
+              "auprc": 0.8577587048492987,
+              "balanced_accuracy": 0.3903866100895804,
+              "sensitivity": 0.476963696369637,
+              "specificity": 0.30380952380952386,
+              "group_auroc": 0.25,
+              "threshold": 0.5261753797531128
+            },
+            "seed2": {
+              "auroc": 0.37428027659908847,
+              "ci95": [
+                0.19719001060209648,
+                0.5626179791335993
+              ],
+              "auprc": 0.8611835517147394,
+              "balanced_accuracy": 0.34495992456388497,
+              "sensitivity": 0.5870627062706271,
+              "specificity": 0.10285714285714287,
+              "group_auroc": 0.2916666666666667,
+              "threshold": -0.9648973345756531
+            }
+          },
+          "logreg_frozen": {
+            "auroc": 0.7375227408455132,
+            "ci95": [
+              0.6297707414239965,
+              0.9394178922080849
+            ],
+            "auprc": 0.950615651668557,
+            "balanced_accuracy": 0.671004243281471,
+            "sensitivity": 0.641056105610561,
+            "specificity": 0.700952380952381,
+            "group_auroc": 0.9583333333333334,
+            "threshold": 1.3471916342172328
+          },
+          "model_f_summary": {
+            "auroc": {
+              "mean": 0.3453954004924302,
+              "min": 0.29310627062706274,
+              "max": 0.37428027659908847
+            },
+            "auprc": {
+              "mean": 0.8505134322546484,
+              "min": 0.8325980401999069,
+              "max": 0.8611835517147394
+            },
+            "balanced_accuracy": {
+              "mean": 0.3491709885274242,
+              "min": 0.31216643092880714,
+              "max": 0.3903866100895804
+            },
+            "sensitivity": {
+              "mean": 0.4823102310231023,
+              "min": 0.3829042904290429,
+              "max": 0.5870627062706271
+            },
+            "specificity": {
+              "mean": 0.21603174603174605,
+              "min": 0.10285714285714287,
+              "max": 0.30380952380952386
+            },
+            "group_auroc": {
+              "mean": 0.22222222222222224,
+              "min": 0.125,
+              "max": 0.2916666666666667
+            }
+          }
+        },
+        "full14_reproduction": {
+          "refit_auroc": 0.7375227408455132,
+          "frozen_auroc": 0.7375227408455132,
+          "abs_diff": 0.0
+        }
+      },
+      "B": {
+        "train_rig": "sheffield",
+        "test_rig": "mendeley_acc",
+        "thresholds": {
+          "three_band": -1.165626736321443,
+          "full14": -2.76408809796686
+        },
+        "val_auroc": {
+          "three_band": 0.8620571765399352,
+          "full14": 0.8828293545534924
+        },
+        "train_val": {
+          "n_train_windows": 11925,
+          "n_val_windows": 5325,
+          "n_train_groups": 8,
+          "n_val_groups": 3
+        },
+        "test_summary": {
+          "n_windows": 7148,
+          "n_streams": 80,
+          "n_groups": 40,
+          "n_groups_leak": 32,
+          "n_groups_no_leak": 8,
+          "n_windows_leak": 5722,
+          "n_windows_no_leak": 1426,
+          "n_dropped_dead": 0
+        },
+        "methods": {
+          "three_band": {
+            "auroc": 0.5056924554376137,
+            "detection_rate": 0.8680531282768262,
+            "false_alarm_rate": 0.8408134642356241,
+            "balanced_accuracy": 0.5136198320206011,
+            "threshold": -1.165626736321443,
+            "n_leak": 5722,
+            "n_no_leak": 1426,
+            "ci95": {
+              "auroc": [
+                0.3551048341574406,
+                0.652967113025127
+              ],
+              "detection_rate": [
+                0.8108357256778309,
+                0.9212160554377864
+              ],
+              "false_alarm_rate": [
+                0.7076923076923077,
+                0.9432812720060091
+              ],
+              "balanced_accuracy": [
+                0.4551492015658174,
+                0.5853519676718931
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 32,
+            "n_groups_no_leak": 8,
+            "auprc": 0.7877614131343769,
+            "prevalence": 0.8005036373810857,
+            "confusion": {
+              "tp": 4967,
+              "fn": 755,
+              "tn": 227,
+              "fp": 1199,
+              "windows": 7148
+            },
+            "group": {
+              "auroc": 0.46484375,
+              "n_groups_leak": 32,
+              "n_groups_no_leak": 8,
+              "confusion": {
+                "tp": 31,
+                "fn": 1,
+                "tn": 1,
+                "fp": 7
+              }
+            }
+          },
+          "full14": {
+            "auroc": 0.47313609096163384,
+            "detection_rate": 0.8222649423278574,
+            "false_alarm_rate": 0.7748948106591865,
+            "balanced_accuracy": 0.5236850658343355,
+            "threshold": -2.76408809796686,
+            "n_leak": 5722,
+            "n_no_leak": 1426,
+            "ci95": {
+              "auroc": [
+                0.369419258918275,
+                0.5737726622701309
+              ],
+              "detection_rate": [
+                0.7441753980694662,
+                0.8915870869264776
+              ],
+              "false_alarm_rate": [
+                0.6374043284945251,
+                0.9173728813559322
+              ],
+              "balanced_accuracy": [
+                0.44362410869089103,
+                0.6035041283206667
+              ]
+            },
+            "n_boot": 2000,
+            "mixed_groups": false,
+            "n_groups_leak": 32,
+            "n_groups_no_leak": 8,
+            "auprc": 0.8100219586143125,
+            "prevalence": 0.8005036373810857,
+            "confusion": {
+              "tp": 4705,
+              "fn": 1017,
+              "tn": 321,
+              "fp": 1105,
+              "windows": 7148
+            },
+            "group": {
+              "auroc": 0.4296875,
+              "n_groups_leak": 32,
+              "n_groups_no_leak": 8,
+              "confusion": {
+                "tp": 28,
+                "fn": 4,
+                "tn": 0,
+                "fp": 8
+              }
+            }
+          }
+        },
+        "breakdowns": {
+          "three_band": {
+            "topology/Looped": {
+              "auroc": 0.3914293548590727,
+              "n_leak": 2864,
+              "n_no_leak": 708
+            },
+            "topology/Branched": {
+              "auroc": 0.5838076571457531,
+              "n_leak": 2858,
+              "n_no_leak": 718
+            },
+            "leak_type/Orifice Leak": {
+              "auroc": 0.5824526745907997,
+              "n_leak": 1432,
+              "n_no_leak": 1426
+            },
+            "leak_type/Longitudinal Crack": {
+              "auroc": 0.536194941103777,
+              "n_leak": 1430,
+              "n_no_leak": 1426
+            },
+            "leak_type/Circumferential Crack": {
+              "auroc": 0.5233655874692094,
+              "n_leak": 1428,
+              "n_no_leak": 1426
+            },
+            "leak_type/Gasket Leak": {
+              "auroc": 0.38084858611422345,
+              "n_leak": 1432,
+              "n_no_leak": 1426
+            }
+          },
+          "full14": {
+            "topology/Looped": {
+              "auroc": 0.3356817930751507,
+              "n_leak": 2864,
+              "n_no_leak": 708
+            },
+            "topology/Branched": {
+              "auroc": 0.6503632475716894,
+              "n_leak": 2858,
+              "n_no_leak": 718
+            },
+            "leak_type/Orifice Leak": {
+              "auroc": 0.509457736215691,
+              "n_leak": 1432,
+              "n_no_leak": 1426
+            },
+            "leak_type/Longitudinal Crack": {
+              "auroc": 0.46662874292607814,
+              "n_leak": 1430,
+              "n_no_leak": 1426
+            },
+            "leak_type/Circumferential Crack": {
+              "auroc": 0.490346348918249,
+              "n_leak": 1428,
+              "n_no_leak": 1426
+            },
+            "leak_type/Gasket Leak": {
+              "auroc": 0.4261505206578545,
+              "n_leak": 1432,
+              "n_no_leak": 1426
+            }
+          }
+        },
+        "clf_params": {
+          "three_band": {
+            "C": 0.5,
+            "class_weight": "balanced",
+            "dual": false,
+            "fit_intercept": true,
+            "intercept_scaling": 1,
+            "l1_ratio": 0.0,
+            "max_iter": 3000,
+            "n_jobs": null,
+            "penalty": "deprecated",
+            "random_state": null,
+            "solver": "lbfgs",
+            "tol": 0.0001,
+            "verbose": 0,
+            "warm_start": false
+          },
+          "full14": {
+            "C": 0.5,
+            "class_weight": "balanced",
+            "dual": false,
+            "fit_intercept": true,
+            "intercept_scaling": 1,
+            "l1_ratio": 0.0,
+            "max_iter": 3000,
+            "n_jobs": null,
+            "penalty": "deprecated",
+            "random_state": null,
+            "solver": "lbfgs",
+            "tol": 0.0001,
+            "verbose": 0,
+            "warm_start": false
+          }
+        },
+        "test_topology_groups": {
+          "Branched": {
+            "leak": 16,
+            "no_leak": 4
+          },
+          "Looped": {
+            "leak": 16,
+            "no_leak": 4
+          }
+        },
+        "paired_diff_three_band_minus_full14": {
+          "point_diff": 0.032556364475979815,
+          "boot_mean_diff": 0.030970544875546808,
+          "ci95": [
+            -0.12645819171092662,
+            0.18185603544533493
+          ],
+          "n_boot": 2000,
+          "n_valid_draws": 2000,
+          "seed": 0
+        },
+        "comparators": {
+          "model_f": {
+            "seed0": {
+              "auroc": 0.5151700358793329,
+              "ci95": [
+                0.4320089163726089,
+                0.6054305326248084
+              ],
+              "auprc": 0.8171709598721513,
+              "balanced_accuracy": 0.470988919516857,
+              "sensitivity": 0.8865781195386229,
+              "specificity": 0.05539971949509115,
+              "group_auroc": 0.51171875,
+              "threshold": 2.273987054824829
+            },
+            "seed1": {
+              "auroc": 0.5242662850453431,
+              "ci95": [
+                0.4136156712396953,
+                0.639077640546075
+              ],
+              "auprc": 0.832431913324066,
+              "balanced_accuracy": 0.45903939569379376,
+              "sensitivity": 0.7932541069556099,
+              "specificity": 0.12482468443197758,
+              "group_auroc": 0.51171875,
+              "threshold": 2.439009189605713
+            },
+            "seed2": {
+              "auroc": 0.5345078761484059,
+              "ci95": [
+                0.4553220396830223,
+                0.6232924809488511
+              ],
+              "auprc": 0.822633411491464,
+              "balanced_accuracy": 0.4790523326468594,
+              "sensitivity": 0.887277175812653,
+              "specificity": 0.07082748948106588,
+              "group_auroc": 0.546875,
+              "threshold": 2.842957019805908
+            }
+          },
+          "logreg_frozen": {
+            "auroc": 0.47313609096163384,
+            "ci95": [
+              0.369419258918275,
+              0.5737726622701309
+            ],
+            "auprc": 0.8100219586143125,
+            "balanced_accuracy": 0.5236850658343355,
+            "sensitivity": 0.8222649423278574,
+            "specificity": 0.22510518934081347,
+            "group_auroc": 0.4296875,
+            "threshold": -2.7640880979664053
+          },
+          "model_f_summary": {
+            "auroc": {
+              "mean": 0.5246480656910273,
+              "min": 0.5151700358793329,
+              "max": 0.5345078761484059
+            },
+            "auprc": {
+              "mean": 0.8240787615625603,
+              "min": 0.8171709598721513,
+              "max": 0.832431913324066
+            },
+            "balanced_accuracy": {
+              "mean": 0.46969354928583673,
+              "min": 0.45903939569379376,
+              "max": 0.4790523326468594
+            },
+            "sensitivity": {
+              "mean": 0.8557031341022953,
+              "min": 0.7932541069556099,
+              "max": 0.887277175812653
+            },
+            "specificity": {
+              "mean": 0.0836839644693782,
+              "min": 0.05539971949509115,
+              "max": 0.12482468443197758
+            },
+            "group_auroc": {
+              "mean": 0.5234375,
+              "min": 0.51171875,
+              "max": 0.546875
+            }
+          }
+        },
+        "full14_reproduction": {
+          "refit_auroc": 0.47313609096163384,
+          "frozen_auroc": 0.47313609096163384,
+          "abs_diff": 0.0
+        }
+      }
+    },
+    "provenance": {
+      "git_commit": "726e8602a216b946786240b3135d310db0cc56b1",
+      "git_status_porcelain": "?? experiments/xrig_three_band.py\n?? results/v2_cross_rig/phase7/",
+      "python": "3.12.10",
+      "numpy": "2.4.2",
+      "sklearn": "1.8.0",
+      "scipy": "1.17.0",
+      "hostname": "PC",
+      "sha256_cache_xrig_mendeley_acc": "7e4d2d52f0be0b8a7ad8cdd69ff1e3d1e44af422fd5f9906124f5a145c287475",
+      "sha256_cache_xrig_sheffield": "1239cbf81a4a144995c28d71070694210650ccd6a52b1363d87552e5e7829ed0",
+      "peak_rss_mb": null,
+      "timings": {
+        "direction_A_s": 39.26908540725708,
+        "direction_B_s": 21.153084993362427,
+        "total_s": 60.430681467056274
+      },
+      "gpu_name_not_used_for_compute": "NVIDIA GeForce RTX 3060"
+    },
+    "config": {
+      "prereg": "docs/PHASE7_THREE_BAND_PREREG.md",
+      "three_band_cols": [
+        4,
+        5,
+        8
+      ],
+      "three_band_edges_hz": [
+        [
+          400,
+          600
+        ],
+        [
+          600,
+          800
+        ],
+        [
+          1600,
+          2000
+        ]
+      ],
+      "n_features_full": 14,
+      "band_edges": [
+        10,
+        50,
+        100,
+        200,
+        400,
+        600,
+        800,
+        1200,
+        1600,
+        2000
+      ],
+      "classifier": {
+        "max_iter": 3000,
+        "class_weight": "balanced",
+        "C": 0.5
+      },
+      "n_boot": 2000,
+      "seed": 0,
+      "directions": [
+        [
+          "A",
+          "mendeley_acc",
+          "sheffield"
+        ],
+        [
+          "B",
+          "sheffield",
+          "mendeley_acc"
+        ]
+      ]
+    },
+    "assertions": [
+      "col 4 is band (400, 600) Hz",
+      "col 5 is band (600, 800) Hz",
+      "col 8 is band (1600, 2000) Hz",
+      "features_1ch has 14 columns",
+      "three-band selection has shape (N, 3)",
+      "three_band clf params C=0.5, class_weight=balanced, max_iter=3000",
+      "full14 clf params C=0.5, class_weight=balanced, max_iter=3000",
+      "A: recomputed val_split == stored val_groups",
+      "A: train U val == all mendeley_acc groups, disjoint",
+      "A: train feature shapes",
+      "A: test rig != train rig",
+      "A: test groups disjoint from train-rig groups",
+      "A: test feature shapes",
+      "A: refit full14 window AUROC matches frozen logreg within 1e-6 (diff 0.00e+00)",
+      "B: recomputed val_split == stored val_groups",
+      "B: train U val == all sheffield groups, disjoint",
+      "B: train feature shapes",
+      "B: test rig != train rig",
+      "B: test groups disjoint from train-rig groups",
+      "B: test feature shapes",
+      "B: refit full14 window AUROC matches frozen logreg within 1e-6 (diff 0.00e+00)"
+    ]
+  }
+}
