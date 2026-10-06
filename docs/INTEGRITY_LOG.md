@@ -48,6 +48,14 @@ dated list of self-found mistakes shows judges that the evidence has been checke
 | 24 | The handoff named two audit documents (`VERSION2_PHYSICAL_DOMAIN_AUDIT.md`, `VERSION2_CRITICAL_REVIEW.md`) as the benchmark definition. Neither exists in this repository. | Every physical fact was checked against the raw data instead, and the protocol was written down before training (`docs/VERSION2_CROSS_RIG_PREREG.md`). One check changed the data: Sheffield has 3 distinct no-leak recordings, not 4, because two files are byte-identical copies. |
 | 25 | The cross-rig runs were made while the benchmark code was untracked, so the commit hash in each run record (`4b20090`) does not identify that code. | Commit the code together with the results, so the commit that adds `results/v2_cross_rig/` identifies the code version. Not committed yet (awaiting the go-ahead). |
 
+## 5–6 Oct 2026: Phase 7 band intervention (`science/phase7/PHASE7_AUDIT.md`)
+
+| # | Problem found | Correction |
+|---|---|---|
+| 26 | The Mendeley Branched accelerometer recordings are missing on the machine used for Phase 7, and no cache holds them. Phase 7 therefore uses 20 Looped Mendeley groups, not the 40 of the cross-rig baseline. | Stated in the audit's Addendum 1 before the run. All Phase 7 comparisons are made within one run on identical data. None is compared with the 40-group baseline numbers. |
+| 27 | A first launch of `xrig_band_intervention.py` on 5 Oct left an empty log and no output. No score was produced or seen. | Recorded here. The single counted run is the one made after Addendum 1 was committed. |
+| 28 | The three Phase 7 bands were chosen using leak labels from both rigs' full data (`xrig_mechanism.py`), which are also the Phase 7 test sets. | Phase 7 is labelled exploratory. Only the no-refit Dongguan/Hong Kong scoring bears on the decision, under rules fixed in Addendum 1. |
+
 ## Still open
 
 - `L-TOWN.inp` is not committed (it's over 100 MB). The README says where to get it.
