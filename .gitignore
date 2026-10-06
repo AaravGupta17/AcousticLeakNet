@@ -10,6 +10,10 @@
 /cache_v2/
 /cache_sweep/
 /cache_mendeley/
+/cache_xrig/
+
+# V2 cross-rig run logs (absolute local paths; per-epoch histories are in results/v2_cross_rig/)
+/logs_v2/
 
 # Regenerable index files (exceed GitHub 100MB LFS limit)
 /data/csv/train_index.csv

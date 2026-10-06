@@ -1,0 +1,256 @@
+{
+  "experiment": "v2_xrig_train_sheffield_fold2_seed0",
+  "timestamp": "2026-10-04T05:49:00",
+  "git_commit": "4b20090",
+  "git_dirty": true,
+  "python": "3.12.10",
+  "torch": "2.7.1+cu118",
+  "device": "cuda",
+  "command": "Model_F/xrig_train.py --train-rig sheffield --fold 2 --seed 0 --workers 6",
+  "config": {
+    "base_channels": 64,
+    "dropout": 0.3,
+    "fusion": "cca",
+    "input_norm": "zscore",
+    "band_hz": 2000.0,
+    "train_rig": "sheffield",
+    "seed": 0,
+    "fold": 2,
+    "epochs": 30,
+    "steps": 1500,
+    "batch": 256,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "workers": 6,
+    "smoke": false,
+    "overwrite": false,
+    "out_dir": "<repo>/results/v2_cross_rig",
+    "recipe": "model_f_real_only",
+    "train_groups": [
+      "sh:noleak:NoLeak_2.8bar",
+      "sh:test3",
+      "sh:test6",
+      "sh:test7",
+      "sh:test8"
+    ],
+    "val_groups": [
+      "sh:noleak:NoLeak_4.2bar",
+      "sh:test1",
+      "sh:test5"
+    ]
+  },
+  "summary": "best epoch 16: val AUROC 0.950 on held-out groups of sheffield; Youden threshold -3.633",
+  "results": {
+    "checkpoint": "xrig_sheffield_fold2_seed0.pt",
+    "train_rig": "sheffield",
+    "fold": 2,
+    "seed": 0,
+    "best_epoch": 16,
+    "val_auroc": 0.9500354848216918,
+    "threshold_val_youden": -3.632970094680786,
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 0.3079825519323349,
+        "val_auroc": 0.8030681992337164
+      },
+      {
+        "epoch": 2,
+        "loss": 0.13486917090415954,
+        "val_auroc": 0.827687120542293
+      },
+      {
+        "epoch": 3,
+        "loss": 0.12472624700764814,
+        "val_auroc": 0.9062289419392868
+      },
+      {
+        "epoch": 4,
+        "loss": 0.12226497462391853,
+        "val_auroc": 0.885146949602122
+      },
+      {
+        "epoch": 5,
+        "loss": 0.12141190304855505,
+        "val_auroc": 0.9138777483053344
+      },
+      {
+        "epoch": 6,
+        "loss": 0.12039714934925239,
+        "val_auroc": 0.9095279693486591
+      },
+      {
+        "epoch": 7,
+        "loss": 0.12000498771667481,
+        "val_auroc": 0.9143832596522251
+      },
+      {
+        "epoch": 8,
+        "loss": 0.11973937237262726,
+        "val_auroc": 0.9481006778661951
+      },
+      {
+        "epoch": 9,
+        "loss": 0.1193496030519406,
+        "val_auroc": 0.9269434718538168
+      },
+      {
+        "epoch": 10,
+        "loss": 0.11915926451484363,
+        "val_auroc": 0.9123408193339229
+      },
+      {
+        "epoch": 11,
+        "loss": 0.11882492917776108,
+        "val_auroc": 0.9121464190981432
+      },
+      {
+        "epoch": 12,
+        "loss": 0.11897614855567615,
+        "val_auroc": 0.9242197465369879
+      },
+      {
+        "epoch": 13,
+        "loss": 0.11849571893612544,
+        "val_auroc": 0.8849698791629826
+      },
+      {
+        "epoch": 14,
+        "loss": 0.11853066253165404,
+        "val_auroc": 0.9423603890362511
+      },
+      {
+        "epoch": 15,
+        "loss": 0.11834902246296405,
+        "val_auroc": 0.940339286766873
+      },
+      {
+        "epoch": 16,
+        "loss": 0.11829350694020589,
+        "val_auroc": 0.9500354848216918
+      },
+      {
+        "epoch": 17,
+        "loss": 0.1182136603742838,
+        "val_auroc": 0.9261605658709107
+      },
+      {
+        "epoch": 18,
+        "loss": 0.1182472991446654,
+        "val_auroc": 0.9437332154435603
+      },
+      {
+        "epoch": 19,
+        "loss": 0.11814410584171613,
+        "val_auroc": 0.9251066312997349
+      },
+      {
+        "epoch": 20,
+        "loss": 0.11814685301979383,
+        "val_auroc": 0.9317908635425877
+      },
+      {
+        "epoch": 21,
+        "loss": 0.11798510654767354,
+        "val_auroc": 0.9169051576775715
+      },
+      {
+        "epoch": 22,
+        "loss": 0.1180111651221911,
+        "val_auroc": 0.9454759799587386
+      },
+      {
+        "epoch": 23,
+        "loss": 0.11797576170166334,
+        "val_auroc": 0.9390657235484821
+      },
+      {
+        "epoch": 24,
+        "loss": 0.11797950280209382,
+        "val_auroc": 0.9352973769525493
+      },
+      {
+        "epoch": 25,
+        "loss": 0.11795871582627296,
+        "val_auroc": 0.93557536103743
+      },
+      {
+        "epoch": 26,
+        "loss": 0.11792623110115528,
+        "val_auroc": 0.9291252578838785
+      },
+      {
+        "epoch": 27,
+        "loss": 0.11791950086255869,
+        "val_auroc": 0.9389022104332448
+      },
+      {
+        "epoch": 28,
+        "loss": 0.11790280335644882,
+        "val_auroc": 0.9397384025935749
+      },
+      {
+        "epoch": 29,
+        "loss": 0.1179045411547025,
+        "val_auroc": 0.939067256115532
+      },
+      {
+        "epoch": 30,
+        "loss": 0.11789779678483804,
+        "val_auroc": 0.9386296492779252
+      }
+    ],
+    "train_groups": [
+      "sh:noleak:NoLeak_2.8bar",
+      "sh:test3",
+      "sh:test6",
+      "sh:test7",
+      "sh:test8"
+    ],
+    "val_groups": [
+      "sh:noleak:NoLeak_4.2bar",
+      "sh:test1",
+      "sh:test5"
+    ],
+    "cfg": {
+      "base_channels": 64,
+      "dropout": 0.3,
+      "fusion": "cca",
+      "input_norm": "zscore",
+      "band_hz": 2000.0,
+      "train_rig": "sheffield",
+      "seed": 0,
+      "fold": 2,
+      "epochs": 30,
+      "steps": 1500,
+      "batch": 256,
+      "lr": 0.0003,
+      "weight_decay": 0.01,
+      "workers": 6,
+      "smoke": false,
+      "overwrite": false,
+      "out_dir": "<repo>/results/v2_cross_rig",
+      "recipe": "model_f_real_only",
+      "train_groups": [
+        "sh:noleak:NoLeak_2.8bar",
+        "sh:test3",
+        "sh:test6",
+        "sh:test7",
+        "sh:test8"
+      ],
+      "val_groups": [
+        "sh:noleak:NoLeak_4.2bar",
+        "sh:test1",
+        "sh:test5"
+      ]
+    },
+    "hardware": {
+      "torch": "2.7.1+cu118",
+      "cuda": "11.8",
+      "max_memory_allocated_mb": 1661.4541015625,
+      "gpu": "NVIDIA GeForce RTX 3060",
+      "gpu_total_mem_mb": 12287.5
+    },
+    "wall_time_s": 5961.405084609985
+  }
+}

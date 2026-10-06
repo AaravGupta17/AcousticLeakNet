@@ -1,0 +1,291 @@
+{
+ "checkpoint": "xrig_sheffield_fold0_seed0.pt",
+ "train_rig": "sheffield",
+ "fold": 0,
+ "seed_pairing": 0,
+ "thresholds": {
+  "model_f": 3.459378480911255,
+  "rms": -2.9320263862609863,
+  "logreg": 5.496930721763351
+ },
+ "rms_sign": 1.0,
+ "test_sets": {
+  "sheffield_fold0": {
+   "summary": {
+    "n_windows": 6600,
+    "n_streams": 88,
+    "n_groups": 4,
+    "n_groups_leak": 3,
+    "n_groups_no_leak": 1,
+    "n_windows_leak": 5625,
+    "n_windows_no_leak": 975,
+    "n_dropped_dead": 0
+   },
+   "methods": {
+    "model_f": {
+     "val_youden": {
+      "auroc": 0.5838174814814815,
+      "detection_rate": 0.6718222222222222,
+      "false_alarm_rate": 0.5835897435897436,
+      "balanced_accuracy": 0.5441162393162393,
+      "threshold": 3.459378480911255,
+      "n_leak": 5625,
+      "n_no_leak": 975,
+      "ci95": {
+       "auroc": [
+        0.40907094017094014,
+        0.763533177933178
+       ],
+       "detection_rate": [
+        0.40625,
+        0.9587878787878787
+       ],
+       "false_alarm_rate": [
+        0.5835897435897436,
+        0.5835897435897436
+       ],
+       "balanced_accuracy": [
+        0.4113301282051282,
+        0.6875990675990675
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 3,
+      "n_groups_no_leak": 1,
+      "auprc": 0.8872444405325272,
+      "prevalence": 0.8522727272727273,
+      "confusion": {
+       "tp": 3779,
+       "fn": 1846,
+       "tn": 406,
+       "fp": 569,
+       "windows": 6600
+      },
+      "group": {
+       "auroc": 0.6666666666666666,
+       "n_groups_leak": 3,
+       "n_groups_no_leak": 1,
+       "confusion": {
+        "tp": 2,
+        "fn": 1,
+        "tn": 1,
+        "fp": 0
+       }
+      }
+     },
+     "logit0": {
+      "auroc": 0.5838174814814815,
+      "detection_rate": 0.9395555555555556,
+      "false_alarm_rate": 0.9333333333333333,
+      "balanced_accuracy": 0.5031111111111111,
+      "threshold": 0.0,
+      "n_leak": 5625,
+      "n_no_leak": 975,
+      "ci95": {
+       "auroc": [
+        0.40907094017094014,
+        0.763533177933178
+       ],
+       "detection_rate": [
+        0.8583333333333333,
+        1.0
+       ],
+       "false_alarm_rate": [
+        0.9333333333333333,
+        0.9333333333333333
+       ],
+       "balanced_accuracy": [
+        0.46249999999999997,
+        0.5333333333333333
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 3,
+      "n_groups_no_leak": 1,
+      "auprc": 0.8872444405325272,
+      "prevalence": 0.8522727272727273,
+      "confusion": {
+       "tp": 5285,
+       "fn": 340,
+       "tn": 65,
+       "fp": 910,
+       "windows": 6600
+      },
+      "group": {
+       "auroc": 0.6666666666666666,
+       "n_groups_leak": 3,
+       "n_groups_no_leak": 1,
+       "confusion": {
+        "tp": 3,
+        "fn": 0,
+        "tn": 0,
+        "fp": 1
+       }
+      }
+     }
+    },
+    "rms": {
+     "val_youden": {
+      "auroc": 0.5310152934472935,
+      "detection_rate": 0.6878222222222222,
+      "false_alarm_rate": 0.6871794871794872,
+      "balanced_accuracy": 0.5003213675213676,
+      "threshold": -2.9320263862609863,
+      "n_leak": 5625,
+      "n_no_leak": 975,
+      "ci95": {
+       "auroc": [
+        0.21260726495726492,
+        0.8297212121212121
+       ],
+       "detection_rate": [
+        0.2683333333333333,
+        1.0
+       ],
+       "false_alarm_rate": [
+        0.6871794871794872,
+        0.6871794871794872
+       ],
+       "balanced_accuracy": [
+        0.29057692307692307,
+        0.6564102564102564
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 3,
+      "n_groups_no_leak": 1,
+      "auprc": 0.8836342044335672,
+      "prevalence": 0.8522727272727273,
+      "confusion": {
+       "tp": 3869,
+       "fn": 1756,
+       "tn": 305,
+       "fp": 670,
+       "windows": 6600
+      },
+      "group": {
+       "auroc": 0.6666666666666666,
+       "n_groups_leak": 3,
+       "n_groups_no_leak": 1,
+       "confusion": {
+        "tp": 2,
+        "fn": 1,
+        "tn": 0,
+        "fp": 1
+       }
+      }
+     }
+    },
+    "logreg": {
+     "val_youden": {
+      "auroc": 0.8488531509971509,
+      "detection_rate": 0.6421333333333333,
+      "false_alarm_rate": 0.14974358974358976,
+      "balanced_accuracy": 0.7461948717948719,
+      "threshold": 5.496930721763351,
+      "n_leak": 5625,
+      "n_no_leak": 975,
+      "ci95": {
+       "auroc": [
+        0.7461363247863247,
+        0.9739226107226107
+       ],
+       "detection_rate": [
+        0.42375,
+        0.9733333333333334
+       ],
+       "false_alarm_rate": [
+        0.14974358974358976,
+        0.14974358974358976
+       ],
+       "balanced_accuracy": [
+        0.6370032051282052,
+        0.9117948717948718
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 3,
+      "n_groups_no_leak": 1,
+      "auprc": 0.9648778441905348,
+      "prevalence": 0.8522727272727273,
+      "confusion": {
+       "tp": 3612,
+       "fn": 2013,
+       "tn": 829,
+       "fp": 146,
+       "windows": 6600
+      },
+      "group": {
+       "auroc": 1.0,
+       "n_groups_leak": 3,
+       "n_groups_no_leak": 1,
+       "confusion": {
+        "tp": 2,
+        "fn": 1,
+        "tn": 1,
+        "fp": 0
+       }
+      }
+     }
+    }
+   },
+   "breakdowns": {
+    "model_f": {
+     "distance/pos0": {
+      "auroc": 0.6272492307692308,
+      "n_leak": 375,
+      "n_no_leak": 975
+     },
+     "distance/pos1_10": {
+      "auroc": 0.5520976410256411,
+      "n_leak": 3750,
+      "n_no_leak": 975
+     },
+     "distance/pos15plus": {
+      "auroc": 0.6522591452991453,
+      "n_leak": 1500,
+      "n_no_leak": 975
+     }
+    },
+    "rms": {
+     "distance/pos0": {
+      "auroc": 0.8477511111111111,
+      "n_leak": 375,
+      "n_no_leak": 975
+     },
+     "distance/pos1_10": {
+      "auroc": 0.5880306324786325,
+      "n_leak": 3750,
+      "n_no_leak": 975
+     },
+     "distance/pos15plus": {
+      "auroc": 0.30929299145299144,
+      "n_leak": 1500,
+      "n_no_leak": 975
+     }
+    },
+    "logreg": {
+     "distance/pos0": {
+      "auroc": 0.9853347008547009,
+      "n_leak": 375,
+      "n_no_leak": 975
+     },
+     "distance/pos1_10": {
+      "auroc": 0.8166476581196581,
+      "n_leak": 3750,
+      "n_no_leak": 975
+     },
+     "distance/pos15plus": {
+      "auroc": 0.8952464957264956,
+      "n_leak": 1500,
+      "n_no_leak": 975
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,658 @@
+{
+ "checkpoint": "xrig_sheffield_foldx_seed0.pt",
+ "train_rig": "sheffield",
+ "fold": -1,
+ "seed_pairing": 0,
+ "thresholds": {
+  "model_f": 2.273987054824829,
+  "rms": -2.0844674110412598,
+  "logreg": -2.7640880979664053
+ },
+ "rms_sign": 1.0,
+ "test_sets": {
+  "mendeley_acc": {
+   "summary": {
+    "n_windows": 7148,
+    "n_streams": 80,
+    "n_groups": 40,
+    "n_groups_leak": 32,
+    "n_groups_no_leak": 8,
+    "n_windows_leak": 5722,
+    "n_windows_no_leak": 1426,
+    "n_dropped_dead": 0
+   },
+   "methods": {
+    "model_f": {
+     "val_youden": {
+      "auroc": 0.5151700358793329,
+      "detection_rate": 0.8865781195386229,
+      "false_alarm_rate": 0.9446002805049089,
+      "balanced_accuracy": 0.470988919516857,
+      "threshold": 2.273987054824829,
+      "n_leak": 5722,
+      "n_no_leak": 1426,
+      "ci95": {
+       "auroc": [
+        0.4320089163726089,
+        0.6054305326248084
+       ],
+       "detection_rate": [
+        0.833330410382322,
+        0.9365184818132273
+       ],
+       "false_alarm_rate": [
+        0.8820183236144693,
+        0.9852533260711978
+       ],
+       "balanced_accuracy": [
+        0.43508893850241,
+        0.5130001565324429
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 32,
+      "n_groups_no_leak": 8,
+      "auprc": 0.8171709598721513,
+      "prevalence": 0.8005036373810857,
+      "confusion": {
+       "tp": 5073,
+       "fn": 649,
+       "tn": 79,
+       "fp": 1347,
+       "windows": 7148
+      },
+      "group": {
+       "auroc": 0.51171875,
+       "n_groups_leak": 32,
+       "n_groups_no_leak": 8,
+       "confusion": {
+        "tp": 27,
+        "fn": 5,
+        "tn": 0,
+        "fp": 8
+       }
+      }
+     },
+     "logit0": {
+      "auroc": 0.5151700358793329,
+      "detection_rate": 0.9454736106256554,
+      "false_alarm_rate": 0.982468443197756,
+      "balanced_accuracy": 0.4815025837139497,
+      "threshold": 0.0,
+      "n_leak": 5722,
+      "n_no_leak": 1426,
+      "ci95": {
+       "auroc": [
+        0.4320089163726089,
+        0.6054305326248084
+       ],
+       "detection_rate": [
+        0.9150377262652271,
+        0.9720419492719327
+       ],
+       "false_alarm_rate": [
+        0.957978761124703,
+        0.998589562764457
+       ],
+       "balanced_accuracy": [
+        0.46343838453222913,
+        0.5010411830920632
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 32,
+      "n_groups_no_leak": 8,
+      "auprc": 0.8171709598721513,
+      "prevalence": 0.8005036373810857,
+      "confusion": {
+       "tp": 5410,
+       "fn": 312,
+       "tn": 25,
+       "fp": 1401,
+       "windows": 7148
+      },
+      "group": {
+       "auroc": 0.51171875,
+       "n_groups_leak": 32,
+       "n_groups_no_leak": 8,
+       "confusion": {
+        "tp": 32,
+        "fn": 0,
+        "tn": 0,
+        "fp": 8
+       }
+      }
+     }
+    },
+    "rms": {
+     "val_youden": {
+      "auroc": 0.339128449384355,
+      "detection_rate": 0.1317721076546662,
+      "false_alarm_rate": 0.20476858345021037,
+      "balanced_accuracy": 0.4635017621022279,
+      "threshold": -2.0844674110412598,
+      "n_leak": 5722,
+      "n_no_leak": 1426,
+      "ci95": {
+       "auroc": [
+        0.2141068986576249,
+        0.4591063988953966
+       ],
+       "detection_rate": [
+        0.06732058820493081,
+        0.20080752315522382
+       ],
+       "false_alarm_rate": [
+        0.062324929971988796,
+        0.35162982112081764
+       ],
+       "balanced_accuracy": [
+        0.37847148674531245,
+        0.5404012463009918
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 32,
+      "n_groups_no_leak": 8,
+      "auprc": 0.725493599109939,
+      "prevalence": 0.8005036373810857,
+      "confusion": {
+       "tp": 754,
+       "fn": 4968,
+       "tn": 1134,
+       "fp": 292,
+       "windows": 7148
+      },
+      "group": {
+       "auroc": 0.29296875,
+       "n_groups_leak": 32,
+       "n_groups_no_leak": 8,
+       "confusion": {
+        "tp": 0,
+        "fn": 32,
+        "tn": 8,
+        "fp": 0
+       }
+      }
+     }
+    },
+    "logreg": {
+     "val_youden": {
+      "auroc": 0.47313609096163384,
+      "detection_rate": 0.8222649423278574,
+      "false_alarm_rate": 0.7748948106591865,
+      "balanced_accuracy": 0.5236850658343355,
+      "threshold": -2.7640880979664053,
+      "n_leak": 5722,
+      "n_no_leak": 1426,
+      "ci95": {
+       "auroc": [
+        0.369419258918275,
+        0.5737726622701309
+       ],
+       "detection_rate": [
+        0.7441753980694662,
+        0.8915870869264776
+       ],
+       "false_alarm_rate": [
+        0.6374043284945251,
+        0.9173728813559322
+       ],
+       "balanced_accuracy": [
+        0.44362410869089103,
+        0.6035041283206667
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 32,
+      "n_groups_no_leak": 8,
+      "auprc": 0.8100219586143125,
+      "prevalence": 0.8005036373810857,
+      "confusion": {
+       "tp": 4705,
+       "fn": 1017,
+       "tn": 321,
+       "fp": 1105,
+       "windows": 7148
+      },
+      "group": {
+       "auroc": 0.4296875,
+       "n_groups_leak": 32,
+       "n_groups_no_leak": 8,
+       "confusion": {
+        "tp": 28,
+        "fn": 4,
+        "tn": 0,
+        "fp": 8
+       }
+      }
+     }
+    }
+   },
+   "breakdowns": {
+    "model_f": {
+     "topology/Looped": {
+      "auroc": 0.585751576160717,
+      "n_leak": 2864,
+      "n_no_leak": 708
+     },
+     "topology/Branched": {
+      "auroc": 0.44533645477387424,
+      "n_leak": 2858,
+      "n_no_leak": 718
+     },
+     "leak_type/Orifice Leak": {
+      "auroc": 0.5060021096633158,
+      "n_leak": 1432,
+      "n_no_leak": 1426
+     },
+     "leak_type/Longitudinal Crack": {
+      "auroc": 0.4759557763414707,
+      "n_leak": 1430,
+      "n_no_leak": 1426
+     },
+     "leak_type/Circumferential Crack": {
+      "auroc": 0.5856507399593779,
+      "n_leak": 1428,
+      "n_no_leak": 1426
+     },
+     "leak_type/Gasket Leak": {
+      "auroc": 0.49321362250934364,
+      "n_leak": 1432,
+      "n_no_leak": 1426
+     }
+    },
+    "rms": {
+     "topology/Looped": {
+      "auroc": 0.260921176182811,
+      "n_leak": 2864,
+      "n_no_leak": 708
+     },
+     "topology/Branched": {
+      "auroc": 0.4377133238858426,
+      "n_leak": 2858,
+      "n_no_leak": 718
+     },
+     "leak_type/Orifice Leak": {
+      "auroc": 0.4452540410728138,
+      "n_leak": 1432,
+      "n_no_leak": 1426
+     },
+     "leak_type/Longitudinal Crack": {
+      "auroc": 0.2752067007326474,
+      "n_leak": 1430,
+      "n_no_leak": 1426
+     },
+     "leak_type/Circumferential Crack": {
+      "auroc": 0.2668577950114127,
+      "n_leak": 1428,
+      "n_no_leak": 1426
+     },
+     "leak_type/Gasket Leak": {
+      "auroc": 0.36890411119904093,
+      "n_leak": 1432,
+      "n_no_leak": 1426
+     }
+    },
+    "logreg": {
+     "topology/Looped": {
+      "auroc": 0.3356817930751507,
+      "n_leak": 2864,
+      "n_no_leak": 708
+     },
+     "topology/Branched": {
+      "auroc": 0.6503632475716894,
+      "n_leak": 2858,
+      "n_no_leak": 718
+     },
+     "leak_type/Orifice Leak": {
+      "auroc": 0.509457736215691,
+      "n_leak": 1432,
+      "n_no_leak": 1426
+     },
+     "leak_type/Longitudinal Crack": {
+      "auroc": 0.46662874292607814,
+      "n_leak": 1430,
+      "n_no_leak": 1426
+     },
+     "leak_type/Circumferential Crack": {
+      "auroc": 0.490346348918249,
+      "n_leak": 1428,
+      "n_no_leak": 1426
+     },
+     "leak_type/Gasket Leak": {
+      "auroc": 0.4261505206578545,
+      "n_leak": 1432,
+      "n_no_leak": 1426
+     }
+    }
+   }
+  },
+  "mendeley_hyd": {
+   "summary": {
+    "n_windows": 11516,
+    "n_streams": 120,
+    "n_groups": 60,
+    "n_groups_leak": 48,
+    "n_groups_no_leak": 12,
+    "n_windows_leak": 9122,
+    "n_windows_no_leak": 2394,
+    "n_dropped_dead": 0
+   },
+   "methods": {
+    "model_f": {
+     "val_youden": {
+      "auroc": 0.5642794042037051,
+      "detection_rate": 0.3824819118614339,
+      "false_alarm_rate": 0.2907268170426065,
+      "balanced_accuracy": 0.5458775474094137,
+      "threshold": 2.273987054824829,
+      "n_leak": 9122,
+      "n_no_leak": 2394,
+      "ci95": {
+       "auroc": [
+        0.4874250542209038,
+        0.6385627123256366
+       ],
+       "detection_rate": [
+        0.3265852643243536,
+        0.4460846717112817
+       ],
+       "false_alarm_rate": [
+        0.20472150991259272,
+        0.37998477147432497
+       ],
+       "balanced_accuracy": [
+        0.4953717212210064,
+        0.5978189630185053
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 48,
+      "n_groups_no_leak": 12,
+      "auprc": 0.8342139748207641,
+      "prevalence": 0.792115317818687,
+      "confusion": {
+       "tp": 3489,
+       "fn": 5633,
+       "tn": 1698,
+       "fp": 696,
+       "windows": 11516
+      },
+      "group": {
+       "auroc": 0.6475694444444444,
+       "n_groups_leak": 48,
+       "n_groups_no_leak": 12,
+       "confusion": {
+        "tp": 6,
+        "fn": 42,
+        "tn": 12,
+        "fp": 0
+       }
+      }
+     },
+     "logit0": {
+      "auroc": 0.5642794042037051,
+      "detection_rate": 0.5916465687349266,
+      "false_alarm_rate": 0.5058479532163743,
+      "balanced_accuracy": 0.5428993077592761,
+      "threshold": 0.0,
+      "n_leak": 9122,
+      "n_no_leak": 2394,
+      "ci95": {
+       "auroc": [
+        0.4874250542209038,
+        0.6385627123256366
+       ],
+       "detection_rate": [
+        0.5335260949496934,
+        0.6542209568658334
+       ],
+       "false_alarm_rate": [
+        0.4156133734958514,
+        0.6074608075328208
+       ],
+       "balanced_accuracy": [
+        0.48461886259576115,
+        0.5996382574878564
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 48,
+      "n_groups_no_leak": 12,
+      "auprc": 0.8342139748207641,
+      "prevalence": 0.792115317818687,
+      "confusion": {
+       "tp": 5397,
+       "fn": 3725,
+       "tn": 1183,
+       "fp": 1211,
+       "windows": 11516
+      },
+      "group": {
+       "auroc": 0.6475694444444444,
+       "n_groups_leak": 48,
+       "n_groups_no_leak": 12,
+       "confusion": {
+        "tp": 32,
+        "fn": 16,
+        "tn": 6,
+        "fp": 6
+       }
+      }
+     }
+    },
+    "rms": {
+     "val_youden": {
+      "auroc": 0.6381765319166512,
+      "detection_rate": 1.0,
+      "false_alarm_rate": 1.0,
+      "balanced_accuracy": 0.5,
+      "threshold": -2.0844674110412598,
+      "n_leak": 9122,
+      "n_no_leak": 2394,
+      "ci95": {
+       "auroc": [
+        0.5375437939031209,
+        0.7363198653650306
+       ],
+       "detection_rate": [
+        1.0,
+        1.0
+       ],
+       "false_alarm_rate": [
+        1.0,
+        1.0
+       ],
+       "balanced_accuracy": [
+        0.5,
+        0.5
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 48,
+      "n_groups_no_leak": 12,
+      "auprc": 0.8454309529425353,
+      "prevalence": 0.792115317818687,
+      "confusion": {
+       "tp": 9122,
+       "fn": 0,
+       "tn": 0,
+       "fp": 2394,
+       "windows": 11516
+      },
+      "group": {
+       "auroc": 0.7673611111111112,
+       "n_groups_leak": 48,
+       "n_groups_no_leak": 12,
+       "confusion": {
+        "tp": 48,
+        "fn": 0,
+        "tn": 0,
+        "fp": 12
+       }
+      }
+     }
+    },
+    "logreg": {
+     "val_youden": {
+      "auroc": 0.5261866113797247,
+      "detection_rate": 0.9907914930936198,
+      "false_alarm_rate": 0.8859649122807017,
+      "balanced_accuracy": 0.552413290406459,
+      "threshold": -2.7640880979664053,
+      "n_leak": 9122,
+      "n_no_leak": 2394,
+      "ci95": {
+       "auroc": [
+        0.4636329910569232,
+        0.5977476116092381
+       ],
+       "detection_rate": [
+        0.9842243060615671,
+        0.9960633451417094
+       ],
+       "false_alarm_rate": [
+        0.8032317952146365,
+        0.9546276617365214
+       ],
+       "balanced_accuracy": [
+        0.5178307137621893,
+        0.593855060888286
+       ]
+      },
+      "n_boot": 2000,
+      "mixed_groups": false,
+      "n_groups_leak": 48,
+      "n_groups_no_leak": 12,
+      "auprc": 0.7496939845669003,
+      "prevalence": 0.792115317818687,
+      "confusion": {
+       "tp": 9038,
+       "fn": 84,
+       "tn": 273,
+       "fp": 2121,
+       "windows": 11516
+      },
+      "group": {
+       "auroc": 0.5069444444444444,
+       "n_groups_leak": 48,
+       "n_groups_no_leak": 12,
+       "confusion": {
+        "tp": 48,
+        "fn": 0,
+        "tn": 0,
+        "fp": 12
+       }
+      }
+     }
+    }
+   },
+   "breakdowns": {
+    "model_f": {
+     "topology/Looped": {
+      "auroc": 0.5945295824639661,
+      "n_leak": 4428,
+      "n_no_leak": 1130
+     },
+     "topology/Branched": {
+      "auroc": 0.5428182624735051,
+      "n_leak": 4694,
+      "n_no_leak": 1264
+     },
+     "leak_type/Orifice Leak": {
+      "auroc": 0.4603626234076676,
+      "n_leak": 2192,
+      "n_no_leak": 2394
+     },
+     "leak_type/Longitudinal Crack": {
+      "auroc": 0.6480383864888084,
+      "n_leak": 2258,
+      "n_no_leak": 2394
+     },
+     "leak_type/Circumferential Crack": {
+      "auroc": 0.6061913842577458,
+      "n_leak": 2300,
+      "n_no_leak": 2394
+     },
+     "leak_type/Gasket Leak": {
+      "auroc": 0.5399371813457197,
+      "n_leak": 2372,
+      "n_no_leak": 2394
+     }
+    },
+    "rms": {
+     "topology/Looped": {
+      "auroc": 0.5877878904157773,
+      "n_leak": 4428,
+      "n_no_leak": 1130
+     },
+     "topology/Branched": {
+      "auroc": 0.6918541310479847,
+      "n_leak": 4694,
+      "n_no_leak": 1264
+     },
+     "leak_type/Orifice Leak": {
+      "auroc": 0.6126725725505978,
+      "n_leak": 2192,
+      "n_no_leak": 2394
+     },
+     "leak_type/Longitudinal Crack": {
+      "auroc": 0.6555095481544132,
+      "n_leak": 2258,
+      "n_no_leak": 2394
+     },
+     "leak_type/Circumferential Crack": {
+      "auroc": 0.6525536667756346,
+      "n_leak": 2300,
+      "n_no_leak": 2394
+     },
+     "leak_type/Gasket Leak": {
+      "auroc": 0.6313044063221572,
+      "n_leak": 2372,
+      "n_no_leak": 2394
+     }
+    },
+    "logreg": {
+     "topology/Looped": {
+      "auroc": 0.4845088775371529,
+      "n_leak": 4428,
+      "n_no_leak": 1130
+     },
+     "topology/Branched": {
+      "auroc": 0.6041027328180872,
+      "n_leak": 4694,
+      "n_no_leak": 1264
+     },
+     "leak_type/Orifice Leak": {
+      "auroc": 0.5228574782454921,
+      "n_leak": 2192,
+      "n_no_leak": 2394
+     },
+     "leak_type/Longitudinal Crack": {
+      "auroc": 0.4947023966766636,
+      "n_leak": 2258,
+      "n_no_leak": 2394
+     },
+     "leak_type/Circumferential Crack": {
+      "auroc": 0.5025318731611638,
+      "n_leak": 2300,
+      "n_no_leak": 2394
+     },
+     "leak_type/Gasket Leak": {
+      "auroc": 0.5821708923799098,
+      "n_leak": 2372,
+      "n_no_leak": 2394
+     }
+    }
+   }
+  }
+ }
+}

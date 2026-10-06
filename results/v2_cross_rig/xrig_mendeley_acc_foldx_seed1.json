@@ -1,0 +1,277 @@
+{
+ "checkpoint": "xrig_mendeley_acc_foldx_seed1.pt",
+ "train_rig": "mendeley_acc",
+ "fold": -1,
+ "seed": 1,
+ "best_epoch": 1,
+ "val_auroc": 0.8717727272727274,
+ "threshold_val_youden": 0.5261753797531128,
+ "history": [
+  {
+   "epoch": 1,
+   "loss": 0.4338822103043397,
+   "val_auroc": 0.8717727272727274
+  },
+  {
+   "epoch": 2,
+   "loss": 0.17030349120497704,
+   "val_auroc": 0.7875909090909091
+  },
+  {
+   "epoch": 3,
+   "loss": 0.13167480731010436,
+   "val_auroc": 0.7574045454545455
+  },
+  {
+   "epoch": 4,
+   "loss": 0.12566470210254194,
+   "val_auroc": 0.6688318181818181
+  },
+  {
+   "epoch": 5,
+   "loss": 0.12449288876354694,
+   "val_auroc": 0.6530181818181818
+  },
+  {
+   "epoch": 6,
+   "loss": 0.12273745773732662,
+   "val_auroc": 0.6332045454545454
+  },
+  {
+   "epoch": 7,
+   "loss": 0.12178397829333941,
+   "val_auroc": 0.6153227272727273
+  },
+  {
+   "epoch": 8,
+   "loss": 0.12161717720826466,
+   "val_auroc": 0.7511227272727272
+  },
+  {
+   "epoch": 9,
+   "loss": 0.12118238573273023,
+   "val_auroc": 0.6678818181818182
+  },
+  {
+   "epoch": 10,
+   "loss": 0.12073636157313983,
+   "val_auroc": 0.6409522727272728
+  },
+  {
+   "epoch": 11,
+   "loss": 0.120312689413627,
+   "val_auroc": 0.6749863636363637
+  },
+  {
+   "epoch": 12,
+   "loss": 0.11981917910774549,
+   "val_auroc": 0.6504295454545455
+  },
+  {
+   "epoch": 13,
+   "loss": 0.11988448799153169,
+   "val_auroc": 0.6968022727272727
+  },
+  {
+   "epoch": 14,
+   "loss": 0.11949897667268912,
+   "val_auroc": 0.6891420454545454
+  },
+  {
+   "epoch": 15,
+   "loss": 0.11921956326067448,
+   "val_auroc": 0.6253170454545454
+  },
+  {
+   "epoch": 16,
+   "loss": 0.11908283848067125,
+   "val_auroc": 0.6855022727272727
+  },
+  {
+   "epoch": 17,
+   "loss": 0.11888847421109676,
+   "val_auroc": 0.7113977272727272
+  },
+  {
+   "epoch": 18,
+   "loss": 0.11881235120197137,
+   "val_auroc": 0.6812431818181819
+  },
+  {
+   "epoch": 19,
+   "loss": 0.11866628853976727,
+   "val_auroc": 0.6731840909090909
+  },
+  {
+   "epoch": 20,
+   "loss": 0.11852586075663567,
+   "val_auroc": 0.6624522727272727
+  },
+  {
+   "epoch": 21,
+   "loss": 0.11848929293950398,
+   "val_auroc": 0.6876363636363636
+  },
+  {
+   "epoch": 22,
+   "loss": 0.11843464198708534,
+   "val_auroc": 0.6824659090909091
+  },
+  {
+   "epoch": 23,
+   "loss": 0.11841716150939464,
+   "val_auroc": 0.6564022727272727
+  },
+  {
+   "epoch": 24,
+   "loss": 0.11835654836396377,
+   "val_auroc": 0.6405545454545454
+  },
+  {
+   "epoch": 25,
+   "loss": 0.1183143662015597,
+   "val_auroc": 0.6391477272727273
+  },
+  {
+   "epoch": 26,
+   "loss": 0.11830276727676392,
+   "val_auroc": 0.674221590909091
+  },
+  {
+   "epoch": 27,
+   "loss": 0.11827307576437791,
+   "val_auroc": 0.6569272727272727
+  },
+  {
+   "epoch": 28,
+   "loss": 0.11827286534011364,
+   "val_auroc": 0.6830431818181819
+  },
+  {
+   "epoch": 29,
+   "loss": 0.11826825547218323,
+   "val_auroc": 0.6849920454545455
+  },
+  {
+   "epoch": 30,
+   "loss": 0.11828856216867764,
+   "val_auroc": 0.6747
+  }
+ ],
+ "train_groups": [
+  "md:Branched/Circumferential Crack/BR_CC_0.18 LPS",
+  "md:Branched/Circumferential Crack/BR_CC_0.47 LPS",
+  "md:Branched/Circumferential Crack/BR_CC_ND",
+  "md:Branched/Gasket Leak/BR_GL_0.18 LPS",
+  "md:Branched/Gasket Leak/BR_GL_ND",
+  "md:Branched/Gasket Leak/BR_GL_Transient",
+  "md:Branched/Longitudinal Crack/BR_LC_0.18 LPS",
+  "md:Branched/Longitudinal Crack/BR_LC_0.47 LPS",
+  "md:Branched/Longitudinal Crack/BR_LC_ND",
+  "md:Branched/Longitudinal Crack/BR_LC_Transient",
+  "md:Branched/No-leak/BR_NL_0.18 LPS",
+  "md:Branched/No-leak/BR_NL_0.47 LPS",
+  "md:Branched/No-leak/BR_NL_ND",
+  "md:Branched/No-leak/BR_NL_Transient",
+  "md:Branched/Orifice Leak/BR_OL_0.47 LPS",
+  "md:Branched/Orifice Leak/BR_OL_ND",
+  "md:Branched/Orifice Leak/BR_OL_Transient",
+  "md:Looped/Circumferential Crack/LO_CC_0.47 LPS",
+  "md:Looped/Circumferential Crack/LO_CC_Transient",
+  "md:Looped/Gasket Leak/LO_GL_0.47 LPS",
+  "md:Looped/Gasket Leak/LO_GL_ND",
+  "md:Looped/Gasket Leak/LO_GL_Transient",
+  "md:Looped/Longitudinal Crack/LO_LC_0.18 LPS",
+  "md:Looped/Longitudinal Crack/LO_LC_0.47 LPS",
+  "md:Looped/Longitudinal Crack/LO_LC_ND",
+  "md:Looped/Longitudinal Crack/LO_LC_Transient",
+  "md:Looped/No-leak/LO_NL_0.18 LPS",
+  "md:Looped/No-leak/LO_NL_ND",
+  "md:Looped/Orifice Leak/LO_OL_0.47 LPS",
+  "md:Looped/Orifice Leak/LO_OL_ND",
+  "md:Looped/Orifice Leak/LO_OL_Transient"
+ ],
+ "val_groups": [
+  "md:Branched/Circumferential Crack/BR_CC_Transient",
+  "md:Branched/Gasket Leak/BR_GL_0.47 LPS",
+  "md:Branched/Orifice Leak/BR_OL_0.18 LPS",
+  "md:Looped/Circumferential Crack/LO_CC_0.18 LPS",
+  "md:Looped/Circumferential Crack/LO_CC_ND",
+  "md:Looped/Gasket Leak/LO_GL_0.18 LPS",
+  "md:Looped/No-leak/LO_NL_0.47 LPS",
+  "md:Looped/No-leak/LO_NL_Transient",
+  "md:Looped/Orifice Leak/LO_OL_0.18 LPS"
+ ],
+ "cfg": {
+  "base_channels": 64,
+  "dropout": 0.3,
+  "fusion": "cca",
+  "input_norm": "zscore",
+  "band_hz": 2000.0,
+  "train_rig": "mendeley_acc",
+  "seed": 1,
+  "fold": -1,
+  "epochs": 30,
+  "steps": 1500,
+  "batch": 256,
+  "lr": 0.0003,
+  "weight_decay": 0.01,
+  "workers": 6,
+  "smoke": false,
+  "overwrite": false,
+  "out_dir": "<repo>/results/v2_cross_rig",
+  "recipe": "model_f_real_only",
+  "train_groups": [
+   "md:Branched/Circumferential Crack/BR_CC_0.18 LPS",
+   "md:Branched/Circumferential Crack/BR_CC_0.47 LPS",
+   "md:Branched/Circumferential Crack/BR_CC_ND",
+   "md:Branched/Gasket Leak/BR_GL_0.18 LPS",
+   "md:Branched/Gasket Leak/BR_GL_ND",
+   "md:Branched/Gasket Leak/BR_GL_Transient",
+   "md:Branched/Longitudinal Crack/BR_LC_0.18 LPS",
+   "md:Branched/Longitudinal Crack/BR_LC_0.47 LPS",
+   "md:Branched/Longitudinal Crack/BR_LC_ND",
+   "md:Branched/Longitudinal Crack/BR_LC_Transient",
+   "md:Branched/No-leak/BR_NL_0.18 LPS",
+   "md:Branched/No-leak/BR_NL_0.47 LPS",
+   "md:Branched/No-leak/BR_NL_ND",
+   "md:Branched/No-leak/BR_NL_Transient",
+   "md:Branched/Orifice Leak/BR_OL_0.47 LPS",
+   "md:Branched/Orifice Leak/BR_OL_ND",
+   "md:Branched/Orifice Leak/BR_OL_Transient",
+   "md:Looped/Circumferential Crack/LO_CC_0.47 LPS",
+   "md:Looped/Circumferential Crack/LO_CC_Transient",
+   "md:Looped/Gasket Leak/LO_GL_0.47 LPS",
+   "md:Looped/Gasket Leak/LO_GL_ND",
+   "md:Looped/Gasket Leak/LO_GL_Transient",
+   "md:Looped/Longitudinal Crack/LO_LC_0.18 LPS",
+   "md:Looped/Longitudinal Crack/LO_LC_0.47 LPS",
+   "md:Looped/Longitudinal Crack/LO_LC_ND",
+   "md:Looped/Longitudinal Crack/LO_LC_Transient",
+   "md:Looped/No-leak/LO_NL_0.18 LPS",
+   "md:Looped/No-leak/LO_NL_ND",
+   "md:Looped/Orifice Leak/LO_OL_0.47 LPS",
+   "md:Looped/Orifice Leak/LO_OL_ND",
+   "md:Looped/Orifice Leak/LO_OL_Transient"
+  ],
+  "val_groups": [
+   "md:Branched/Circumferential Crack/BR_CC_Transient",
+   "md:Branched/Gasket Leak/BR_GL_0.47 LPS",
+   "md:Branched/Orifice Leak/BR_OL_0.18 LPS",
+   "md:Looped/Circumferential Crack/LO_CC_0.18 LPS",
+   "md:Looped/Circumferential Crack/LO_CC_ND",
+   "md:Looped/Gasket Leak/LO_GL_0.18 LPS",
+   "md:Looped/No-leak/LO_NL_0.47 LPS",
+   "md:Looped/No-leak/LO_NL_Transient",
+   "md:Looped/Orifice Leak/LO_OL_0.18 LPS"
+  ]
+ },
+ "hardware": {
+  "torch": "2.7.1+cu118",
+  "cuda": "11.8",
+  "max_memory_allocated_mb": 1661.4541015625,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "gpu_total_mem_mb": 12287.5
+ },
+ "wall_time_s": 9073.355099201202
+}

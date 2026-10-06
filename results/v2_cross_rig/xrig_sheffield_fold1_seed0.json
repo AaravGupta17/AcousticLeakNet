@@ -1,0 +1,211 @@
+{
+ "checkpoint": "xrig_sheffield_fold1_seed0.pt",
+ "train_rig": "sheffield",
+ "fold": 1,
+ "seed": 0,
+ "best_epoch": 19,
+ "val_auroc": 0.682967735042735,
+ "threshold_val_youden": 3.6685874462127686,
+ "history": [
+  {
+   "epoch": 1,
+   "loss": 0.24097923610607783,
+   "val_auroc": 0.5510102564102565
+  },
+  {
+   "epoch": 2,
+   "loss": 0.12451108346879482,
+   "val_auroc": 0.5870076923076922
+  },
+  {
+   "epoch": 3,
+   "loss": 0.12079893283049266,
+   "val_auroc": 0.5848811965811965
+  },
+  {
+   "epoch": 4,
+   "loss": 0.11997535928090414,
+   "val_auroc": 0.6040878205128206
+  },
+  {
+   "epoch": 5,
+   "loss": 0.11952002795537313,
+   "val_auroc": 0.6534380341880343
+  },
+  {
+   "epoch": 6,
+   "loss": 0.11931260576844216,
+   "val_auroc": 0.6646508547008547
+  },
+  {
+   "epoch": 7,
+   "loss": 0.11899046484132608,
+   "val_auroc": 0.5946181623931623
+  },
+  {
+   "epoch": 8,
+   "loss": 0.11862073428928852,
+   "val_auroc": 0.6059431623931624
+  },
+  {
+   "epoch": 9,
+   "loss": 0.11853568750123183,
+   "val_auroc": 0.6569331196581196
+  },
+  {
+   "epoch": 10,
+   "loss": 0.11847588208317757,
+   "val_auroc": 0.6295626068376068
+  },
+  {
+   "epoch": 11,
+   "loss": 0.11829898666838805,
+   "val_auroc": 0.6330801282051283
+  },
+  {
+   "epoch": 12,
+   "loss": 0.11815671259661516,
+   "val_auroc": 0.6313395299145299
+  },
+  {
+   "epoch": 13,
+   "loss": 0.1180756423920393,
+   "val_auroc": 0.6623623931623933
+  },
+  {
+   "epoch": 14,
+   "loss": 0.11813033944865067,
+   "val_auroc": 0.5375764957264957
+  },
+  {
+   "epoch": 15,
+   "loss": 0.11801460740466913,
+   "val_auroc": 0.6646324786324787
+  },
+  {
+   "epoch": 16,
+   "loss": 0.11801845564941565,
+   "val_auroc": 0.6201470085470084
+  },
+  {
+   "epoch": 17,
+   "loss": 0.1179255808442831,
+   "val_auroc": 0.5793745726495727
+  },
+  {
+   "epoch": 18,
+   "loss": 0.1178923012961944,
+   "val_auroc": 0.6380653846153845
+  },
+  {
+   "epoch": 19,
+   "loss": 0.11786378895739714,
+   "val_auroc": 0.682967735042735
+  },
+  {
+   "epoch": 20,
+   "loss": 0.1178122717688481,
+   "val_auroc": 0.563668376068376
+  },
+  {
+   "epoch": 21,
+   "loss": 0.11781335914631684,
+   "val_auroc": 0.6728329059829059
+  },
+  {
+   "epoch": 22,
+   "loss": 0.11776565630733966,
+   "val_auroc": 0.6610452991452992
+  },
+  {
+   "epoch": 23,
+   "loss": 0.1177700259288152,
+   "val_auroc": 0.6602950854700855
+  },
+  {
+   "epoch": 24,
+   "loss": 0.11774158904453119,
+   "val_auroc": 0.6383861111111111
+  },
+  {
+   "epoch": 25,
+   "loss": 0.11771810751159986,
+   "val_auroc": 0.6217384615384616
+  },
+  {
+   "epoch": 26,
+   "loss": 0.11772027418514093,
+   "val_auroc": 0.5994141025641027
+  },
+  {
+   "epoch": 27,
+   "loss": 0.117706180408597,
+   "val_auroc": 0.6257096153846153
+  },
+  {
+   "epoch": 28,
+   "loss": 0.11769637426733971,
+   "val_auroc": 0.6131679487179487
+  },
+  {
+   "epoch": 29,
+   "loss": 0.11770383690297603,
+   "val_auroc": 0.6161040598290598
+  },
+  {
+   "epoch": 30,
+   "loss": 0.1176985762665669,
+   "val_auroc": 0.6151649572649573
+  }
+ ],
+ "train_groups": [
+  "sh:noleak:noLeak_2.8bar_newer",
+  "sh:test2",
+  "sh:test3",
+  "sh:test4",
+  "sh:test8"
+ ],
+ "val_groups": [
+  "sh:noleak:NoLeak_4.2bar",
+  "sh:test5"
+ ],
+ "cfg": {
+  "base_channels": 64,
+  "dropout": 0.3,
+  "fusion": "cca",
+  "input_norm": "zscore",
+  "band_hz": 2000.0,
+  "train_rig": "sheffield",
+  "seed": 0,
+  "fold": 1,
+  "epochs": 30,
+  "steps": 1500,
+  "batch": 256,
+  "lr": 0.0003,
+  "weight_decay": 0.01,
+  "workers": 6,
+  "smoke": false,
+  "overwrite": false,
+  "out_dir": "<repo>/results/v2_cross_rig",
+  "recipe": "model_f_real_only",
+  "train_groups": [
+   "sh:noleak:noLeak_2.8bar_newer",
+   "sh:test2",
+   "sh:test3",
+   "sh:test4",
+   "sh:test8"
+  ],
+  "val_groups": [
+   "sh:noleak:NoLeak_4.2bar",
+   "sh:test5"
+  ]
+ },
+ "hardware": {
+  "torch": "2.7.1+cu118",
+  "cuda": "11.8",
+  "max_memory_allocated_mb": 1661.4541015625,
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "gpu_total_mem_mb": 12287.5
+ },
+ "wall_time_s": 5989.959798574448
+}
