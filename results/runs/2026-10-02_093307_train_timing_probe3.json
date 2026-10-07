@@ -1,0 +1,52 @@
+{
+  "experiment": "train_timing_probe3",
+  "timestamp": "2026-10-02T09:33:07",
+  "git_commit": "4f1eeb8",
+  "git_dirty": true,
+  "python": "3.13.1",
+  "torch": "2.13.0+cpu",
+  "device": "cpu",
+  "command": "train_f.py --cache cache_f --bank ../cache_f_mendeley/bank.npz --epochs 1 --steps 10 --batch 256 --workers 6 --prefix timing_probe3",
+  "config": {
+    "base_channels": 64,
+    "dropout": 0.3,
+    "fusion": "cca",
+    "input_norm": "zscore",
+    "band_hz": 2000.0,
+    "cache": "cache_f",
+    "bank": "../cache_f_mendeley/bank.npz",
+    "exclude_source": [],
+    "real_frac": 0.3,
+    "epochs": 1,
+    "steps": 10,
+    "batch": 256,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "workers": 6,
+    "n_val": 4000,
+    "seed": 0,
+    "prefix": "timing_probe3"
+  },
+  "summary": "best epoch 1: val AUROC synthetic 0.707, real 0.722 (held-out groups of the training sources)",
+  "results": {
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 1.06321063041687,
+        "det_loss": 1.0215197145938872,
+        "val_auroc_synthetic": 0.7069144356309701,
+        "val_auroc_real": 0.721863554534732,
+        "score": 0.714388995082851
+      }
+    ],
+    "best": {
+      "epoch": 1,
+      "loss": 1.06321063041687,
+      "det_loss": 1.0215197145938872,
+      "val_auroc_synthetic": 0.7069144356309701,
+      "val_auroc_real": 0.721863554534732,
+      "score": 0.714388995082851
+    },
+    "checkpoint": "best_model_timing_probe3_seed0.pt"
+  }
+}
