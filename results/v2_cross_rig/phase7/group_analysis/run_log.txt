@@ -1,0 +1,142 @@
+[assert ok] col 4 is band (400, 600) Hz
+[assert ok] col 5 is band (600, 800) Hz
+[assert ok] col 8 is band (1600, 2000) Hz
+[assert ok] A: model_f seed0 window order identical to phase7 scores
+[assert ok] A: model_f seed0 comparator threshold == eval json threshold
+[assert ok] A: model_f seed0 eval_xrig thresholds.model_f == comparator threshold
+[assert ok] A: model_f seed1 window order identical to phase7 scores
+[assert ok] A: model_f seed1 comparator threshold == eval json threshold
+[assert ok] A: model_f seed1 eval_xrig thresholds.model_f == comparator threshold
+[assert ok] A: model_f seed2 window order identical to phase7 scores
+[assert ok] A: model_f seed2 comparator threshold == eval json threshold
+[assert ok] A: model_f seed2 eval_xrig thresholds.model_f == comparator threshold
+
+######## Direction A: mendeley_acc -> sheffield
+method          pooled  grpbal    LOGO[min,max]  grpAUC  1grp leak min/med/max  1grp noleak min/med/max  grp-confusion
+[assert ok] pooled window AUROC reproduces frozen (0.801483 vs 0.801483)
+[assert ok] group-level AUROC reproduces frozen (1.0 vs 1.0)
+[assert ok] group confusion reproduces frozen {'tp': 0, 'fn': 8, 'tn': 3, 'fp': 0}
+three_band       0.801   0.831 [0.728,0.887]   1.000         0.72/0.83/0.87           0.70/0.89/0.89  {'tp': 0, 'fn': 8, 'tn': 3, 'fp': 0}
+   LOGO min when dropping sh:noleak:NoLeak_4.2bar; max when dropping sh:noleak:NoLeak_2.8bar
+[assert ok] pooled window AUROC reproduces frozen (0.737523 vs 0.737523)
+[assert ok] group-level AUROC reproduces frozen (0.9583333333333334 vs 0.9583333333333334)
+[assert ok] group confusion reproduces frozen {'tp': 7, 'fn': 1, 'tn': 3, 'fp': 0}
+full14           0.738   0.819 [0.693,0.811]   0.958         0.60/0.75/0.92           0.65/0.79/0.95  {'tp': 7, 'fn': 1, 'tn': 3, 'fp': 0}
+   LOGO min when dropping sh:noleak:NoLeak_4.2bar; max when dropping sh:noleak:NoLeak_2.8bar
+[assert ok] pooled window AUROC reproduces frozen (0.293106 vs 0.293106)
+[assert ok] group-level AUROC reproduces frozen (0.125 vs 0.125)
+model_f_seed0    0.293   0.257 [0.242,0.326]   0.125         0.12/0.30/0.64           0.10/0.27/0.34  {'tp': 3, 'fn': 5, 'tn': 0, 'fp': 3}
+   LOGO min when dropping sh:test2; max when dropping sh:test8
+[assert ok] pooled window AUROC reproduces frozen (0.368800 vs 0.368800)
+[assert ok] group-level AUROC reproduces frozen (0.25 vs 0.25)
+model_f_seed1    0.369   0.340 [0.310,0.409]   0.250         0.16/0.40/0.77           0.16/0.35/0.42  {'tp': 4, 'fn': 4, 'tn': 0, 'fp': 3}
+   LOGO min when dropping sh:test2; max when dropping sh:test7
+[assert ok] pooled window AUROC reproduces frozen (0.374280 vs 0.374280)
+[assert ok] group-level AUROC reproduces frozen (0.2916666666666667 vs 0.2916666666666667)
+model_f_seed2    0.374   0.364 [0.315,0.418]   0.292         0.14/0.44/0.77           0.19/0.36/0.41  {'tp': 6, 'fn': 2, 'tn': 0, 'fp': 3}
+   LOGO min when dropping sh:test2; max when dropping sh:test7
+[assert ok] B: model_f seed0 window order identical to phase7 scores
+[assert ok] B: model_f seed0 comparator threshold == eval json threshold
+[assert ok] B: model_f seed0 eval_xrig thresholds.model_f == comparator threshold
+[assert ok] B: model_f seed1 window order identical to phase7 scores
+[assert ok] B: model_f seed1 comparator threshold == eval json threshold
+[assert ok] B: model_f seed1 eval_xrig thresholds.model_f == comparator threshold
+[assert ok] B: model_f seed2 window order identical to phase7 scores
+[assert ok] B: model_f seed2 comparator threshold == eval json threshold
+[assert ok] B: model_f seed2 eval_xrig thresholds.model_f == comparator threshold
+
+######## Direction B: sheffield -> mendeley_acc
+method          pooled  grpbal    LOGO[min,max]  grpAUC  1grp leak min/med/max  1grp noleak min/med/max  grp-confusion
+[assert ok] pooled window AUROC reproduces frozen (0.505692 vs 0.505692)
+[assert ok] group-level AUROC reproduces frozen (0.46484375 vs 0.46484375)
+[assert ok] group confusion reproduces frozen {'tp': 31, 'fn': 1, 'tn': 1, 'fp': 7}
+three_band       0.506   0.505 [0.454,0.552]   0.465         0.21/0.51/0.90           0.18/0.50/0.86  {'tp': 31, 'fn': 1, 'tn': 1, 'fp': 7}
+   LOGO min when dropping md:Branched/No-leak/BR_NL_0.18 LPS; max when dropping md:Looped/No-leak/LO_NL_0.47 LPS
+[assert ok] pooled window AUROC reproduces frozen (0.473136 vs 0.473136)
+[assert ok] group-level AUROC reproduces frozen (0.4296875 vs 0.4296875)
+[assert ok] group confusion reproduces frozen {'tp': 28, 'fn': 4, 'tn': 0, 'fp': 8}
+full14           0.473   0.473 [0.453,0.509]   0.430         0.17/0.43/0.80           0.22/0.50/0.61  {'tp': 28, 'fn': 4, 'tn': 0, 'fp': 8}
+   LOGO min when dropping md:Branched/No-leak/BR_NL_0.18 LPS; max when dropping md:Looped/No-leak/LO_NL_ND
+[assert ok] pooled window AUROC reproduces frozen (0.515170 vs 0.515170)
+[assert ok] group-level AUROC reproduces frozen (0.51171875 vs 0.51171875)
+model_f_seed0    0.515   0.516 [0.484,0.532]   0.512         0.16/0.51/0.75           0.40/0.50/0.74  {'tp': 27, 'fn': 5, 'tn': 0, 'fp': 8}
+   LOGO min when dropping md:Branched/No-leak/BR_NL_ND; max when dropping md:Looped/No-leak/LO_NL_0.47 LPS
+[assert ok] pooled window AUROC reproduces frozen (0.524266 vs 0.524266)
+[assert ok] group-level AUROC reproduces frozen (0.51171875 vs 0.51171875)
+model_f_seed1    0.524   0.525 [0.493,0.553]   0.512         0.07/0.51/0.82           0.32/0.52/0.75  {'tp': 21, 'fn': 11, 'tn': 1, 'fp': 7}
+   LOGO min when dropping md:Branched/No-leak/BR_NL_ND; max when dropping md:Looped/No-leak/LO_NL_ND
+[assert ok] pooled window AUROC reproduces frozen (0.534508 vs 0.534508)
+[assert ok] group-level AUROC reproduces frozen (0.546875 vs 0.546875)
+model_f_seed2    0.535   0.535 [0.505,0.547]   0.547         0.19/0.54/0.71           0.45/0.48/0.74  {'tp': 25, 'fn': 7, 'tn': 1, 'fp': 7}
+   LOGO min when dropping md:Branched/No-leak/BR_NL_ND; max when dropping md:Branched/No-leak/BR_NL_Transient
+
+Wrote C:\Users\armaan\PycharmProjects\SJWP_Research\results\v2_cross_rig\phase7\group_analysis\per_group.csv (255 rows)
+
+######## Failure analysis (features)
+mendeley_acc: {'n_windows': 7148, 'n_streams': 80, 'n_groups': 40, 'n_groups_leak': 32, 'n_groups_no_leak': 8, 'n_windows_leak': 5722, 'n_windows_no_leak': 1426, 'n_dropped_dead': 0}
+sheffield: {'n_windows': 17250, 'n_streams': 230, 'n_groups': 11, 'n_groups_leak': 8, 'n_groups_no_leak': 3, 'n_windows_leak': 15150, 'n_windows_no_leak': 2100, 'n_dropped_dead': 0}
+rig           feature          grpAUC  winAUC  direction(group)  leak-mean  noleak-mean
+mendeley_acc  band_400_600      0.750   0.647  leak higher        -1.2737   -1.4603
+mendeley_acc  band_600_800      0.719   0.674  leak higher        -1.9775   -2.4468
+mendeley_acc  band_1600_2000    0.730   0.667  leak higher        -2.5994   -3.0702
+mendeley_acc  log_rms           0.293   0.339  leak lower         -2.7117   -2.4788
+sheffield     band_400_600      1.000   0.802  leak higher        -0.8898   -1.5521
+sheffield     band_600_800      0.833   0.577  leak higher        -1.7153   -1.9159
+sheffield     band_1600_2000    0.750   0.644  leak higher        -2.5468   -2.8053
+sheffield     log_rms           0.917   0.768  leak higher        -2.3878   -2.9956
+[assert ok] A: refit three_band val AUROC 0.498400000000 == frozen 0.498400000000
+
+Refit A (train mendeley_acc): val AUROC 0.498400
+  feature          coef_std  coef_raw     mean    scale
+  band_400_600      +0.6168   +1.7681  -1.3116   0.3488
+  band_600_800      -0.5678   -0.7679  -2.0557   0.7394
+  band_1600_2000    +0.8982   +1.2504  -2.6774   0.7183
+  intercept (scaled space) +0.1955; raw space +4.2838
+[assert ok] B: refit three_band val AUROC 0.862057176540 == frozen 0.862057176540
+
+Refit B (train sheffield): val AUROC 0.862057
+  feature          coef_std  coef_raw     mean    scale
+  band_400_600      +1.4335   +3.4841  -0.9800   0.4114
+  band_600_800      -1.0025   -2.0087  -1.8002   0.4991
+  band_1600_2000    +0.3614   +0.5318  -2.5088   0.6796
+  intercept (scaled space) +0.5732; raw space +1.7060
+
+Class-conditional group means; shift = (sheffield - mendeley_acc)/pooled SD of group means (pooled over the 4 rig x class cells, df-weighted)
+feature         class    mend_mean  mend_sd sheff_mean sheff_sd pooledSD   shift
+band_400_600    leak       -1.2737   0.2060    -0.8898   0.2933   0.2235   +1.72
+band_400_600    no_leak    -1.4603   0.2086    -1.5521   0.2506   0.2235   -0.41
+                leak-noleak gap: mend +0.1866 (+0.84 SD), sheff +0.6623 (+2.96 SD)
+band_600_800    leak       -1.9775   0.4687    -1.7153   0.2449   0.4448   +0.59
+band_600_800    no_leak    -2.4468   0.5336    -1.9159   0.1943   0.4448   +1.19
+                leak-noleak gap: mend +0.4693 (+1.05 SD), sheff +0.2006 (+0.45 SD)
+band_1600_2000  leak       -2.5994   0.5342    -2.5468   0.3505   0.4881   +0.11
+band_1600_2000  no_leak    -3.0702   0.4401    -2.8053   0.2605   0.4881   +0.54
+                leak-noleak gap: mend +0.4708 (+0.96 SD), sheff +0.2586 (+0.53 SD)
+log_rms         leak       -2.7117   0.3499    -2.3878   0.4453   0.3489   +0.93
+log_rms         no_leak    -2.4788   0.2361    -2.9956   0.2711   0.3489   -1.48
+                leak-noleak gap: mend -0.2328 (-0.67 SD), sheff +0.6078 (+1.74 SD)
+
+######## Within-rig reference (3-band LR, existing grouped 3-fold)
+rig           fold  nTest(leak/no)  AUROC   BalAcc  Sens   Spec   thr | frozen full-LR AUROC/BalAcc | frozen model_f AUROC/BalAcc
+[assert ok] mendeley_acc fold0: train/val/test groups disjoint
+[assert ok] mendeley_acc fold0: train U val U test == all groups
+mendeley_acc     0    1984/536     0.699  0.571  0.986  0.157  -1.013 | 0.615/0.557 | 0.698/0.647   [test groups leak/no 11/3, val no-leak groups 1]
+[assert ok] mendeley_acc fold1: train/val/test groups disjoint
+[assert ok] mendeley_acc fold1: train U val U test == all groups
+mendeley_acc     1    1958/534     0.637  0.587  0.738  0.436  -0.214 | 0.700/0.681 | 0.753/0.674   [test groups leak/no 11/3, val no-leak groups 1]
+[assert ok] mendeley_acc fold2: train/val/test groups disjoint
+[assert ok] mendeley_acc fold2: train U val U test == all groups
+mendeley_acc     2    1780/356     0.479  0.558  0.117  1.000  +1.501 | 0.448/0.572 | 0.792/0.700   [test groups leak/no 10/2, val no-leak groups 2]
+[assert ok] sheffield fold0: train/val/test groups disjoint
+[assert ok] sheffield fold0: train U val U test == all groups
+sheffield        0    5625/975     0.885  0.808  0.732  0.884  +0.465 | 0.849/0.746 | 0.584/0.544   [test groups leak/no 3/1, val no-leak groups 1]
+[assert ok] sheffield fold1: train/val/test groups disjoint
+[assert ok] sheffield fold1: train U val U test == all groups
+sheffield        1    6750/975     0.770  0.669  0.943  0.396  -1.007 | 0.874/0.588 | 0.759/0.647   [test groups leak/no 3/1, val no-leak groups 1]
+[assert ok] sheffield fold2: train/val/test groups disjoint
+[assert ok] sheffield fold2: train U val U test == all groups
+sheffield        2    2775/150     0.860  0.713  0.886  0.540  -1.336 | 0.889/0.760 | 0.548/0.548   [test groups leak/no 2/1, val no-leak groups 1]
+
+Run recorded: C:\Users\armaan\PycharmProjects\SJWP_Research\results\runs\2026-10-08_215302_v2_xrig_three_band_groups.json
+
+Saved C:\Users\armaan\PycharmProjects\SJWP_Research\results\v2_cross_rig\phase7\group_analysis\group_analysis.json, per_group.csv, fig_per_group.png, within_rig_scores.npz

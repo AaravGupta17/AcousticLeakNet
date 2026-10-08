@@ -1,0 +1,2321 @@
+{
+  "experiment": "v2_xrig_three_band_groups",
+  "timestamp": "2026-10-08T21:53:02",
+  "git_commit": "ed5cf64",
+  "git_dirty": false,
+  "python": "3.12.10",
+  "torch": "2.7.1+cu118",
+  "device": "cuda",
+  "command": "experiments/xrig_three_band_groups.py",
+  "config": {
+    "addendum": "docs/PHASE7_ADDENDUM_1_GROUP_ANALYSIS.md",
+    "n_boot": 2000,
+    "seed": 0,
+    "three_band_cols": [
+      4,
+      5,
+      8
+    ],
+    "classifier": {
+      "max_iter": 3000,
+      "class_weight": "balanced",
+      "C": 0.5
+    }
+  },
+  "summary": "group-level/failure analysis of frozen Phase 7 results (descriptive)",
+  "results": {
+    "analysis_1_to_3": {
+      "directions": {
+        "A": {
+          "train_rig": "mendeley_acc",
+          "test_rig": "sheffield",
+          "methods": {
+            "three_band": {
+              "pooled_window_auroc": 0.8014826025459689,
+              "group_balanced_window_auroc": 0.8305729934328456,
+              "balanced_minus_pooled": 0.029090390886876705,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "sh:noleak:NoLeak_2.8bar",
+                  "label": 0,
+                  "auroc": 0.8866466299963329
+                },
+                {
+                  "dropped_group": "sh:noleak:NoLeak_4.2bar",
+                  "label": 0,
+                  "auroc": 0.7282140080674734
+                },
+                {
+                  "dropped_group": "sh:noleak:noLeak_2.8bar_newer",
+                  "label": 0,
+                  "auroc": 0.7946198527545062
+                },
+                {
+                  "dropped_group": "sh:test1",
+                  "label": 1,
+                  "auroc": 0.812903823953824
+                },
+                {
+                  "dropped_group": "sh:test2",
+                  "label": 1,
+                  "auroc": 0.8135397907647907
+                },
+                {
+                  "dropped_group": "sh:test3",
+                  "label": 1,
+                  "auroc": 0.7986672151583146
+                },
+                {
+                  "dropped_group": "sh:test4",
+                  "label": 1,
+                  "auroc": 0.7991636665835619
+                },
+                {
+                  "dropped_group": "sh:test5",
+                  "label": 1,
+                  "auroc": 0.7990871895424837
+                },
+                {
+                  "dropped_group": "sh:test6",
+                  "label": 1,
+                  "auroc": 0.8057032306255837
+                },
+                {
+                  "dropped_group": "sh:test7",
+                  "label": 1,
+                  "auroc": 0.7890649486461251
+                },
+                {
+                  "dropped_group": "sh:test8",
+                  "label": 1,
+                  "auroc": 0.7935365452847805
+                }
+              ],
+              "loo_min": 0.7282140080674734,
+              "loo_max": 0.8866466299963329,
+              "loo_min_dropped": "sh:noleak:NoLeak_4.2bar",
+              "loo_max_dropped": "sh:noleak:NoLeak_2.8bar",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.703216417026318,
+                  "median": 0.8860232884826944,
+                  "max": 0.8906983498349834,
+                  "n": 3
+                },
+                "leak": {
+                  "min": 0.719864713064713,
+                  "median": 0.8279779987373738,
+                  "max": 0.867451388888889,
+                  "n": 8
+                }
+              },
+              "group_level_auroc": 1.0,
+              "group_confusion": {
+                "tp": 0,
+                "fn": 8,
+                "tn": 3,
+                "fp": 0
+              },
+              "threshold": 1.2420809528922518,
+              "n_groups": {
+                "leak": 8,
+                "no_leak": 3
+              }
+            },
+            "full14": {
+              "pooled_window_auroc": 0.7375227251296559,
+              "group_balanced_window_auroc": 0.8191502378942442,
+              "balanced_minus_pooled": 0.08162751276458835,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "sh:noleak:NoLeak_2.8bar",
+                  "label": 0,
+                  "auroc": 0.8109936193619361
+                },
+                {
+                  "dropped_group": "sh:noleak:NoLeak_4.2bar",
+                  "label": 0,
+                  "auroc": 0.6930366850018335
+                },
+                {
+                  "dropped_group": "sh:noleak:noLeak_2.8bar_newer",
+                  "label": 0,
+                  "auroc": 0.7208006939155455
+                },
+                {
+                  "dropped_group": "sh:test1",
+                  "label": 1,
+                  "auroc": 0.7457021464646465
+                },
+                {
+                  "dropped_group": "sh:test2",
+                  "label": 1,
+                  "auroc": 0.7484055375180375
+                },
+                {
+                  "dropped_group": "sh:test3",
+                  "label": 1,
+                  "auroc": 0.7276198620460401
+                },
+                {
+                  "dropped_group": "sh:test4",
+                  "label": 1,
+                  "auroc": 0.7272614809274495
+                },
+                {
+                  "dropped_group": "sh:test5",
+                  "label": 1,
+                  "auroc": 0.7472876750700279
+                },
+                {
+                  "dropped_group": "sh:test6",
+                  "label": 1,
+                  "auroc": 0.7633188235294117
+                },
+                {
+                  "dropped_group": "sh:test7",
+                  "label": 1,
+                  "auroc": 0.7240296545284779
+                },
+                {
+                  "dropped_group": "sh:test8",
+                  "label": 1,
+                  "auroc": 0.7183746965452847
+                }
+              ],
+              "loo_min": 0.6930366850018335,
+              "loo_max": 0.8109936193619361,
+              "loo_min_dropped": "sh:noleak:NoLeak_4.2bar",
+              "loo_max_dropped": "sh:noleak:NoLeak_2.8bar",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.6527486164001015,
+                  "median": 0.7888527714309894,
+                  "max": 0.9549091309130913,
+                  "n": 3
+                },
+                "leak": {
+                  "min": 0.6004809523809524,
+                  "median": 0.7474255456349206,
+                  "max": 0.9156952380952381,
+                  "n": 8
+                }
+              },
+              "group_level_auroc": 0.9583333333333334,
+              "group_confusion": {
+                "tp": 7,
+                "fn": 1,
+                "tn": 3,
+                "fp": 0
+              },
+              "threshold": 1.3471916342171322,
+              "n_groups": {
+                "leak": 8,
+                "no_leak": 3
+              }
+            },
+            "model_f_seed0": {
+              "pooled_window_auroc": 0.29310627062706274,
+              "group_balanced_window_auroc": 0.256812370811208,
+              "balanced_minus_pooled": -0.036293899815854735,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "sh:noleak:NoLeak_2.8bar",
+                  "label": 0,
+                  "auroc": 0.24997661899523285
+                },
+                {
+                  "dropped_group": "sh:noleak:NoLeak_4.2bar",
+                  "label": 0,
+                  "auroc": 0.31023518885221857
+                },
+                {
+                  "dropped_group": "sh:noleak:noLeak_2.8bar_newer",
+                  "label": 0,
+                  "auroc": 0.30810669374629773
+                },
+                {
+                  "dropped_group": "sh:test1",
+                  "label": 1,
+                  "auroc": 0.3119194805194805
+                },
+                {
+                  "dropped_group": "sh:test2",
+                  "label": 1,
+                  "auroc": 0.24180613275613277
+                },
+                {
+                  "dropped_group": "sh:test3",
+                  "label": 1,
+                  "auroc": 0.28815145017867533
+                },
+                {
+                  "dropped_group": "sh:test4",
+                  "label": 1,
+                  "auroc": 0.2861860882572924
+                },
+                {
+                  "dropped_group": "sh:test5",
+                  "label": 1,
+                  "auroc": 0.2600867600373483
+                },
+                {
+                  "dropped_group": "sh:test6",
+                  "label": 1,
+                  "auroc": 0.3079206722689076
+                },
+                {
+                  "dropped_group": "sh:test7",
+                  "label": 1,
+                  "auroc": 0.32514057889822595
+                },
+                {
+                  "dropped_group": "sh:test8",
+                  "label": 1,
+                  "auroc": 0.32625251167133523
+                }
+              ],
+              "loo_min": 0.24180613275613277,
+              "loo_max": 0.32625251167133523,
+              "loo_min_dropped": "sh:test2",
+              "loo_max_dropped": "sh:test8",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.0981007700770077,
+                  "median": 0.27334213421342135,
+                  "max": 0.34287125327917406,
+                  "n": 3
+                },
+                "leak": {
+                  "min": 0.11701686507936508,
+                  "median": 0.2967723665223665,
+                  "max": 0.6403687423687423,
+                  "n": 8
+                }
+              },
+              "group_level_auroc": 0.125,
+              "group_confusion": {
+                "tp": 3,
+                "fn": 5,
+                "tn": 0,
+                "fp": 3
+              },
+              "threshold": -1.2610008716583252,
+              "n_groups": {
+                "leak": 8,
+                "no_leak": 3
+              }
+            },
+            "model_f_seed1": {
+              "pooled_window_auroc": 0.3687996542511395,
+              "group_balanced_window_auroc": 0.34046739541625015,
+              "balanced_minus_pooled": -0.028332258834889323,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "sh:noleak:NoLeak_2.8bar",
+                  "label": 0,
+                  "auroc": 0.3882863806380638
+                },
+                {
+                  "dropped_group": "sh:noleak:NoLeak_4.2bar",
+                  "label": 0,
+                  "auroc": 0.3218762889622296
+                },
+                {
+                  "dropped_group": "sh:noleak:noLeak_2.8bar_newer",
+                  "label": 0,
+                  "auroc": 0.3846284843869002
+                },
+                {
+                  "dropped_group": "sh:test1",
+                  "label": 1,
+                  "auroc": 0.37946969696969696
+                },
+                {
+                  "dropped_group": "sh:test2",
+                  "label": 1,
+                  "auroc": 0.30997651515151514
+                },
+                {
+                  "dropped_group": "sh:test3",
+                  "label": 1,
+                  "auroc": 0.3610812266267764
+                },
+                {
+                  "dropped_group": "sh:test4",
+                  "label": 1,
+                  "auroc": 0.3595730408044544
+                },
+                {
+                  "dropped_group": "sh:test5",
+                  "label": 1,
+                  "auroc": 0.3373016619981326
+                },
+                {
+                  "dropped_group": "sh:test6",
+                  "label": 1,
+                  "auroc": 0.38992765639589166
+                },
+                {
+                  "dropped_group": "sh:test7",
+                  "label": 1,
+                  "auroc": 0.40888698412698415
+                },
+                {
+                  "dropped_group": "sh:test8",
+                  "label": 1,
+                  "auroc": 0.40797318394024273
+                }
+              ],
+              "loo_min": 0.30997651515151514,
+              "loo_max": 0.40888698412698415,
+              "loo_min_dropped": "sh:test2",
+              "loo_max_dropped": "sh:test7",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.16302486248624862,
+                  "median": 0.34631496995853434,
+                  "max": 0.42294199881526606,
+                  "n": 3
+                },
+                "leak": {
+                  "min": 0.1558357142857143,
+                  "median": 0.3996956487956488,
+                  "max": 0.7669870573870573,
+                  "n": 8
+                }
+              },
+              "group_level_auroc": 0.25,
+              "group_confusion": {
+                "tp": 4,
+                "fn": 4,
+                "tn": 0,
+                "fp": 3
+              },
+              "threshold": 0.5261753797531128,
+              "n_groups": {
+                "leak": 8,
+                "no_leak": 3
+              }
+            },
+            "model_f_seed2": {
+              "pooled_window_auroc": 0.37428027659908847,
+              "group_balanced_window_auroc": 0.36354738546717014,
+              "balanced_minus_pooled": -0.010732891131918332,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "sh:noleak:NoLeak_2.8bar",
+                  "label": 0,
+                  "auroc": 0.3841868720205354
+                },
+                {
+                  "dropped_group": "sh:noleak:NoLeak_4.2bar",
+                  "label": 0,
+                  "auroc": 0.33949682434910156
+                },
+                {
+                  "dropped_group": "sh:noleak:noLeak_2.8bar_newer",
+                  "label": 0,
+                  "auroc": 0.3886323093847846
+                },
+                {
+                  "dropped_group": "sh:test1",
+                  "label": 1,
+                  "auroc": 0.3731507215007215
+                },
+                {
+                  "dropped_group": "sh:test2",
+                  "label": 1,
+                  "auroc": 0.3151546176046176
+                },
+                {
+                  "dropped_group": "sh:test3",
+                  "label": 1,
+                  "auroc": 0.36431420260949055
+                },
+                {
+                  "dropped_group": "sh:test4",
+                  "label": 1,
+                  "auroc": 0.35995233108950386
+                },
+                {
+                  "dropped_group": "sh:test5",
+                  "label": 1,
+                  "auroc": 0.3513920448179272
+                },
+                {
+                  "dropped_group": "sh:test6",
+                  "label": 1,
+                  "auroc": 0.4026621101774043
+                },
+                {
+                  "dropped_group": "sh:test7",
+                  "label": 1,
+                  "auroc": 0.41792769374416433
+                },
+                {
+                  "dropped_group": "sh:test8",
+                  "label": 1,
+                  "auroc": 0.41481617180205416
+                }
+              ],
+              "loo_min": 0.3151546176046176,
+              "loo_max": 0.41792769374416433,
+              "loo_min_dropped": "sh:test2",
+              "loo_max_dropped": "sh:test7",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.1877038503850385,
+                  "median": 0.36284958957434205,
+                  "max": 0.4144150291952272,
+                  "n": 3
+                },
+                "leak": {
+                  "min": 0.14240337301587302,
+                  "median": 0.43890025183150183,
+                  "max": 0.7745155067155067,
+                  "n": 8
+                }
+              },
+              "group_level_auroc": 0.2916666666666667,
+              "group_confusion": {
+                "tp": 6,
+                "fn": 2,
+                "tn": 0,
+                "fp": 3
+              },
+              "threshold": -0.9648973345756531,
+              "n_groups": {
+                "leak": 8,
+                "no_leak": 3
+              }
+            }
+          },
+          "n_groups": {
+            "leak": 8,
+            "no_leak": 3
+          }
+        },
+        "B": {
+          "train_rig": "sheffield",
+          "test_rig": "mendeley_acc",
+          "methods": {
+            "three_band": {
+              "pooled_window_auroc": 0.5056924554376137,
+              "group_balanced_window_auroc": 0.5045220675066289,
+              "balanced_minus_pooled": -0.0011703879309847842,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5077980010483517
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5003952500224991
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_ND",
+                  "label": 1,
+                  "auroc": 0.5155021999888607
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.5022266532302352
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5090999657970205
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5125636286058319
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_ND",
+                  "label": 1,
+                  "auroc": 0.503681943268363
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.5096151074097096
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5083223442816444
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5042327542879239
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_ND",
+                  "label": 1,
+                  "auroc": 0.5042507223937769
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.5006179715545744
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.45429947660545905
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.4779057887236846
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_ND",
+                  "label": 0,
+                  "auroc": 0.5080444684931752
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.5038762782783435
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5068994138945051
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5089243972483803
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_ND",
+                  "label": 1,
+                  "auroc": 0.5137957920215984
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.5045265364940129
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5051212897759453
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.501181292994056
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_ND",
+                  "label": 1,
+                  "auroc": 0.5064564448330227
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.5023157845738491
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5112643414712138
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5100494427876314
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_ND",
+                  "label": 1,
+                  "auroc": 0.5095723185891949
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.5119446063520398
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.506929392097695
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5038934981957423
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_ND",
+                  "label": 1,
+                  "auroc": 0.5030966092501856
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.5063201008925893
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.49482807584760574
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.5522933863002895
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_ND",
+                  "label": 0,
+                  "auroc": 0.513642099991934
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.5404504837000401
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5034912644418807
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.49585617748310595
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_ND",
+                  "label": 1,
+                  "auroc": 0.49312841397343504
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.4990874226802036
+                }
+              ],
+              "loo_min": 0.45429947660545905,
+              "loo_max": 0.5522933863002895,
+              "loo_min_dropped": "md:Branched/No-leak/BR_NL_0.18 LPS",
+              "loo_max_dropped": "md:Looped/No-leak/LO_NL_0.47 LPS",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.1789623334341336,
+                  "median": 0.5036541313133924,
+                  "max": 0.8614460755757505,
+                  "n": 8
+                },
+                "leak": {
+                  "min": 0.20708814327327651,
+                  "median": 0.5051447892945653,
+                  "max": 0.8970129378949525,
+                  "n": 32
+                }
+              },
+              "group_level_auroc": 0.46484375,
+              "group_confusion": {
+                "tp": 31,
+                "fn": 1,
+                "tn": 1,
+                "fp": 7
+              },
+              "threshold": -1.165626736321443,
+              "n_groups": {
+                "leak": 32,
+                "no_leak": 8
+              }
+            },
+            "full14": {
+              "pooled_window_auroc": 0.47313609096163384,
+              "group_balanced_window_auroc": 0.4728063235661304,
+              "balanced_minus_pooled": -0.00032976739550344414,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.4722720594038967
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.4674591806708456
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_ND",
+                  "label": 1,
+                  "auroc": 0.46233487425380126
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.4669317257530534
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.47400649451841603
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.47240187516164966
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_ND",
+                  "label": 1,
+                  "auroc": 0.47090293021845675
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.4699446020507307
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.46895582375968503
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.4701667440223149
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_ND",
+                  "label": 1,
+                  "auroc": 0.46264329564417683
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.4668572564189548
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.45319310503853505
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.45842743706252975
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_ND",
+                  "label": 0,
+                  "auroc": 0.4880688514415795
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.46137405017695565
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.47780765478872067
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.4783411909113171
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_ND",
+                  "label": 1,
+                  "auroc": 0.46430481432234594
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.4719536893286529
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.48281806204614713
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.478117556045326
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_ND",
+                  "label": 1,
+                  "auroc": 0.4748147675917662
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.47590511405378166
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.4773933990273402
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.47790390934729443
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_ND",
+                  "label": 1,
+                  "auroc": 0.47771562612775176
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.47696130813241616
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.4828723267538134
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.4828557565233582
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_ND",
+                  "label": 1,
+                  "auroc": 0.47552981730751714
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.47688975994941185
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.46563155365256903
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.4764560031457532
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_ND",
+                  "label": 0,
+                  "auroc": 0.5093061866480252
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.4725637162992899
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.4763980863354254
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.47507559060855
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_ND",
+                  "label": 1,
+                  "auroc": 0.4628351234241837
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.468986416618119
+                }
+              ],
+              "loo_min": 0.45319310503853505,
+              "loo_max": 0.5093061866480252,
+              "loo_min_dropped": "md:Branched/No-leak/BR_NL_0.18 LPS",
+              "loo_max_dropped": "md:Looped/No-leak/LO_NL_ND",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.21953901558738398,
+                  "median": 0.5015033648459379,
+                  "max": 0.6111858712959727,
+                  "n": 8
+                },
+                "leak": {
+                  "min": 0.1698906346029595,
+                  "median": 0.4334391792867611,
+                  "max": 0.8019203797604919,
+                  "n": 32
+                }
+              },
+              "group_level_auroc": 0.4296875,
+              "group_confusion": {
+                "tp": 28,
+                "fn": 4,
+                "tn": 0,
+                "fp": 8
+              },
+              "threshold": -2.76408809796686,
+              "n_groups": {
+                "leak": 32,
+                "no_leak": 8
+              }
+            },
+            "model_f_seed0": {
+              "pooled_window_auroc": 0.5151700358793329,
+              "group_balanced_window_auroc": 0.5156029440457734,
+              "balanced_minus_pooled": 0.00043290816644059316,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5128488223246288
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5122440291587583
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_ND",
+                  "label": 1,
+                  "auroc": 0.5185645895463821
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.5221554337323602
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5186915361792641
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5169065957120508
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_ND",
+                  "label": 1,
+                  "auroc": 0.5261678889196512
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.5192123861175865
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5215537769930418
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.520812254551878
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_ND",
+                  "label": 1,
+                  "auroc": 0.5267246471291775
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.5225752021508752
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.5246850038964253
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.5099027370741807
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_ND",
+                  "label": 0,
+                  "auroc": 0.48360508585845
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.5148228448668253
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5193778093497589
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5152334808716296
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_ND",
+                  "label": 1,
+                  "auroc": 0.511913426490916
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.5189852572781295
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5102233460864707
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5078969164698477
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_ND",
+                  "label": 1,
+                  "auroc": 0.5092138703201116
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.5100644544017616
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5075891655484923
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5151205563516135
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_ND",
+                  "label": 1,
+                  "auroc": 0.5158001020385955
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.5075466648047293
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5106497250606647
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5091656775124518
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_ND",
+                  "label": 1,
+                  "auroc": 0.5088574838750154
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.5111305117998525
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.519690225087158
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.5322565037999982
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_ND",
+                  "label": 0,
+                  "auroc": 0.5245925812652918
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.5118301455176087
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.509898090634545
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5167409923721284
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_ND",
+                  "label": 1,
+                  "auroc": 0.5165993232262517
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.5149872983206654
+                }
+              ],
+              "loo_min": 0.48360508585845,
+              "loo_max": 0.5322565037999982,
+              "loo_min_dropped": "md:Branched/No-leak/BR_NL_ND",
+              "loo_max_dropped": "md:Looped/No-leak/LO_NL_0.47 LPS",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.3953727776490502,
+                  "median": 0.5005105332304414,
+                  "max": 0.7364793483852978,
+                  "n": 8
+                },
+                "leak": {
+                  "min": 0.1594163939535609,
+                  "median": 0.5149350724129709,
+                  "max": 0.7526080653040642,
+                  "n": 32
+                }
+              },
+              "group_level_auroc": 0.51171875,
+              "group_confusion": {
+                "tp": 27,
+                "fn": 5,
+                "tn": 0,
+                "fp": 8
+              },
+              "threshold": 2.273987054824829,
+              "n_groups": {
+                "leak": 32,
+                "no_leak": 8
+              }
+            },
+            "model_f_seed1": {
+              "pooled_window_auroc": 0.5242662850453431,
+              "group_balanced_window_auroc": 0.5248372299017624,
+              "balanced_minus_pooled": 0.0005709448564192865,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5182813281077657
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5235638912118237
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_ND",
+                  "label": 1,
+                  "auroc": 0.5306071235082355
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.533209425106657
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5277798648678733
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.527207002196158
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_ND",
+                  "label": 1,
+                  "auroc": 0.5383684225977022
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.5311150677060757
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5297223966048502
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5291340815488811
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_ND",
+                  "label": 1,
+                  "auroc": 0.5389021512631073
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.5320815464225498
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.5360990892632025
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.5106629887792505
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_ND",
+                  "label": 0,
+                  "auroc": 0.49264226467346006
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.5185055340081887
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5291799860961852
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.525942972603211
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_ND",
+                  "label": 1,
+                  "auroc": 0.5216526743087052
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.5305265065991618
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5182962135886457
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5158716877247733
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_ND",
+                  "label": 1,
+                  "auroc": 0.5146137416035733
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.5175801923259847
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.515192434766418
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5198542665606756
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_ND",
+                  "label": 1,
+                  "auroc": 0.5200572777661645
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.5152984336452078
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5195291550042602
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5176888475012599
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_ND",
+                  "label": 1,
+                  "auroc": 0.5179663672388076
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.5189159037568201
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.5318571230921589
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.5385695056865539
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_ND",
+                  "label": 0,
+                  "auroc": 0.5530717725781733
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.5127593822620613
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5183805064767502
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5263367369345631
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_ND",
+                  "label": 1,
+                  "auroc": 0.5277992178851225
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.5258776787029356
+                }
+              ],
+              "loo_min": 0.49264226467346006,
+              "loo_max": 0.5530717725781733,
+              "loo_min_dropped": "md:Branched/No-leak/BR_NL_ND",
+              "loo_max_dropped": "md:Looped/No-leak/LO_NL_ND",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.3223042151522411,
+                  "median": 0.5173435481805699,
+                  "max": 0.7459897537201183,
+                  "n": 8
+                },
+                "leak": {
+                  "min": 0.0736442262739598,
+                  "median": 0.5106577087800186,
+                  "max": 0.8249050538159698,
+                  "n": 32
+                }
+              },
+              "group_level_auroc": 0.51171875,
+              "group_confusion": {
+                "tp": 21,
+                "fn": 11,
+                "tn": 1,
+                "fp": 7
+              },
+              "threshold": 2.439009189605713,
+              "n_groups": {
+                "leak": 32,
+                "no_leak": 8
+              }
+            },
+            "model_f_seed2": {
+              "pooled_window_auroc": 0.5345078761484059,
+              "group_balanced_window_auroc": 0.5346725070367616,
+              "balanced_minus_pooled": 0.00016463088835572126,
+              "loo_group_auroc": [
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5349820965616898
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.53080731871081
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_ND",
+                  "label": 1,
+                  "auroc": 0.5433107300722528
+                },
+                {
+                  "dropped_group": "md:Branched/Circumferential Crack/BR_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.540441840784361
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5355371360367854
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5345107208854682
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_ND",
+                  "label": 1,
+                  "auroc": 0.5413682105234388
+                },
+                {
+                  "dropped_group": "md:Branched/Gasket Leak/BR_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.5352290722651657
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5402097650455732
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5403692091452091
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_ND",
+                  "label": 1,
+                  "auroc": 0.545825755938459
+                },
+                {
+                  "dropped_group": "md:Branched/Longitudinal Crack/BR_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.5377134166409284
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.5359178732306891
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.5404138407540846
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_ND",
+                  "label": 0,
+                  "auroc": 0.5046710878615153
+                },
+                {
+                  "dropped_group": "md:Branched/No-leak/BR_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.5465281937712063
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5356941105100292
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.532442424141232
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_ND",
+                  "label": 1,
+                  "auroc": 0.5349745071431607
+                },
+                {
+                  "dropped_group": "md:Branched/Orifice Leak/BR_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.533947693637565
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5309851760595994
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5296742469778936
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_ND",
+                  "label": 1,
+                  "auroc": 0.5352422871269296
+                },
+                {
+                  "dropped_group": "md:Looped/Circumferential Crack/LO_CC_Transient",
+                  "label": 1,
+                  "auroc": 0.5302235311439378
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5289555922883412
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5358438058541475
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_ND",
+                  "label": 1,
+                  "auroc": 0.5368453092867775
+                },
+                {
+                  "dropped_group": "md:Looped/Gasket Leak/LO_GL_Transient",
+                  "label": 1,
+                  "auroc": 0.5296148597779033
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.529532135115936
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5319385499960535
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_ND",
+                  "label": 1,
+                  "auroc": 0.5307771792256365
+                },
+                {
+                  "dropped_group": "md:Looped/Longitudinal Crack/LO_LC_Transient",
+                  "label": 1,
+                  "auroc": 0.5297081350477102
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.18 LPS",
+                  "label": 0,
+                  "auroc": 0.5438634706127498
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_0.47 LPS",
+                  "label": 0,
+                  "auroc": 0.5445980258381954
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_ND",
+                  "label": 0,
+                  "auroc": 0.5160220701252027
+                },
+                {
+                  "dropped_group": "md:Looped/No-leak/LO_NL_Transient",
+                  "label": 0,
+                  "auroc": 0.5440586218987753
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.18 LPS",
+                  "label": 1,
+                  "auroc": 0.5309937440223271
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_0.47 LPS",
+                  "label": 1,
+                  "auroc": 0.5314668043893149
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_ND",
+                  "label": 1,
+                  "auroc": 0.534457920721946
+                },
+                {
+                  "dropped_group": "md:Looped/Orifice Leak/LO_OL_Transient",
+                  "label": 1,
+                  "auroc": 0.530633026492074
+                }
+              ],
+              "loo_min": 0.5046710878615153,
+              "loo_max": 0.5465281937712063,
+              "loo_min_dropped": "md:Branched/No-leak/BR_NL_ND",
+              "loo_max_dropped": "md:Branched/No-leak/BR_NL_Transient",
+              "one_group_auroc_spread": {
+                "no_leak": {
+                  "min": 0.4523470238255278,
+                  "median": 0.4810066803074276,
+                  "max": 0.7437006389688527,
+                  "n": 8
+                },
+                "leak": {
+                  "min": 0.18604293283465795,
+                  "median": 0.5352420405418893,
+                  "max": 0.7074396835652489,
+                  "n": 32
+                }
+              },
+              "group_level_auroc": 0.546875,
+              "group_confusion": {
+                "tp": 25,
+                "fn": 7,
+                "tn": 1,
+                "fp": 7
+              },
+              "threshold": 2.842957019805908,
+              "n_groups": {
+                "leak": 32,
+                "no_leak": 8
+              }
+            }
+          },
+          "n_groups": {
+            "leak": 32,
+            "no_leak": 8
+          }
+        }
+      }
+    },
+    "failure_analysis": {
+      "per_rig_feature": {
+        "mendeley_acc": {
+          "band_400_600": {
+            "group_auroc": 0.75,
+            "window_auroc": 0.6468771891466857,
+            "direction_group": "leak higher",
+            "direction_window": "leak higher",
+            "mean_leak_groups": -1.2737157686527532,
+            "mean_no_leak_groups": -1.4603339139487064
+          },
+          "band_600_800": {
+            "group_auroc": 0.71875,
+            "window_auroc": 0.6737972285801266,
+            "direction_group": "leak higher",
+            "direction_window": "leak higher",
+            "mean_leak_groups": -1.9774888259403733,
+            "mean_no_leak_groups": -2.4467503138657216
+          },
+          "band_1600_2000": {
+            "group_auroc": 0.73046875,
+            "window_auroc": 0.6674798629143783,
+            "direction_group": "leak higher",
+            "direction_window": "leak higher",
+            "mean_leak_groups": -2.5994463091497897,
+            "mean_no_leak_groups": -3.0702321067961447
+          },
+          "log_rms": {
+            "group_auroc": 0.29296875,
+            "window_auroc": 0.339128449384355,
+            "direction_group": "leak lower",
+            "direction_window": "leak lower",
+            "mean_leak_groups": -2.711663344714946,
+            "mean_no_leak_groups": -2.47882880273709
+          }
+        },
+        "sheffield": {
+          "band_400_600": {
+            "group_auroc": 1.0,
+            "window_auroc": 0.802244947351878,
+            "direction_group": "leak higher",
+            "direction_window": "leak higher",
+            "mean_leak_groups": -0.8897747597519057,
+            "mean_no_leak_groups": -1.552102430721936
+          },
+          "band_600_800": {
+            "group_auroc": 0.8333333333333334,
+            "window_auroc": 0.5772028288543141,
+            "direction_group": "leak higher",
+            "direction_window": "leak higher",
+            "mean_leak_groups": -1.7153000121423938,
+            "mean_no_leak_groups": -1.9158984565704777
+          },
+          "band_1600_2000": {
+            "group_auroc": 0.75,
+            "window_auroc": 0.6437503064592174,
+            "direction_group": "leak higher",
+            "direction_window": "leak higher",
+            "mean_leak_groups": -2.5467662379756586,
+            "mean_no_leak_groups": -2.805327009925651
+          },
+          "log_rms": {
+            "group_auroc": 0.9166666666666667,
+            "window_auroc": 0.7677119911991199,
+            "direction_group": "leak higher",
+            "direction_window": "leak higher",
+            "mean_leak_groups": -2.3877826415867673,
+            "mean_no_leak_groups": -2.9955648675331705
+          }
+        }
+      },
+      "refit": {
+        "A": {
+          "train_rig": "mendeley_acc",
+          "features": [
+            "band_400_600",
+            "band_600_800",
+            "band_1600_2000"
+          ],
+          "val_auroc_refit": 0.4984,
+          "val_auroc_frozen": 0.4984,
+          "coef_standardised": [
+            0.6167876821215184,
+            -0.5677894343599393,
+            0.898200433757548
+          ],
+          "coef_raw": [
+            1.7680643778522875,
+            -0.7679000251592291,
+            1.250401101511797
+          ],
+          "intercept_scaled_space": 0.1955066073115904,
+          "intercept_raw_space": 4.283769952069954,
+          "scaler_mean": [
+            -1.311601051719542,
+            -2.055694521465584,
+            -2.6774097671258104
+          ],
+          "scaler_scale": [
+            0.34884910857756546,
+            0.7394054118466847,
+            0.7183298484554909
+          ]
+        },
+        "B": {
+          "train_rig": "sheffield",
+          "features": [
+            "band_400_600",
+            "band_600_800",
+            "band_1600_2000"
+          ],
+          "val_auroc_refit": 0.8620571765399352,
+          "val_auroc_frozen": 0.8620571765399352,
+          "coef_standardised": [
+            1.433479818076535,
+            -1.0024780492085061,
+            0.36141852371846644
+          ],
+          "coef_raw": [
+            3.4841461189665766,
+            -2.008698694055396,
+            0.5318446106171567
+          ],
+          "intercept_scaled_space": 0.573249776227072,
+          "intercept_raw_space": 1.7060139114104276,
+          "scaler_mean": [
+            -0.9800259150163249,
+            -1.8002031186618628,
+            -2.508770933740948
+          ],
+          "scaler_scale": [
+            0.4114293055257153,
+            0.4990684029293542,
+            0.679556615792484
+          ]
+        }
+      },
+      "class_means": {
+        "mendeley_acc": {
+          "band_400_600": {
+            "leak": {
+              "mean": -1.2737157686527532,
+              "sd": 0.20597147030787463,
+              "n_groups": 32
+            },
+            "no_leak": {
+              "mean": -1.4603339139487064,
+              "sd": 0.2085678300766107,
+              "n_groups": 8
+            }
+          },
+          "band_600_800": {
+            "leak": {
+              "mean": -1.9774888259403733,
+              "sd": 0.46874080722250727,
+              "n_groups": 32
+            },
+            "no_leak": {
+              "mean": -2.4467503138657216,
+              "sd": 0.533625152356322,
+              "n_groups": 8
+            }
+          },
+          "band_1600_2000": {
+            "leak": {
+              "mean": -2.5994463091497897,
+              "sd": 0.534178368084819,
+              "n_groups": 32
+            },
+            "no_leak": {
+              "mean": -3.0702321067961447,
+              "sd": 0.44007226609330513,
+              "n_groups": 8
+            }
+          },
+          "log_rms": {
+            "leak": {
+              "mean": -2.711663344714946,
+              "sd": 0.34992973626894736,
+              "n_groups": 32
+            },
+            "no_leak": {
+              "mean": -2.47882880273709,
+              "sd": 0.2361114350095923,
+              "n_groups": 8
+            }
+          }
+        },
+        "sheffield": {
+          "band_400_600": {
+            "leak": {
+              "mean": -0.8897747597519057,
+              "sd": 0.2933416680313347,
+              "n_groups": 8
+            },
+            "no_leak": {
+              "mean": -1.552102430721936,
+              "sd": 0.25063165488109485,
+              "n_groups": 3
+            }
+          },
+          "band_600_800": {
+            "leak": {
+              "mean": -1.7153000121423938,
+              "sd": 0.24491652048950893,
+              "n_groups": 8
+            },
+            "no_leak": {
+              "mean": -1.9158984565704777,
+              "sd": 0.19425671226156582,
+              "n_groups": 3
+            }
+          },
+          "band_1600_2000": {
+            "leak": {
+              "mean": -2.5467662379756586,
+              "sd": 0.35047746185851103,
+              "n_groups": 8
+            },
+            "no_leak": {
+              "mean": -2.805327009925651,
+              "sd": 0.260483035543536,
+              "n_groups": 3
+            }
+          },
+          "log_rms": {
+            "leak": {
+              "mean": -2.3877826415867673,
+              "sd": 0.44526868249475354,
+              "n_groups": 8
+            },
+            "no_leak": {
+              "mean": -2.9955648675331705,
+              "sd": 0.27113429940836875,
+              "n_groups": 3
+            }
+          }
+        }
+      },
+      "shift": {
+        "band_400_600": {
+          "pooled_within_cell_sd": 0.22349416739903322,
+          "leak_shift_sd_units": 1.7179016945679286,
+          "no_leak_shift_sd_units": -0.4106081059797115,
+          "leak_minus_noleak_gap": {
+            "mendeley_acc": 0.18661814529595322,
+            "sheffield": 0.6623276709700303
+          },
+          "gap_in_sd_units": {
+            "mendeley_acc": 0.8350023066273562,
+            "sheffield": 2.9635121071749966
+          }
+        },
+        "band_600_800": {
+          "pooled_within_cell_sd": 0.44482621402628775,
+          "leak_shift_sd_units": 0.5894185313963647,
+          "no_leak_shift_sd_units": 1.193391577556336,
+          "leak_minus_noleak_gap": {
+            "mendeley_acc": 0.4692614879253483,
+            "sheffield": 0.20059844442808394
+          },
+          "gap_in_sd_units": {
+            "mendeley_acc": 1.0549321805427962,
+            "sheffield": 0.4509591343828249
+          }
+        },
+        "band_1600_2000": {
+          "pooled_within_cell_sd": 0.4880907566248155,
+          "leak_shift_sd_units": 0.10793089289053079,
+          "no_leak_shift_sd_units": 0.5427373767582332,
+          "leak_minus_noleak_gap": {
+            "mendeley_acc": 0.470785797646355,
+            "sheffield": 0.2585607719499925
+          },
+          "gap_in_sd_units": {
+            "mendeley_acc": 0.9645456121764616,
+            "sheffield": 0.5297391283087592
+          }
+        },
+        "log_rms": {
+          "pooled_within_cell_sd": 0.34889164056335686,
+          "leak_shift_sd_units": 0.9283131650996486,
+          "no_leak_shift_sd_units": -1.4810789503632256,
+          "leak_minus_noleak_gap": {
+            "mendeley_acc": -0.2328345419778559,
+            "sheffield": 0.6077822259464032
+          },
+          "gap_in_sd_units": {
+            "mendeley_acc": -0.667354888761155,
+            "sheffield": 1.742037226701719
+          }
+        }
+      }
+    },
+    "within_rig_reference": [
+      {
+        "rig": "mendeley_acc",
+        "fold": 0,
+        "n_train_groups": 20,
+        "n_val_groups": 6,
+        "n_test_groups_leak": 11,
+        "n_test_groups_no_leak": 3,
+        "n_val_groups_no_leak": 1,
+        "n_test_windows_leak": 1984,
+        "n_test_windows_no_leak": 536,
+        "threshold": -1.0125421481005021,
+        "frozen_logreg": {
+          "auroc": 0.6153133651299951,
+          "balanced_accuracy": 0.5571512397688975
+        },
+        "frozen_model_f": {
+          "auroc": 0.6983272899614829,
+          "balanced_accuracy": 0.6470984292248436
+        },
+        "three_band": {
+          "auroc": 0.6993795513360617,
+          "ci95": [
+            0.47461347646557694,
+            0.8713662722293156
+          ],
+          "balanced_accuracy": 0.5713017573423207,
+          "sensitivity": 0.9858870967741935,
+          "specificity": 0.15671641791044777,
+          "group_auroc": 0.8484848484848485,
+          "group_confusion": {
+            "tp": 11,
+            "fn": 0,
+            "tn": 0,
+            "fp": 3
+          }
+        }
+      },
+      {
+        "rig": "mendeley_acc",
+        "fold": 1,
+        "n_train_groups": 20,
+        "n_val_groups": 6,
+        "n_test_groups_leak": 11,
+        "n_test_groups_no_leak": 3,
+        "n_val_groups_no_leak": 1,
+        "n_test_windows_leak": 1958,
+        "n_test_windows_no_leak": 534,
+        "threshold": -0.2139638467641281,
+        "frozen_logreg": {
+          "auroc": 0.7000369175915193,
+          "balanced_accuracy": 0.681477698331631
+        },
+        "frozen_model_f": {
+          "auroc": 0.7531026079504808,
+          "balanced_accuracy": 0.673987061627511
+        },
+        "three_band": {
+          "auroc": 0.6367863714789608,
+          "ci95": [
+            0.469084616820881,
+            0.7930009934710064
+          ],
+          "balanced_accuracy": 0.5871637725570309,
+          "sensitivity": 0.7379979570990807,
+          "specificity": 0.43632958801498123,
+          "group_auroc": 0.7575757575757576,
+          "group_confusion": {
+            "tp": 8,
+            "fn": 3,
+            "tn": 1,
+            "fp": 2
+          }
+        }
+      },
+      {
+        "rig": "mendeley_acc",
+        "fold": 2,
+        "n_train_groups": 21,
+        "n_val_groups": 7,
+        "n_test_groups_leak": 10,
+        "n_test_groups_no_leak": 2,
+        "n_val_groups_no_leak": 2,
+        "n_test_windows_leak": 1780,
+        "n_test_windows_no_leak": 356,
+        "threshold": 1.5010469417992154,
+        "frozen_logreg": {
+          "auroc": 0.4484061355889408,
+          "balanced_accuracy": 0.5721910112359551
+        },
+        "frozen_model_f": {
+          "auroc": 0.7917545133190254,
+          "balanced_accuracy": 0.7
+        },
+        "three_band": {
+          "auroc": 0.47878582249715945,
+          "ci95": [
+            0.28632517429572746,
+            0.6603061465857802
+          ],
+          "balanced_accuracy": 0.5584269662921348,
+          "sensitivity": 0.11685393258426967,
+          "specificity": 1.0,
+          "group_auroc": 0.4,
+          "group_confusion": {
+            "tp": 0,
+            "fn": 10,
+            "tn": 2,
+            "fp": 0
+          }
+        }
+      },
+      {
+        "rig": "sheffield",
+        "fold": 0,
+        "n_train_groups": 5,
+        "n_val_groups": 2,
+        "n_test_groups_leak": 3,
+        "n_test_groups_no_leak": 1,
+        "n_val_groups_no_leak": 1,
+        "n_test_windows_leak": 5625,
+        "n_test_windows_no_leak": 975,
+        "threshold": 0.4648540689510985,
+        "frozen_logreg": {
+          "auroc": 0.8488531509971509,
+          "balanced_accuracy": 0.7461948717948719
+        },
+        "frozen_model_f": {
+          "auroc": 0.5838174814814815,
+          "balanced_accuracy": 0.5441162393162393
+        },
+        "three_band": {
+          "auroc": 0.8848286267806267,
+          "ci95": [
+            0.8421282051282052,
+            0.9355512043512043
+          ],
+          "balanced_accuracy": 0.8078290598290598,
+          "sensitivity": 0.7315555555555555,
+          "specificity": 0.8841025641025642,
+          "group_auroc": 1.0,
+          "group_confusion": {
+            "tp": 3,
+            "fn": 0,
+            "tn": 1,
+            "fp": 0
+          }
+        }
+      },
+      {
+        "rig": "sheffield",
+        "fold": 1,
+        "n_train_groups": 5,
+        "n_val_groups": 2,
+        "n_test_groups_leak": 3,
+        "n_test_groups_no_leak": 1,
+        "n_val_groups_no_leak": 1,
+        "n_test_windows_leak": 6750,
+        "n_test_windows_no_leak": 975,
+        "threshold": -1.006584911630533,
+        "frozen_logreg": {
+          "auroc": 0.8735218993352325,
+          "balanced_accuracy": 0.5882735042735042
+        },
+        "frozen_model_f": {
+          "auroc": 0.7594885470085471,
+          "balanced_accuracy": 0.6474472934472935
+        },
+        "three_band": {
+          "auroc": 0.7699020702754037,
+          "ci95": [
+            0.6674649572649572,
+            0.834269033530572
+          ],
+          "balanced_accuracy": 0.6692820512820512,
+          "sensitivity": 0.9426666666666667,
+          "specificity": 0.39589743589743587,
+          "group_auroc": 1.0,
+          "group_confusion": {
+            "tp": 3,
+            "fn": 0,
+            "tn": 0,
+            "fp": 1
+          }
+        }
+      },
+      {
+        "rig": "sheffield",
+        "fold": 2,
+        "n_train_groups": 5,
+        "n_val_groups": 3,
+        "n_test_groups_leak": 2,
+        "n_test_groups_no_leak": 1,
+        "n_val_groups_no_leak": 1,
+        "n_test_windows_leak": 2775,
+        "n_test_windows_no_leak": 150,
+        "threshold": -1.3355492455346911,
+        "frozen_logreg": {
+          "auroc": 0.8891939939939941,
+          "balanced_accuracy": 0.7595495495495496
+        },
+        "frozen_model_f": {
+          "auroc": 0.5480624624624624,
+          "balanced_accuracy": 0.5475675675675675
+        },
+        "three_band": {
+          "auroc": 0.8604876876876877,
+          "ci95": [
+            0.8234358974358973,
+            0.9480646464646465
+          ],
+          "balanced_accuracy": 0.7132432432432433,
+          "sensitivity": 0.8864864864864865,
+          "specificity": 0.54,
+          "group_auroc": 1.0,
+          "group_confusion": {
+            "tp": 2,
+            "fn": 0,
+            "tn": 1,
+            "fp": 0
+          }
+        }
+      }
+    ],
+    "provenance": {
+      "git_commit": "ed5cf64d5dd63cb9dcd1a869de84b4af51f4c185",
+      "git_status_porcelain": "?? experiments/xrig_three_band_groups.py\n?? results/v2_cross_rig/phase7/group_analysis/",
+      "timestamp": "2026-10-08 21:53:01",
+      "python": "3.12.10",
+      "numpy": "2.4.2",
+      "sklearn": "1.8.0",
+      "scipy": "1.17.0",
+      "sha256_cache_xrig_mendeley_acc": "7e4d2d52f0be0b8a7ad8cdd69ff1e3d1e44af422fd5f9906124f5a145c287475",
+      "sha256_cache_xrig_sheffield": "1239cbf81a4a144995c28d71070694210650ccd6a52b1363d87552e5e7829ed0",
+      "input_sha256": {
+        "results/v2_cross_rig/phase7/three_band_results.json": "1bd4873c6bb8576daba9e4f7917affbde910a159c28214a6808dfdf4a03ee8de",
+        "results/v2_cross_rig/phase7/scores_A.npz": "43189e398235f6cd19eea54d25aa8db78040b134ea9614b04ce4b4da043ef4b6",
+        "results/v2_cross_rig/phase7/scores_B.npz": "76a7e92e09443a4bccc0f7c42a9c53483a47b69dc3b77eb4422907dea2f3a367",
+        "results/v2_cross_rig/scores_xrig_mendeley_acc_foldx_seed0.npz": "945159f3a8f6b4a782797470c4c8cd61e18f2addf4e7fa53b758af1bd618348c",
+        "results/v2_cross_rig/eval_xrig_mendeley_acc_foldx_seed0.json": "d074be0983c5b48cbffe41a78dac23aee9efc46045486153de72738eb8f8fa2c",
+        "results/v2_cross_rig/scores_xrig_sheffield_foldx_seed0.npz": "3a902580f8a0d9957d275fff16926b6b1535eb21bca44f635661d981602e5eb0",
+        "results/v2_cross_rig/eval_xrig_sheffield_foldx_seed0.json": "c1ec46d36b0ff181a40802cf18d04c2f542d430c672e93c60875f55b25ef31e5",
+        "results/v2_cross_rig/scores_xrig_mendeley_acc_foldx_seed1.npz": "8d5ab36d367f6afbb8b6b135ee351d87bab42a37e4e45f3ef429c5ca2dd4187b",
+        "results/v2_cross_rig/eval_xrig_mendeley_acc_foldx_seed1.json": "626a5ba8eafd31dcdb548b38a70eaa9ce0dad6104acf233af91c2b8bd997b952",
+        "results/v2_cross_rig/scores_xrig_sheffield_foldx_seed1.npz": "903b127c73533c338e77be07a8b044bb87b06d2b57bd71f96be4995a3fcc80bc",
+        "results/v2_cross_rig/eval_xrig_sheffield_foldx_seed1.json": "cc94e0cb0791dff93b3aeff6c6e5566c8d66635052200cf5adf2bd14062fb38a",
+        "results/v2_cross_rig/scores_xrig_mendeley_acc_foldx_seed2.npz": "925fe93c4abd99868374cdb1d0a561c6b64b8eae5204730332f03631880b567a",
+        "results/v2_cross_rig/eval_xrig_mendeley_acc_foldx_seed2.json": "d5374ddf9d7775511b8342de2392d7059fe6f7890599fcce9835689bf8f0c746",
+        "results/v2_cross_rig/scores_xrig_sheffield_foldx_seed2.npz": "44ec38ba5e6d4d3f92cac2ea764fb502c361e328ff8e78e1ca7255d70c853663",
+        "results/v2_cross_rig/eval_xrig_sheffield_foldx_seed2.json": "7003b62702e627db1ba38993c0c43cb746c3c9ae97ba7019523bde579175931d",
+        "results/v2_cross_rig/xrig_mendeley_acc_foldx_seed0.json": "65b4445f1fdcb70e7e12bcac6fe725109f357e7a09d2fecf221fc583e5b3d86f",
+        "results/v2_cross_rig/xrig_mendeley_acc_fold0_seed0.json": "5e9c4852ae220553c8148b0c0a8fa68793965446f624fc8f44deaacf65157191",
+        "results/v2_cross_rig/eval_xrig_mendeley_acc_fold0_seed0.json": "220ea5c0bce656d85390dc264461a2823614bfd8d301d06d0997521df4d0128c",
+        "results/v2_cross_rig/xrig_mendeley_acc_fold1_seed0.json": "1dc3c4cf5c39f5604ef6e43a39f46d623dff5f74a85af97182748762321229bf",
+        "results/v2_cross_rig/eval_xrig_mendeley_acc_fold1_seed0.json": "f67025282cbe3e76e9308780ca5fc91206f6b0417f0de1efeecfebe46c1423aa",
+        "results/v2_cross_rig/xrig_mendeley_acc_fold2_seed0.json": "29d95de445f2f1c054669791f9fd14af6a3d5e76e04d62f83e3d57a2cd9f7465",
+        "results/v2_cross_rig/eval_xrig_mendeley_acc_fold2_seed0.json": "e2eb67fa5816021443488c01d2bd50c0abb6418a9c268807f209868e0835ddc0",
+        "results/v2_cross_rig/xrig_sheffield_foldx_seed0.json": "9643e057fe0c5c0d3f69c3fb9223f627463bd047fb7a6a3e2fce70c9e86f2738",
+        "results/v2_cross_rig/xrig_sheffield_fold0_seed0.json": "ef1ec41d02d8f46f2f7abcf4d6e1ae9b92e2c8f79ed64fa09ecfce708af7eb1c",
+        "results/v2_cross_rig/eval_xrig_sheffield_fold0_seed0.json": "2414a565f1ba395c367d55c4cba9b33489a1613dd96a57b12635bc4b2d6b72c6",
+        "results/v2_cross_rig/xrig_sheffield_fold1_seed0.json": "713875b535a2aacf13ee6ca5eb45d08f798dd8d8616f7a1a070f5e1f96f11c75",
+        "results/v2_cross_rig/eval_xrig_sheffield_fold1_seed0.json": "7115a63dde717afceddf6c250cf88d9534a74339639aaf65a7a4b6fbbfffcffd",
+        "results/v2_cross_rig/xrig_sheffield_fold2_seed0.json": "b22352cdfecd660d5fc5713bc3f25662af26f00fa318d822819878011e919a11",
+        "results/v2_cross_rig/eval_xrig_sheffield_fold2_seed0.json": "e870d61d668d22c42515b78b8a3c2fd126fe16887c24d78280310980613a94a2"
+      },
+      "bootstrap_seed": 0,
+      "n_boot": 2000,
+      "wall_s": 33.578535079956055
+    },
+    "assertions_passed": [
+      "col 4 is band (400, 600) Hz",
+      "col 5 is band (600, 800) Hz",
+      "col 8 is band (1600, 2000) Hz",
+      "A: model_f seed0 window order identical to phase7 scores",
+      "A: model_f seed0 comparator threshold == eval json threshold",
+      "A: model_f seed0 eval_xrig thresholds.model_f == comparator threshold",
+      "A: model_f seed1 window order identical to phase7 scores",
+      "A: model_f seed1 comparator threshold == eval json threshold",
+      "A: model_f seed1 eval_xrig thresholds.model_f == comparator threshold",
+      "A: model_f seed2 window order identical to phase7 scores",
+      "A: model_f seed2 comparator threshold == eval json threshold",
+      "A: model_f seed2 eval_xrig thresholds.model_f == comparator threshold",
+      "pooled window AUROC reproduces frozen (0.801483 vs 0.801483)",
+      "group-level AUROC reproduces frozen (1.0 vs 1.0)",
+      "group confusion reproduces frozen {'tp': 0, 'fn': 8, 'tn': 3, 'fp': 0}",
+      "pooled window AUROC reproduces frozen (0.737523 vs 0.737523)",
+      "group-level AUROC reproduces frozen (0.9583333333333334 vs 0.9583333333333334)",
+      "group confusion reproduces frozen {'tp': 7, 'fn': 1, 'tn': 3, 'fp': 0}",
+      "pooled window AUROC reproduces frozen (0.293106 vs 0.293106)",
+      "group-level AUROC reproduces frozen (0.125 vs 0.125)",
+      "pooled window AUROC reproduces frozen (0.368800 vs 0.368800)",
+      "group-level AUROC reproduces frozen (0.25 vs 0.25)",
+      "pooled window AUROC reproduces frozen (0.374280 vs 0.374280)",
+      "group-level AUROC reproduces frozen (0.2916666666666667 vs 0.2916666666666667)",
+      "B: model_f seed0 window order identical to phase7 scores",
+      "B: model_f seed0 comparator threshold == eval json threshold",
+      "B: model_f seed0 eval_xrig thresholds.model_f == comparator threshold",
+      "B: model_f seed1 window order identical to phase7 scores",
+      "B: model_f seed1 comparator threshold == eval json threshold",
+      "B: model_f seed1 eval_xrig thresholds.model_f == comparator threshold",
+      "B: model_f seed2 window order identical to phase7 scores",
+      "B: model_f seed2 comparator threshold == eval json threshold",
+      "B: model_f seed2 eval_xrig thresholds.model_f == comparator threshold",
+      "pooled window AUROC reproduces frozen (0.505692 vs 0.505692)",
+      "group-level AUROC reproduces frozen (0.46484375 vs 0.46484375)",
+      "group confusion reproduces frozen {'tp': 31, 'fn': 1, 'tn': 1, 'fp': 7}",
+      "pooled window AUROC reproduces frozen (0.473136 vs 0.473136)",
+      "group-level AUROC reproduces frozen (0.4296875 vs 0.4296875)",
+      "group confusion reproduces frozen {'tp': 28, 'fn': 4, 'tn': 0, 'fp': 8}",
+      "pooled window AUROC reproduces frozen (0.515170 vs 0.515170)",
+      "group-level AUROC reproduces frozen (0.51171875 vs 0.51171875)",
+      "pooled window AUROC reproduces frozen (0.524266 vs 0.524266)",
+      "group-level AUROC reproduces frozen (0.51171875 vs 0.51171875)",
+      "pooled window AUROC reproduces frozen (0.534508 vs 0.534508)",
+      "group-level AUROC reproduces frozen (0.546875 vs 0.546875)",
+      "A: refit three_band val AUROC 0.498400000000 == frozen 0.498400000000",
+      "B: refit three_band val AUROC 0.862057176540 == frozen 0.862057176540",
+      "mendeley_acc fold0: train/val/test groups disjoint",
+      "mendeley_acc fold0: train U val U test == all groups",
+      "mendeley_acc fold1: train/val/test groups disjoint",
+      "mendeley_acc fold1: train U val U test == all groups",
+      "mendeley_acc fold2: train/val/test groups disjoint",
+      "mendeley_acc fold2: train U val U test == all groups",
+      "sheffield fold0: train/val/test groups disjoint",
+      "sheffield fold0: train U val U test == all groups",
+      "sheffield fold1: train/val/test groups disjoint",
+      "sheffield fold1: train U val U test == all groups",
+      "sheffield fold2: train/val/test groups disjoint",
+      "sheffield fold2: train U val U test == all groups"
+    ]
+  }
+}
