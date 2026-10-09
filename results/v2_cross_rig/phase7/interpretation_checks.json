@@ -1,0 +1,611 @@
+{
+ "note": "descriptive only; computed after results were seen; nothing selected from it",
+ "per_group": {
+  "A": [
+   {
+    "group": "sh:noleak:NoLeak_2.8bar",
+    "label": 0,
+    "three_band": 0.703216417026318,
+    "full14": 0.6527486164001015,
+    "model_f_mean": 0.3506786042706835,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "sh:noleak:NoLeak_4.2bar",
+    "label": 0,
+    "three_band": 0.8860232884826944,
+    "full14": 0.7888527714309894,
+    "model_f_mean": 0.3702330540746382,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "sh:noleak:noLeak_2.8bar_newer",
+    "label": 0,
+    "three_band": 0.8906983498349834,
+    "full14": 0.9549091309130913,
+    "model_f_mean": 0.14960982764943162,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "sh:test1",
+    "label": 1,
+    "three_band": 0.7241697191697192,
+    "full14": 0.6821543345543346,
+    "model_f_mean": 0.2814178266178266,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "sh:test2",
+    "label": 1,
+    "three_band": 0.719864713064713,
+    "full14": 0.6638544566544566,
+    "model_f_mean": 0.7272904354904354,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "sh:test3",
+    "label": 1,
+    "three_band": 0.8503679653679654,
+    "full14": 0.9094724386724387,
+    "model_f_mean": 0.4764290524290525,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "sh:test4",
+    "label": 1,
+    "three_band": 0.8417477633477634,
+    "full14": 0.9156952380952381,
+    "model_f_mean": 0.5217795093795093,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "sh:test5",
+    "label": 1,
+    "three_band": 0.8142082341269842,
+    "full14": 0.6856464285714285,
+    "model_f_mean": 0.5001763888888889,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "sh:test6",
+    "label": 1,
+    "three_band": 0.7790605158730158,
+    "full14": 0.6004809523809524,
+    "model_f_mean": 0.2314878968253968,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "sh:test7",
+    "label": 1,
+    "three_band": 0.867451388888889,
+    "full14": 0.8092046626984127,
+    "model_f_mean": 0.1403876984126984,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "sh:test8",
+    "label": 1,
+    "three_band": 0.8436960317460317,
+    "full14": 0.8392466269841271,
+    "model_f_mean": 0.14554682539682542,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   }
+  ],
+  "B": [
+   {
+    "group": "md:Branched/Circumferential Crack/BR_CC_0.18 LPS",
+    "label": 1,
+    "three_band": 0.44011298989867154,
+    "full14": 0.5000472761082307,
+    "model_f_mean": 0.6059595474100572,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Circumferential Crack/BR_CC_0.47 LPS",
+    "label": 1,
+    "three_band": 0.6745941545356353,
+    "full14": 0.6541447018426271,
+    "model_f_mean": 0.6025428146141983,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Circumferential Crack/BR_CC_ND",
+    "label": 1,
+    "three_band": 0.20708814327327651,
+    "full14": 0.8019203797604919,
+    "model_f_mean": 0.33654937862511497,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Circumferential Crack/BR_CC_Transient",
+    "label": 1,
+    "three_band": 0.612400654511454,
+    "full14": 0.6641616019947015,
+    "model_f_mean": 0.3002740117396499,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Gasket Leak/BR_GL_0.18 LPS",
+    "label": 1,
+    "three_band": 0.3995619080637282,
+    "full14": 0.4460264431032037,
+    "model_f_mean": 0.4409239064773521,
+    "all_below_0.5": true,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Gasket Leak/BR_GL_0.47 LPS",
+    "label": 1,
+    "three_band": 0.29413666822502726,
+    "full14": 0.49574177964781047,
+    "model_f_mean": 0.4766161498103995,
+    "all_below_0.5": true,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Gasket Leak/BR_GL_ND",
+    "label": 1,
+    "three_band": 0.5675938912264298,
+    "full14": 0.54189262895434,
+    "model_f_mean": 0.19664043426315514,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Gasket Leak/BR_GL_Transient",
+    "label": 1,
+    "three_band": 0.38208434272599767,
+    "full14": 0.5737042585745251,
+    "model_f_mean": 0.4026746249309363,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Longitudinal Crack/BR_LC_0.18 LPS",
+    "label": 1,
+    "three_band": 0.4187495825819809,
+    "full14": 0.6113337340546318,
+    "model_f_mean": 0.33134085798882434,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Longitudinal Crack/BR_LC_0.47 LPS",
+    "label": 1,
+    "three_band": 0.5506350319463924,
+    "full14": 0.5645589839488857,
+    "model_f_mean": 0.35662952573892265,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Longitudinal Crack/BR_LC_ND",
+    "label": 1,
+    "three_band": 0.5500818139317438,
+    "full14": 0.7961976001246689,
+    "model_f_mean": 0.13970118435405954,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Longitudinal Crack/BR_LC_Transient",
+    "label": 1,
+    "three_band": 0.6601575142949616,
+    "full14": 0.6642610545135088,
+    "model_f_mean": 0.3376886087264768,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/No-leak/BR_NL_0.18 LPS",
+    "label": 0,
+    "three_band": 0.8614460755757505,
+    "full14": 0.6111858712959727,
+    "model_f_mean": 0.47213662019236996,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Branched/No-leak/BR_NL_0.47 LPS",
+    "label": 0,
+    "three_band": 0.7005113321734759,
+    "full14": 0.5762619340295095,
+    "model_f_mean": 0.5549474267790916,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Branched/No-leak/BR_NL_ND",
+    "label": 0,
+    "three_band": 0.48920193693569863,
+    "full14": 0.3684389837763962,
+    "model_f_mean": 0.7420565803580897,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Branched/No-leak/BR_NL_Transient",
+    "label": 0,
+    "three_band": 0.5181063256910863,
+    "full14": 0.5535315785228403,
+    "model_f_mean": 0.5111773784877595,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Orifice Leak/BR_OL_0.18 LPS",
+    "label": 1,
+    "three_band": 0.46810044597128764,
+    "full14": 0.3276352490662969,
+    "model_f_mean": 0.4176332004349403,
+    "all_below_0.5": true,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Branched/Orifice Leak/BR_OL_0.47 LPS",
+    "label": 1,
+    "three_band": 0.405030177915754,
+    "full14": 0.31101769702318105,
+    "model_f_mean": 0.5280255396042465,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Branched/Orifice Leak/BR_OL_ND",
+    "label": 1,
+    "three_band": 0.253305387900468,
+    "full14": 0.7481956285358589,
+    "model_f_mean": 0.5807482494707702,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Branched/Orifice Leak/BR_OL_Transient",
+    "label": 1,
+    "three_band": 0.5403942149632781,
+    "full14": 0.5083284320378832,
+    "model_f_mean": 0.4302457685482614,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Looped/Circumferential Crack/LO_CC_0.18 LPS",
+    "label": 1,
+    "three_band": 0.5232780115318685,
+    "full14": 0.17503895901511612,
+    "model_f_mean": 0.6728397226118124,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Circumferential Crack/LO_CC_0.47 LPS",
+    "label": 1,
+    "three_band": 0.6461974250279717,
+    "full14": 0.3179830436358479,
+    "model_f_mean": 0.7374934995351183,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Circumferential Crack/LO_CC_ND",
+    "label": 1,
+    "three_band": 0.4818971902233008,
+    "full14": 0.42085191547031847,
+    "model_f_mean": 0.6790733620141722,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Circumferential Crack/LO_CC_Transient",
+    "label": 1,
+    "three_band": 0.6108624738011567,
+    "full14": 0.38689191105788173,
+    "model_f_mean": 0.6915496582987956,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Gasket Leak/LO_GL_0.18 LPS",
+    "label": 1,
+    "three_band": 0.33215011740233547,
+    "full14": 0.3405376869376113,
+    "model_f_mean": 0.7552016851306133,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Looped/Gasket Leak/LO_GL_0.47 LPS",
+    "label": 1,
+    "three_band": 0.37306767566234605,
+    "full14": 0.32800579504646826,
+    "model_f_mean": 0.5563617074837272,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Looped/Gasket Leak/LO_GL_ND",
+    "label": 1,
+    "three_band": 0.3862357799594826,
+    "full14": 0.33213729156926913,
+    "model_f_mean": 0.5373896161238377,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Gasket Leak/LO_GL_Transient",
+    "label": 1,
+    "three_band": 0.3109625415635785,
+    "full14": 0.35399561908063726,
+    "model_f_mean": 0.7476979161742072,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Looped/Longitudinal Crack/LO_LC_0.18 LPS",
+    "label": 1,
+    "three_band": 0.46716674283372994,
+    "full14": 0.1698906346029595,
+    "model_f_mean": 0.6724172799428484,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Longitudinal Crack/LO_LC_0.47 LPS",
+    "label": 1,
+    "three_band": 0.5617228989709567,
+    "full14": 0.17040673211781207,
+    "model_f_mean": 0.6819473554270346,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Longitudinal Crack/LO_LC_ND",
+    "label": 1,
+    "three_band": 0.5865428557921112,
+    "full14": 0.39858092881793966,
+    "model_f_mean": 0.6943231899816674,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Longitudinal Crack/LO_LC_Transient",
+    "label": 1,
+    "three_band": 0.4870115670572622,
+    "full14": 0.3614139860350782,
+    "model_f_mean": 0.6654256335238556,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/No-leak/LO_NL_0.18 LPS",
+    "label": 0,
+    "three_band": 0.5818651842484556,
+    "full14": 0.5257521727690091,
+    "model_f_mean": 0.47447888234778174,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/No-leak/LO_NL_0.47 LPS",
+    "label": 0,
+    "three_band": 0.1789623334341336,
+    "full14": 0.4498594032887063,
+    "model_f_mean": 0.42770642123769614,
+    "all_below_0.5": true,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Looped/No-leak/LO_NL_ND",
+    "label": 0,
+    "three_band": 0.4499556217084464,
+    "full14": 0.21953901558738398,
+    "model_f_mean": 0.4785089286766236,
+    "all_below_0.5": true,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/No-leak/LO_NL_Transient",
+    "label": 0,
+    "three_band": 0.2555944589746371,
+    "full14": 0.4772545569228668,
+    "model_f_mean": 0.5373504628904235,
+    "all_below_0.5": false,
+    "full_gt_3band": true,
+    "3band_gt_full": false
+   },
+   {
+    "group": "md:Looped/Orifice Leak/LO_OL_0.18 LPS",
+    "label": 1,
+    "three_band": 0.5750549853372434,
+    "full14": 0.3703461685579497,
+    "model_f_mean": 0.6787581282672446,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Orifice Leak/LO_OL_0.47 LPS",
+    "label": 1,
+    "three_band": 0.8120538317285722,
+    "full14": 0.41272830420599776,
+    "model_f_mean": 0.5184153573811138,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Orifice Leak/LO_OL_ND",
+    "label": 1,
+    "three_band": 0.8970129378949525,
+    "full14": 0.7939707203303024,
+    "model_f_mean": 0.47364882256226,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   },
+   {
+    "group": "md:Looped/Orifice Leak/LO_OL_Transient",
+    "label": 1,
+    "three_band": 0.7090540751129811,
+    "full14": 0.6008999532491819,
+    "model_f_mean": 0.5497532595709315,
+    "all_below_0.5": false,
+    "full_gt_3band": false,
+    "3band_gt_full": true
+   }
+  ]
+ },
+ "stream_variance_share": {
+  "A": {
+   "n_streams": 230,
+   "three_band": 0.8793847096686398,
+   "full14": 0.9038919996640725,
+   "model_f_seed0": 0.8290678092018762,
+   "model_f_seed1": 0.7939363901450647,
+   "model_f_seed2": 0.8268370704944866
+  },
+  "B": {
+   "n_streams": 80,
+   "three_band": 0.7416089535176209,
+   "full14": 0.9376437509974872,
+   "model_f_seed0": 0.4001488342718713,
+   "model_f_seed1": 0.5881950291427387,
+   "model_f_seed2": 0.4862935194812755
+  }
+ },
+ "per_channel_B": {
+  "three_band": {
+   "ch1": {
+    "window_auroc": 0.4089513518601221,
+    "frac_flagged_all": 0.8069390039171797,
+    "frac_flagged_no_leak": 0.8625525946704067
+   },
+   "ch2": {
+    "window_auroc": 0.600149125468836,
+    "frac_flagged_all": 0.9182988248461108,
+    "frac_flagged_no_leak": 0.8190743338008415
+   }
+  },
+  "full14": {
+   "ch1": {
+    "window_auroc": 0.4867441576592498,
+    "frac_flagged_all": 0.6259093452714046,
+    "frac_flagged_no_leak": 0.5511921458625526
+   },
+   "ch2": {
+    "window_auroc": 0.45617196588252423,
+    "frac_flagged_all": 0.9997202014549524,
+    "frac_flagged_no_leak": 0.9985974754558204
+   }
+  },
+  "model_f_seed0": {
+   "ch1": {
+    "window_auroc": 0.538876303806131,
+    "frac_flagged_all": 0.929770565193061,
+    "frac_flagged_no_leak": 0.9551192145862553
+   },
+   "ch2": {
+    "window_auroc": 0.490047517198206,
+    "frac_flagged_all": 0.8665360940123111,
+    "frac_flagged_no_leak": 0.9340813464235624
+   }
+  },
+  "model_f_seed1": {
+   "ch1": {
+    "window_auroc": 0.5541881363385237,
+    "frac_flagged_all": 0.9068270844991606,
+    "frac_flagged_no_leak": 0.908835904628331
+   },
+   "ch2": {
+    "window_auroc": 0.4806568285689495,
+    "frac_flagged_all": 0.7123670956911025,
+    "frac_flagged_no_leak": 0.8415147265077139
+   }
+  },
+  "model_f_seed2": {
+   "ch1": {
+    "window_auroc": 0.5016613616498512,
+    "frac_flagged_all": 0.9043088975937326,
+    "frac_flagged_no_leak": 0.94109396914446
+   },
+   "ch2": {
+    "window_auroc": 0.5633405771773323,
+    "frac_flagged_all": 0.8869613878007835,
+    "frac_flagged_no_leak": 0.9172510518934082
+   }
+  }
+ },
+ "per_group_counts_A": {
+  "all_below_0.5": 0,
+  "full_gt_3band": 3,
+  "3band_gt_full": 6,
+  "n_groups": 11
+ },
+ "per_group_counts_B": {
+  "all_below_0.5": 5,
+  "full_gt_3band": 10,
+  "3band_gt_full": 20,
+  "n_groups": 40
+ }
+}
